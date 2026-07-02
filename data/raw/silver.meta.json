@@ -1,0 +1,20 @@
+{
+  "source": "Yahoo Finance chart endpoint",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SLV?period1=0&period2=1783051053&interval=1d&events=history&includeAdjustedClose=true",
+  "provenance": "live-public-no-key-daily-history",
+  "asset_id": "silver",
+  "name": "Silver",
+  "symbol": "SLV",
+  "type": "etf",
+  "currency": "USD",
+  "exchange": "PCX",
+  "instrument_type": "ETF",
+  "regular_market_price": 53.58,
+  "regular_market_time": 1782936000,
+  "rows": 5075,
+  "first_date": "2006-04-28",
+  "last_date": "2026-07-01",
+  "fetched_at": "2026-07-02T03:57:34.296677+00:00",
+  "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues.",
+  "proxy_note": "ETF proxy for silver spot"
+}

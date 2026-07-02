@@ -1,0 +1,53 @@
+{
+  "source": "CoinMetrics community BTC CSV + Coinbase Exchange recent candles + Coinbase spot ticker",
+  "source_url": "https://raw.githubusercontent.com/coinmetrics/data/master/csv/btc.csv",
+  "provenance": "live-public-full-history-with-recent-coinbase-overlay-and-spot",
+  "rows": 5829,
+  "first_date": "2010-07-18",
+  "last_date": "2026-07-02",
+  "fetched_at": "2026-07-02T03:57:33.368241+00:00",
+  "fields": [
+    "PriceUSD",
+    "CapMVRVCur",
+    "CapMrktCurUSD",
+    "volume_reported_spot_usd_1d"
+  ],
+  "limitation": "Recent Coinbase overlay has no MVRV/on-chain fields; on-chain values are shown as latest available, not faked. Current-day BTC close is refreshed hourly from Coinbase spot and remains provisional until the daily candle finalizes.",
+  "primary_source": {
+    "source": "CoinMetrics community BTC CSV",
+    "source_url": "https://raw.githubusercontent.com/coinmetrics/data/master/csv/btc.csv",
+    "provenance": "live-public-full-history",
+    "rows": 5790,
+    "first_date": "2010-07-18",
+    "last_date": "2026-05-24",
+    "fetched_at": "2026-07-02T03:57:29.378906+00:00",
+    "fields": [
+      "PriceUSD",
+      "CapMVRVCur",
+      "CapMrktCurUSD",
+      "volume_reported_spot_usd_1d"
+    ],
+    "limitation": "Daily CoinMetrics community data may lag current spot by a day; use Coinbase/Binance spot overlay later if needed."
+  },
+  "recent_overlay_source": {
+    "source": "Coinbase Exchange candles endpoint",
+    "product": "BTC-USD",
+    "granularity_seconds": 86400,
+    "provenance": "live-public-partial-history",
+    "rows": 4000,
+    "first_date": "2015-07-20",
+    "last_date": "2026-07-01",
+    "fetched_at": "2026-07-02T03:57:33.243669+00:00",
+    "request_count": 14,
+    "limitation": "Coinbase spot history starts around 2015; use CoinMetrics/backfill for the final long-term model."
+  },
+  "current_spot_source": {
+    "source": "Coinbase Exchange ticker endpoint",
+    "product": "BTC-USD",
+    "provenance": "live-public-spot-price",
+    "price": 61042.42,
+    "time": "2026-07-02T03:57:32.353295180Z",
+    "fetched_at": "2026-07-02T03:57:33.367029+00:00",
+    "limitation": "Hourly dashboard refresh treats the current day's close as provisional spot until the daily candle finalizes."
+  }
+}

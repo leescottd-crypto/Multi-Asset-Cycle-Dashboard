@@ -1,0 +1,19 @@
+{
+  "last_updated": "2026-06-29",
+  "primary_thesis": "BTC long-term log regression is the anchor. Accumulation is favored when price approaches -1.5 standard deviations below trend and macro liquidity is improving.",
+  "alternate_thesis": "If BTC loses major moving-average support while liquidity deteriorates, treat log-regression value zones as early, not immediate.",
+  "elliott_wave_mode": "hybrid",
+  "manual_override_enabled": true,
+  "manual_elliott_wave_count": {
+    "status": "manual-placeholder",
+    "primary_count": "Add current primary wave count here if you want to override the V1 algorithmic candidate.",
+    "alternate_count": "Add alternate count here if you want to override the V1 algorithmic alternate.",
+    "invalidation_level_usd": null,
+    "confirmation_level_usd": null,
+    "target_zones_usd": []
+  },
+  "notes": [
+    "Elliott Wave tab is hybrid by design: V1 algorithmic pivots plus Phase 2 confluence, with manual override available.",
+    "Use the dashboard regime score as decision support, not trade execution."
+  ]
+}

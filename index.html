@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multi-Asset Cycle Dashboard</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Cross-asset secular trend dashboard</p>
+        <h1>Cycle Command Center</h1>
+        <p class="lede">Bitcoin's log channel, rainbow bands, moving-average readouts, regime scoring, and Elliott scenario lab — rebuilt as a repeatable kit for BTC, gold, silver, MAGS, S&P 500, and NASDAQ.</p>
+      </div>
+      <div class="hero-warning">
+        <strong>Decision support only.</strong><br />Not financial advice. No autopilot. No clown lever.
+      </div>
+    </header>
+
+    <main>
+      <section class="panel asset-selector-panel">
+        <div class="panel-title-row">
+          <div>
+            <h2>Central Dashboard</h2>
+            <p>Pick an asset. The same charting stack renders underneath: log channel, rainbow, Elliott Wave, current read, and regime checks.</p>
+          </div>
+          <div id="globalAsOf" class="pill">Loading…</div>
+        </div>
+        <div id="assetButtons" class="asset-buttons"></div>
+        <div id="assetOverview" class="asset-overview"></div>
+      </section>
+
+      <section id="status" class="card-grid"></section>
+
+      <section class="panel">
+        <div class="panel-title-row">
+          <div>
+            <h2 id="chartTitle">Cycle Charts</h2>
+            <p id="chartSubtitle">Switch between the log channel, rainbow chart, and separate Elliott Wave scenario lab.</p>
+          </div>
+          <div id="asOf" class="pill"></div>
+        </div>
+        <div class="chart-tabs" role="tablist" aria-label="Asset chart views">
+          <button class="chart-tab active" type="button" role="tab" aria-selected="true" data-chart-tab="log">Log Channel</button>
+          <button class="chart-tab" type="button" role="tab" aria-selected="false" data-chart-tab="rainbow">Rainbow Chart</button>
+          <button class="chart-tab" type="button" role="tab" aria-selected="false" data-chart-tab="elliott">Elliott Wave</button>
+        </div>
+        <div class="chart-pane active" id="logPane" role="tabpanel">
+          <div id="logChart" class="chart"></div>
+          <div class="legend">
+            <span><b class="dot price"></b>Price</span>
+            <span><b class="dot trend"></b>Trend</span>
+            <span><b class="dot buy"></b>-1.5σ accumulation</span>
+            <span><b class="dot deep"></b>-2σ deep value</span>
+            <span><b class="dot sell"></b>+2σ take chips</span>
+          </div>
+        </div>
+        <div class="chart-pane" id="rainbowPane" role="tabpanel" hidden>
+          <div id="rainbowChart" class="rainbow-chart"></div>
+          <div id="rainbowSummary" class="rainbow-summary"></div>
+        </div>
+        <div class="chart-pane" id="elliottPane" role="tabpanel" hidden>
+          <div class="elliott-header">
+            <div>
+              <h3>Elliott Wave Scenario Lab</h3>
+              <p>V1 pivot engine plus Phase 2 confluence. Kept separate so objective valuation views stay clean.</p>
+            </div>
+            <span class="pill">Hybrid: algorithm + manual override</span>
+          </div>
+          <div id="elliottSummary" class="elliott-summary"></div>
+          <div id="elliottChart" class="elliott-chart"></div>
+          <div class="two-col elliott-scenarios">
+            <article class="subpanel"><h3>Primary Count</h3><div id="elliottPrimary"></div></article>
+            <article class="subpanel"><h3>Alternate Count</h3><div id="elliottAlternate"></div></article>
+          </div>
+          <div class="two-col elliott-scenarios">
+            <article class="subpanel"><h3>Phase 2 Confluence</h3><div id="elliottConfluence"></div></article>
+            <article class="subpanel"><h3>Manual Override</h3><div id="elliottManual"></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <article class="panel"><h2>Current Read</h2><div id="currentRead" class="readout"></div></article>
+        <article class="panel"><h2>Regime Score</h2><div id="regime" class="readout"></div></article>
+      </section>
+
+      <section class="two-col">
+        <article class="panel"><h2>Confirmation Checks</h2><div id="components"></div></article>
+        <article class="panel"><h2>Data & Notes</h2><div id="manual"></div></article>
+      </section>
+    </main>
+
+    <script type="module" src="/src/app.js?v=multi-asset-20260702-rainbowfix"></script>
+  </body>
+</html>
