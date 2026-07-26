@@ -1,0 +1,15 @@
+{
+  "ism_manufacturing_pmi": {
+    "value": 53.3,
+    "date": "2026-06",
+    "frequency": "monthly",
+    "status_note": "Above 50 indicates manufacturing expansion.",
+    "provenance": "manual-video-snapshot",
+    "source": {
+      "name": "Video-provided ISM Manufacturing PMI snapshot",
+      "url": "https://youtu.be/rzZ1AmdWhaY?t=133",
+      "captured_from_video_at": "02:13",
+      "limitation": "Not independently refreshed: the official ISM release is not exposed here through a stable no-key machine-readable feed. Update this explicit manual snapshot when a new release is verified."
+    }
+  }
+}

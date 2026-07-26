@@ -1,9 +1,11 @@
 const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
 const num = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
 let logChart;
+let movingAverageChart;
 let dashboardIndex;
 let activeAssetId;
 let activeData;
+let macroData;
 
 function zoneClass(zone) {
   return String(zone).toLowerCase().replace(/\s+/g, '-');
@@ -25,6 +27,11 @@ function fmtNum(value) {
   return value === null || value === undefined ? 'n/a' : num.format(value);
 }
 
+function fmtRatio(value) {
+  const n = Number(value);
+  return Number.isFinite(n) ? n.toFixed(6) : 'n/a';
+}
+
 function isPositiveFinite(value) {
   const n = Number(value);
   return Number.isFinite(n) && n > 0;
@@ -32,6 +39,57 @@ function isPositiveFinite(value) {
 
 function card(label, value, detail, cls = '') {
   return `<article class="status-card ${cls}"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong><small>${detail ?? ''}</small></article>`;
+}
+
+function sparkline(points, color = '#38bdf8') {
+  const clean = (points ?? []).map((p) => Number(p.value)).filter(Number.isFinite);
+  if (clean.length < 2) return '<div class="sparkline-empty">Snapshot only</div>';
+  const width = 280;
+  const height = 64;
+  const min = Math.min(...clean);
+  const max = Math.max(...clean);
+  const range = Math.max(max - min, 1e-9);
+  const path = clean.map((value, i) => {
+    const x = (i / Math.max(clean.length - 1, 1)) * width;
+    const y = height - 4 - ((value - min) / range) * (height - 8);
+    return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  return `<svg class="sparkline" viewBox="0 0 ${width} ${height}" aria-hidden="true"><path d="${path}" stroke="${color}" /></svg>`;
+}
+
+function renderMacroCycle(data) {
+  const panel = document.querySelector('#macroCyclePanel');
+  if (!data || activeAssetId !== 'btc') {
+    panel.hidden = true;
+    return;
+  }
+  panel.hidden = false;
+  const framework = data.framework;
+  const indicators = data.indicators;
+  document.querySelector('#macroCycleSummary').textContent = framework.summary;
+  document.querySelector('#macroCycleCount').textContent = `${framework.fired_count} of 4 fired`;
+  document.querySelector('#dominoSequence').innerHTML = framework.sequence.map((item, index) => `
+    <article class="domino ${escapeHtml(item.status).replaceAll(' ', '-')}">
+      <div class="domino-number">${escapeHtml(item.number)}</div>
+      <div><span>${escapeHtml(item.status)}</span><strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.detail)}</small></div>
+      ${index < framework.sequence.length - 1 ? '<b class="domino-arrow">→</b>' : ''}
+    </article>
+  `).join('');
+  const pmi = indicators.ism_pmi;
+  const copper = indicators.copper_gold;
+  const realized = indicators.btc_realized_volatility;
+  const implied = indicators.btc_implied_volatility;
+  document.querySelector('#macroIndicators').innerHTML = `
+    <article class="macro-card"><span>ISM Manufacturing PMI</span><strong>${fmtNum(pmi.value)}</strong><small>${escapeHtml(pmi.date)} · ${escapeHtml(pmi.status)} · 50 threshold</small><div class="threshold-bar"><i style="width:${Math.min(100, Number(pmi.value))}%"></i><b style="left:50%"></b></div><em>Manual, video-sourced snapshot</em></article>
+    <article class="macro-card"><span>Copper / Gold</span><strong>${fmtRatio(copper.value)}</strong><small>${fmtNum(copper.distance_above_3y_trend_pct)}% vs 3Y trend · ${escapeHtml(copper.status)}</small>${sparkline(copper.series, '#f59e0b')}<em>${escapeHtml(copper.method)}</em></article>
+    <article class="macro-card"><span>BTC 90D Realized Vol</span><strong>${fmtNum(realized.value)}%</strong><small>Historical percentile ${fmtNum(realized.historical_percentile)} · ${escapeHtml(realized.status)}</small>${sparkline(realized.series, '#a78bfa')}<em>${escapeHtml(realized.method)}</em></article>
+    <article class="macro-card"><span>BTC Implied Volatility</span><strong>${fmtNum(implied.value)}%</strong><small>Deribit DVOL · ${escapeHtml(implied.status)}</small><div class="vol-gauge"><i style="width:${Math.min(100, Number(implied.value))}%"></i></div><em>Options market expectation; complements realized volatility.</em></article>
+  `;
+  const oil = indicators.oil;
+  document.querySelector('#macroRisk').innerHTML = `<div><span>Setup invalidation watch</span><strong>WTI ${fmtMoney(oil.value)} · ${escapeHtml(oil.status)}</strong><small>${fmtNum(oil.change_20d_pct)}% over 20 sessions. Persistent oil strength can revive inflation and tighten policy.</small></div>${sparkline(oil.series, oil.status === 'contained' ? '#22c55e' : '#f87171')}`;
+  const pmiLimitation = data.sources?.pmi?.limitation ?? 'PMI is an explicit manual snapshot.';
+  const errors = (data.refresh_errors ?? []).length ? `<p><strong>Refresh warnings:</strong> ${escapeHtml(data.refresh_errors.join(' | '))}</p>` : '';
+  document.querySelector('#macroSources').innerHTML = `<p>${escapeHtml(framework.warning)}</p><p><strong>PMI:</strong> ${escapeHtml(pmiLimitation)}</p><p><strong>Copper, gold, oil:</strong> Yahoo Finance futures proxies. <strong>Implied volatility:</strong> Deribit DVOL public API. <strong>Realized volatility:</strong> local BTC daily history.</p>${errors}<p><a href="${escapeHtml(framework.source_video)}" target="_blank" rel="noreferrer">Source video</a></p>`;
 }
 
 function renderAssetButtons(index) {
@@ -84,7 +142,7 @@ function renderStatus(data) {
   ].join('');
   document.querySelector('#asOf').textContent = `As of ${l.date}`;
   document.querySelector('#chartTitle').textContent = `${data.asset.name} Cycle Charts`;
-  document.querySelector('#chartSubtitle').textContent = `${data.asset.symbol} · log channel, rainbow, and Elliott scenario lab`;
+  document.querySelector('#chartSubtitle').textContent = `${data.asset.symbol} · log channel, moving averages, rainbow, and Elliott scenario lab`;
 }
 
 function renderLogChart(data) {
@@ -114,6 +172,40 @@ function renderLogChart(data) {
   minus1.setData(series(data.points, 'band_minus_1'));
   logChart.timeScale().fitContent();
   logChart.applyOptions({ width: chartEl.clientWidth });
+}
+
+function renderMovingAverageChart(data) {
+  const chartEl = document.querySelector('#movingAverageChart');
+  const note = document.querySelector('#movingAverageNote');
+  if (movingAverageChart) movingAverageChart.remove();
+  movingAverageChart = LightweightCharts.createChart(chartEl, {
+    height: 620,
+    layout: { background: { color: '#08111f' }, textColor: '#d7e2f2' },
+    grid: { vertLines: { color: 'rgba(148, 163, 184, 0.15)' }, horzLines: { color: 'rgba(148, 163, 184, 0.15)' } },
+    rightPriceScale: { mode: LightweightCharts.PriceScaleMode.Logarithmic, borderColor: 'rgba(148, 163, 184, 0.3)' },
+    timeScale: { borderColor: 'rgba(148, 163, 184, 0.3)' },
+    crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
+  });
+  const price = movingAverageChart.addLineSeries({ color: '#f8fafc', lineWidth: 3, title: `${data.asset.symbol} price` });
+  const ma50 = movingAverageChart.addLineSeries({ color: '#22d3ee', lineWidth: 2, title: '50D MA' });
+  const ma100 = movingAverageChart.addLineSeries({ color: '#f59e0b', lineWidth: 2, title: '100D MA' });
+  const ma200 = movingAverageChart.addLineSeries({ color: '#f472b6', lineWidth: 2, title: '200D MA' });
+  const ma200w = movingAverageChart.addLineSeries({
+    color: '#4ade80',
+    lineWidth: 3,
+    lineStyle: LightweightCharts.LineStyle.Dashed,
+    title: '200W MA',
+  });
+  const ma200wData = series(data.points, 'ma_200w');
+  price.setData(series(data.points, 'close'));
+  ma50.setData(series(data.points, 'ma_50d'));
+  ma100.setData(series(data.points, 'ma_100d'));
+  ma200.setData(series(data.points, 'ma_200d'));
+  ma200w.setData(ma200wData);
+  note.hidden = ma200wData.length > 0;
+  note.textContent = ma200wData.length > 0 ? '' : `${data.asset.name} does not yet have enough price history to calculate a 200W moving average.`;
+  movingAverageChart.timeScale().fitContent();
+  movingAverageChart.applyOptions({ width: chartEl.clientWidth });
 }
 
 function renderRainbowChart(data) {
@@ -223,13 +315,19 @@ function renderElliottWave(data) {
 
 function setupTabs() {
   const buttons = Array.from(document.querySelectorAll('[data-chart-tab]'));
-  const panes = { log: document.querySelector('#logPane'), rainbow: document.querySelector('#rainbowPane'), elliott: document.querySelector('#elliottPane') };
+  const panes = {
+    log: document.querySelector('#logPane'),
+    'moving-average': document.querySelector('#movingAveragePane'),
+    rainbow: document.querySelector('#rainbowPane'),
+    elliott: document.querySelector('#elliottPane'),
+  };
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       const target = button.dataset.chartTab;
       buttons.forEach((b) => { const active = b === button; b.classList.toggle('active', active); b.setAttribute('aria-selected', String(active)); });
       Object.entries(panes).forEach(([name, pane]) => { const active = name === target; pane.classList.toggle('active', active); pane.hidden = !active; });
       if (target === 'log') logChart?.applyOptions({ width: document.querySelector('#logChart').clientWidth });
+      if (target === 'moving-average' && activeData) renderMovingAverageChart(activeData);
       if (target === 'rainbow' && activeData) renderRainbowChart(activeData);
       if (target === 'elliott' && activeData) renderElliottWave(activeData);
     });
@@ -246,20 +344,29 @@ function renderReadouts(data) {
 
 function renderAll(data) {
   renderStatus(data);
+  renderMacroCycle(macroData);
   renderLogChart(data);
+  if (!document.querySelector('#movingAveragePane').hidden) renderMovingAverageChart(data);
   renderRainbowChart(data);
   renderElliottWave(data);
   renderReadouts(data);
 }
 
 async function main() {
-  const res = await fetch('/public/data/assets.json', { cache: 'no-store' });
+  const [res, macroRes] = await Promise.all([
+    fetch('/public/data/assets.json', { cache: 'no-store' }),
+    fetch('/public/data/macro-cycle.json', { cache: 'no-store' }),
+  ]);
   if (!res.ok) throw new Error(`Asset index fetch failed: ${res.status}`);
   dashboardIndex = await res.json();
+  macroData = macroRes.ok ? await macroRes.json() : null;
   renderAssetButtons(dashboardIndex);
   setupTabs();
   await selectAsset(dashboardIndex.assets[0].id);
-  window.addEventListener('resize', () => logChart?.applyOptions({ width: document.querySelector('#logChart').clientWidth }));
+  window.addEventListener('resize', () => {
+    if (!document.querySelector('#logPane').hidden) logChart?.applyOptions({ width: document.querySelector('#logChart').clientWidth });
+    if (!document.querySelector('#movingAveragePane').hidden) movingAverageChart?.applyOptions({ width: document.querySelector('#movingAverageChart').clientWidth });
+  });
 }
 
 main().catch((err) => {

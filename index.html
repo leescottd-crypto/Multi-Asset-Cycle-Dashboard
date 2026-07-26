@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Multi-Asset Cycle Dashboard</title>
-    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="/src/styles.css?v=multi-asset-20260726-moving-averages" />
     <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
   </head>
   <body>
@@ -34,16 +34,35 @@
 
       <section id="status" class="card-grid"></section>
 
+      <section id="macroCyclePanel" class="panel macro-cycle-panel" hidden>
+        <div class="panel-title-row">
+          <div>
+            <p class="eyebrow">Bitcoin macro cycle</p>
+            <h2>Four-Domino Sequence</h2>
+            <p id="macroCycleSummary">Business cycle → copper/gold → volatility → cycle top.</p>
+          </div>
+          <div id="macroCycleCount" class="pill"></div>
+        </div>
+        <div id="dominoSequence" class="domino-sequence"></div>
+        <div id="macroIndicators" class="macro-indicators"></div>
+        <div id="macroRisk" class="macro-risk"></div>
+        <details class="macro-methodology">
+          <summary>Methodology, sources, and limitations</summary>
+          <div id="macroSources"></div>
+        </details>
+      </section>
+
       <section class="panel">
         <div class="panel-title-row">
           <div>
             <h2 id="chartTitle">Cycle Charts</h2>
-            <p id="chartSubtitle">Switch between the log channel, rainbow chart, and separate Elliott Wave scenario lab.</p>
+            <p id="chartSubtitle">Switch between the log channel, moving averages, rainbow chart, and separate Elliott Wave scenario lab.</p>
           </div>
           <div id="asOf" class="pill"></div>
         </div>
         <div class="chart-tabs" role="tablist" aria-label="Asset chart views">
           <button class="chart-tab active" type="button" role="tab" aria-selected="true" data-chart-tab="log">Log Channel</button>
+          <button class="chart-tab" type="button" role="tab" aria-selected="false" data-chart-tab="moving-average">Moving Averages</button>
           <button class="chart-tab" type="button" role="tab" aria-selected="false" data-chart-tab="rainbow">Rainbow Chart</button>
           <button class="chart-tab" type="button" role="tab" aria-selected="false" data-chart-tab="elliott">Elliott Wave</button>
         </div>
@@ -56,6 +75,17 @@
             <span><b class="dot deep"></b>-2σ deep value</span>
             <span><b class="dot sell"></b>+2σ take chips</span>
           </div>
+        </div>
+        <div class="chart-pane" id="movingAveragePane" role="tabpanel" hidden>
+          <div id="movingAverageChart" class="chart"></div>
+          <div class="legend moving-average-legend">
+            <span><b class="dot price"></b>Price</span>
+            <span><b class="dot ma-50"></b>50D</span>
+            <span><b class="dot ma-100"></b>100D</span>
+            <span><b class="dot ma-200"></b>200D</span>
+            <span><b class="dot ma-200w"></b>200W</span>
+          </div>
+          <p id="movingAverageNote" class="chart-note" hidden></p>
         </div>
         <div class="chart-pane" id="rainbowPane" role="tabpanel" hidden>
           <div id="rainbowChart" class="rainbow-chart"></div>
@@ -93,6 +123,6 @@
       </section>
     </main>
 
-    <script type="module" src="/src/app.js?v=multi-asset-20260702-rainbowfix"></script>
+    <script type="module" src="/src/app.js?v=multi-asset-20260726-moving-averages"></script>
   </body>
 </html>
