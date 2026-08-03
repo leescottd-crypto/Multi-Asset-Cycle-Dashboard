@@ -106,7 +106,7 @@ Set `GLASSNODE_API_KEY` in the environment used by the refresh service to popula
 - exchange balance as a percentage of circulating BTC supply
 - 30-day exchange net-position change
 
-Without the key, the rest of the macro dashboard remains live and the BTC Market Supply tab displays an explicit provider-needed state. Historical ask-side order-book depth requires a separate provider such as Kaiko or Coin Metrics and is intentionally kept distinct from exchange custody balances.
+Without the key, the BTC Market Supply tab still shows the latest reviewed CoinGlass estimate of BTC held across tracked exchanges from `data/manual/btc-exchange-reserve.json`. This is a provider-specific exchange-reserve estimate and is not the amount currently posted in sell orders. Historical ask-side order-book depth requires a separate provider such as Kaiko or Coin Metrics and is intentionally kept distinct from exchange custody balances.
 
 ### Foreign holders of U.S. Treasury debt
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T16:00:23.057724+00:00",
+  "generated_at": "2026-08-03T17:54:25.263118+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -23,8 +23,8 @@
     {
       "key": "supply",
       "label": "BTC Market Supply",
-      "state": "provider needed",
-      "detail": "Exchange inventory, flows and stablecoins"
+      "state": "available",
+      "detail": "Exchange reserve, live asks and stablecoins"
     }
   ],
   "metrics": {

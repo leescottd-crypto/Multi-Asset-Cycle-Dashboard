@@ -58,10 +58,20 @@ def main() -> int:
         if holder.get("value", 0) < 0:
             fail(f"{holder.get('country')} has negative holdings")
 
-    if supply.get("status") not in {"live", "provider_required"}:
+    if supply.get("status") not in {"live", "reviewed_snapshot", "provider_required"}:
         fail("unexpected BTC market-supply status")
     if not supply.get("warning"):
         fail("BTC market-supply caveat is absent")
+    exchange_reserve = next(
+        (item for item in supply.get("exchange_metrics", []) if item.get("key") == "exchange_reserve"),
+        None,
+    )
+    if exchange_reserve:
+        reserve = float(exchange_reserve.get("value", 0))
+        if not 1_000_000 <= reserve <= 5_000_000:
+            fail(f"exchange-reserve units are implausible: {reserve} BTC")
+        if not exchange_reserve.get("source_url") or not exchange_reserve.get("date"):
+            fail("exchange reserve is missing source or date")
 
     print(json.dumps({
         "valid": True,

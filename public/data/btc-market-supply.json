@@ -1,8 +1,130 @@
 {
-  "generated_at": "2026-08-03T16:00:23.053879+00:00",
-  "status": "provider_required",
-  "status_message": "Add GLASSNODE_API_KEY to populate labelled exchange inventory and net-flow history.",
-  "exchange_metrics": [],
+  "generated_at": "2026-08-03T17:54:25.259331+00:00",
+  "status": "reviewed_snapshot",
+  "status_message": "A reviewed CoinGlass exchange-reserve estimate is available; paid-provider flow history remains optional.",
+  "exchange_metrics": [
+    {
+      "key": "exchange_reserve",
+      "label": "BTC on Tracked Exchanges",
+      "value": 2488973.31,
+      "date": "2026-08-03",
+      "unit": "BTC",
+      "change_3m": 33808.72,
+      "change_12m": -230262.25,
+      "change_3m_pct": 1.38,
+      "change_12m_pct": -8.47,
+      "percentile_since_2015": 32.0,
+      "cadence": "reviewed public snapshot",
+      "source": "CoinGlass",
+      "source_url": "https://www.coinglass.com/pro/i/Balance",
+      "supportive_when": "falling exchange inventory is generally supportive",
+      "caveat": "CoinGlass sums balances attributed to tracked exchange wallets. Coverage and address labels can change, and exchange custody inventory is not the same as BTC currently offered in sell orders.",
+      "series": [
+        {
+          "date": "2024-08-31",
+          "value": 3184313.85
+        },
+        {
+          "date": "2024-09-30",
+          "value": 3146195.18
+        },
+        {
+          "date": "2024-10-31",
+          "value": 3134363.48
+        },
+        {
+          "date": "2024-11-30",
+          "value": 3023018.57
+        },
+        {
+          "date": "2024-12-31",
+          "value": 2964877.21
+        },
+        {
+          "date": "2025-01-31",
+          "value": 2889399.26
+        },
+        {
+          "date": "2025-02-27",
+          "value": 2940027.47
+        },
+        {
+          "date": "2025-03-31",
+          "value": 2914520.73
+        },
+        {
+          "date": "2025-04-30",
+          "value": 2927567.46
+        },
+        {
+          "date": "2025-05-30",
+          "value": 2880316.66
+        },
+        {
+          "date": "2025-06-29",
+          "value": 2772802.78
+        },
+        {
+          "date": "2025-07-31",
+          "value": 2719235.56
+        },
+        {
+          "date": "2025-08-31",
+          "value": 2716366.4
+        },
+        {
+          "date": "2025-09-30",
+          "value": 2637686.7
+        },
+        {
+          "date": "2025-10-31",
+          "value": 2555543.89
+        },
+        {
+          "date": "2025-11-30",
+          "value": 2527086.96
+        },
+        {
+          "date": "2025-12-31",
+          "value": 2493479.78
+        },
+        {
+          "date": "2026-01-31",
+          "value": 2474882.81
+        },
+        {
+          "date": "2026-02-28",
+          "value": 2479192.76
+        },
+        {
+          "date": "2026-03-31",
+          "value": 2452458.92
+        },
+        {
+          "date": "2026-04-30",
+          "value": 2455164.59
+        },
+        {
+          "date": "2026-05-31",
+          "value": 2482068.69
+        },
+        {
+          "date": "2026-06-30",
+          "value": 2477339.1
+        },
+        {
+          "date": "2026-07-31",
+          "value": 2478121.01
+        },
+        {
+          "date": "2026-08-03",
+          "value": 2488973.31
+        }
+      ],
+      "exchange_count": 20,
+      "reviewed_at": "2026-08-03T18:00:00Z"
+    }
+  ],
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
@@ -450,5 +572,5 @@
     "status": "provider_required",
     "message": "Historical ask-side depth within 1% and 2% requires a market-data provider such as Kaiko or Coin Metrics."
   },
-  "warning": "Exchange custody inventory is not equivalent to coins offered for sale."
+  "warning": "Exchange reserve is the buyable inventory proxy you requested; only the smaller ask-side order book is immediately executable at current prices."
 }
