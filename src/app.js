@@ -6,6 +6,10 @@ let dashboardIndex;
 let activeAssetId;
 let activeData;
 let macroData;
+let macroDashboardData;
+let macroSupplyData;
+let activeMacroRange = '10Y';
+let activeHolderCountry;
 
 function zoneClass(zone) {
   return String(zone).toLowerCase().replace(/\s+/g, '-');
@@ -58,12 +62,7 @@ function sparkline(points, color = '#38bdf8') {
 }
 
 function renderMacroCycle(data) {
-  const panel = document.querySelector('#macroCyclePanel');
-  if (!data || activeAssetId !== 'btc') {
-    panel.hidden = true;
-    return;
-  }
-  panel.hidden = false;
+  if (!data) return;
   const framework = data.framework;
   const indicators = data.indicators;
   document.querySelector('#macroCycleSummary').textContent = framework.summary;
@@ -87,9 +86,160 @@ function renderMacroCycle(data) {
   `;
   const oil = indicators.oil;
   document.querySelector('#macroRisk').innerHTML = `<div><span>Setup invalidation watch</span><strong>WTI ${fmtMoney(oil.value)} · ${escapeHtml(oil.status)}</strong><small>${fmtNum(oil.change_20d_pct)}% over 20 sessions. Persistent oil strength can revive inflation and tighten policy.</small></div>${sparkline(oil.series, oil.status === 'contained' ? '#22c55e' : '#f87171')}`;
-  const pmiLimitation = data.sources?.pmi?.limitation ?? 'PMI is an explicit manual snapshot.';
-  const errors = (data.refresh_errors ?? []).length ? `<p><strong>Refresh warnings:</strong> ${escapeHtml(data.refresh_errors.join(' | '))}</p>` : '';
-  document.querySelector('#macroSources').innerHTML = `<p>${escapeHtml(framework.warning)}</p><p><strong>PMI:</strong> ${escapeHtml(pmiLimitation)}</p><p><strong>Copper, gold, oil:</strong> Yahoo Finance futures proxies. <strong>Implied volatility:</strong> Deribit DVOL public API. <strong>Realized volatility:</strong> local BTC daily history.</p>${errors}<p><a href="${escapeHtml(framework.source_video)}" target="_blank" rel="noreferrer">Source video</a></p>`;
+}
+
+function macroRangeStart(rows) {
+  if (!rows?.length || activeMacroRange === 'Max') return null;
+  const years = activeMacroRange === '1Y' ? 1 : activeMacroRange === '5Y' ? 5 : 10;
+  const latest = new Date(`${rows[rows.length - 1].date}T00:00:00Z`);
+  latest.setUTCFullYear(latest.getUTCFullYear() - years);
+  return latest.toISOString().slice(0, 10);
+}
+
+function macroChart(rows, color = '#38bdf8', ariaLabel = 'Macro history') {
+  const start = macroRangeStart(rows);
+  const clean = (rows ?? [])
+    .filter((row) => !start || row.date >= start)
+    .map((row) => ({ date: row.date, value: Number(row.value) }))
+    .filter((row) => Number.isFinite(row.value));
+  if (clean.length < 2) return '<div class="macro-chart-empty">Historical series unavailable</div>';
+  const width = 760;
+  const height = 230;
+  const pad = { top: 20, right: 18, bottom: 34, left: 58 };
+  const values = clean.map((row) => row.value);
+  let min = Math.min(...values);
+  let max = Math.max(...values);
+  const range = Math.max(max - min, Math.abs(max) * 0.01, 1e-9);
+  min -= range * 0.08;
+  max += range * 0.08;
+  const x = (index) => pad.left + (index / Math.max(clean.length - 1, 1)) * (width - pad.left - pad.right);
+  const y = (value) => pad.top + (1 - (value - min) / (max - min)) * (height - pad.top - pad.bottom);
+  const path = clean.map((row, index) => `${index ? 'L' : 'M'}${x(index).toFixed(1)},${y(row.value).toFixed(1)}`).join(' ');
+  const zero = min < 0 && max > 0 ? `<line class="macro-zero" x1="${pad.left}" x2="${width - pad.right}" y1="${y(0).toFixed(1)}" y2="${y(0).toFixed(1)}" />` : '';
+  return `<svg class="macro-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(ariaLabel)}">
+    <line class="macro-grid" x1="${pad.left}" x2="${width - pad.right}" y1="${y(max - (max - min) * .15).toFixed(1)}" y2="${y(max - (max - min) * .15).toFixed(1)}" />
+    <line class="macro-grid" x1="${pad.left}" x2="${width - pad.right}" y1="${y(min + (max - min) * .15).toFixed(1)}" y2="${y(min + (max - min) * .15).toFixed(1)}" />
+    ${zero}<path d="${path}" fill="none" stroke="${color}" stroke-width="3" vector-effect="non-scaling-stroke" />
+    <circle cx="${x(clean.length - 1).toFixed(1)}" cy="${y(clean[clean.length - 1].value).toFixed(1)}" r="4" fill="${color}" />
+    <text class="macro-axis" x="${pad.left}" y="${height - 10}">${escapeHtml(clean[0].date.slice(0, 7))}</text>
+    <text class="macro-axis end" x="${width - pad.right}" y="${height - 10}">${escapeHtml(clean[clean.length - 1].date.slice(0, 7))}</text>
+    <text class="macro-axis" x="4" y="${(pad.top + 12).toFixed(1)}">${escapeHtml(fmtCompact(max))}</text>
+    <text class="macro-axis" x="4" y="${(height - pad.bottom).toFixed(1)}">${escapeHtml(fmtCompact(min))}</text>
+  </svg>`;
+}
+
+function fmtCompact(value) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return 'n/a';
+  if (Math.abs(n) >= 1000) return `${num.format(n / 1000)}k`;
+  if (Math.abs(n) < 1 && n !== 0) return n.toFixed(2);
+  return num.format(n);
+}
+
+function fmtMacroValue(metric) {
+  if (!metric || metric.value === null || metric.value === undefined) return 'Unavailable';
+  const value = Number(metric.value);
+  if (metric.unit === 'USD/barrel') return `$${num.format(value)}`;
+  if (metric.unit === '%') return `${num.format(value)}%`;
+  if (metric.unit === 'USD trillions') return `$${num.format(value)}T`;
+  if (metric.unit === 'USD billions') return `$${num.format(value)}B`;
+  if (metric.unit === 'BTC') return `${new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(value)} BTC`;
+  return `${num.format(value)} ${metric.unit ?? ''}`.trim();
+}
+
+function macroMetricCard(metric, color = '#38bdf8') {
+  if (!metric) return '';
+  const change3m = metric.change_3m_pct === null ? 'n/a' : `${metric.change_3m_pct > 0 ? '+' : ''}${fmtNum(metric.change_3m_pct)}% over 3M`;
+  return `<article class="macro-chart-card">
+    <div class="macro-chart-title"><div><span>${escapeHtml(metric.label)}</span><strong>${escapeHtml(fmtMacroValue(metric))}</strong></div><small>${escapeHtml(metric.date ?? 'unavailable')}</small></div>
+    ${macroChart(metric.series, color, `${metric.label} history`)}
+    <div class="macro-chart-meta"><span>${escapeHtml(change3m)}</span><span>Percentile ${escapeHtml(fmtNum(metric.percentile_since_2015))}</span></div>
+    <p>${escapeHtml(metric.supportive_when)}</p>
+    <small>${escapeHtml(metric.source)} · ${escapeHtml(metric.cadence)}${metric.caveat ? ` · ${escapeHtml(metric.caveat)}` : ''}</small>
+  </article>`;
+}
+
+function pillarClass(state) {
+  const normalized = String(state).toLowerCase();
+  if (normalized.includes('supportive') || normalized.includes('rising') || normalized.includes('available')) return 'supportive';
+  if (normalized.includes('restrictive') || normalized.includes('falling') || normalized.includes('needed')) return 'restrictive';
+  return 'mixed';
+}
+
+function renderHolderCountry(country) {
+  activeHolderCountry = country;
+  const holder = macroDashboardData?.holders?.holders?.find((item) => item.country === country);
+  const target = document.querySelector('#holderCountryChart');
+  if (!holder || !target) return;
+  target.innerHTML = `<div class="macro-chart-title"><div><span>${escapeHtml(holder.country)}</span><strong>$${fmtNum(holder.value)}B</strong></div><small>${escapeHtml(holder.date)}</small></div>
+    ${macroChart(holder.series, '#f59e0b', `${holder.country} U.S. Treasury holdings`)}
+    <div class="macro-chart-meta"><span>3M ${holder.change_3m > 0 ? '+' : ''}${fmtNum(holder.change_3m)}B · ${escapeHtml(holder.trend_3m)}</span><span>12M ${holder.change_12m > 0 ? '+' : ''}${fmtNum(holder.change_12m)}B · ${escapeHtml(holder.trend_12m)}</span></div>
+    ${holder.custody_center ? '<p class="custody-note">Financial/custody center: location may not identify the ultimate owner.</p>' : ''}`;
+  document.querySelectorAll('[data-holder-country]').forEach((button) => button.classList.toggle('active', button.dataset.holderCountry === country));
+}
+
+function holderTable(holders) {
+  return `<div class="holder-table-wrap"><table class="holder-table"><thead><tr><th>Country / center</th><th>Holdings</th><th>3M</th><th>12M</th><th>Direction</th></tr></thead><tbody>${holders.map((holder) => `
+    <tr><td><button type="button" data-holder-country="${escapeHtml(holder.country)}">${escapeHtml(holder.country)}${holder.custody_center ? '<sup>†</sup>' : ''}</button></td><td>$${fmtNum(holder.value)}B</td><td class="${holder.change_3m > 0 ? 'up' : holder.change_3m < 0 ? 'down' : ''}">${holder.change_3m > 0 ? '+' : ''}${fmtNum(holder.change_3m)}B</td><td class="${holder.change_12m > 0 ? 'up' : holder.change_12m < 0 ? 'down' : ''}">${holder.change_12m > 0 ? '+' : ''}${fmtNum(holder.change_12m)}B</td><td><span class="trend-chip ${escapeHtml(holder.trend_12m.replaceAll(' ', '-'))}">${escapeHtml(holder.trend_12m)}</span></td></tr>`).join('')}</tbody></table></div>`;
+}
+
+function renderMacroWorkspace() {
+  const panel = document.querySelector('#macroCyclePanel');
+  if (activeAssetId !== 'btc' || (!macroDashboardData && !macroData)) {
+    panel.hidden = true;
+    return;
+  }
+  panel.hidden = false;
+  renderMacroCycle(macroData);
+  if (!macroDashboardData) {
+    document.querySelector('#macroAsOf').textContent = 'Long-history data unavailable';
+    return;
+  }
+  const data = macroDashboardData;
+  const metrics = data.metrics;
+  document.querySelector('#macroAsOf').textContent = `Updated ${new Date(data.generated_at).toLocaleString()}`;
+  document.querySelector('#macroPillars').innerHTML = data.pillars.map((pillar) => `<article class="macro-pillar ${pillarClass(pillar.state)}"><span>${escapeHtml(pillar.label)}</span><strong>${escapeHtml(pillar.state)}</strong><small>${escapeHtml(pillar.detail)}</small></article>`).join('');
+  document.querySelector('#macroOverviewPane').innerHTML = `<div class="macro-section-heading"><div><h3>Macro overview</h3><p>Highest-signal long-cycle conditions first. Direction is context, not a mechanical Bitcoin forecast.</p></div></div><div class="macro-chart-grid overview">${macroMetricCard(metrics.net_liquidity, '#22d3ee')}${macroMetricCard(metrics.broad_dollar, '#f59e0b')}${macroMetricCard(metrics.real_yield_10y, '#f472b6')}</div>`;
+  document.querySelector('#macroLiquidityPane').innerHTML = `<div class="macro-section-heading"><div><h3>Liquidity, rates &amp; conditions</h3><p>Quantity of liquidity plus the price and availability of risk capital.</p></div></div><div class="macro-chart-grid">${macroMetricCard(metrics.m2, '#22c55e')}${macroMetricCard(metrics.nfci, '#a78bfa')}${macroMetricCard(metrics.wti, '#f87171')}</div><details class="macro-detail"><summary>Credit-spread diagnostic</summary>${macroMetricCard(metrics.credit_spread, '#fb7185')}</details>`;
+  const holders = data.holders.holders;
+  document.querySelector('#macroFiscalPane').innerHTML = `<div class="macro-section-heading"><div><h3>U.S. debt, absorption &amp; foreign holders</h3><p>Who is absorbing Treasury supply, and whether the largest reported foreign holders are buying or selling.</p></div><span class="pill">TIC as of ${escapeHtml(data.holders.as_of)}</span></div><div class="macro-chart-grid fiscal">${macroMetricCard(metrics.debt_held_public, '#38bdf8')}${macroMetricCard(metrics.fed_treasuries, '#a78bfa')}</div><div class="holder-layout"><article id="holderCountryChart" class="macro-chart-card"></article>${holderTable(holders)}</div><p class="custody-note">† ${escapeHtml(data.holders.methodology_warning)}</p>`;
+  document.querySelectorAll('[data-holder-country]').forEach((button) => button.addEventListener('click', () => renderHolderCountry(button.dataset.holderCountry)));
+  renderHolderCountry(activeHolderCountry && holders.some((holder) => holder.country === activeHolderCountry) ? activeHolderCountry : holders[0]?.country);
+
+  const stablecoin = macroSupplyData?.stablecoin;
+  const exchangeCards = (macroSupplyData?.exchange_metrics ?? []).map((metric, index) => macroMetricCard(metric, ['#22d3ee', '#f59e0b', '#f472b6'][index % 3])).join('');
+  const providerMessage = macroSupplyData?.status === 'live' ? '' : `<article class="provider-card"><span>Labelled exchange supply</span><strong>Provider connection needed</strong><p>${escapeHtml(macroSupplyData?.status_message ?? 'Configure an approved labelled-address provider.')}</p><small>The dashboard pipeline is ready for Glassnode and keeps this absence isolated from the macro charts.</small></article>`;
+  const orderBook = `<article class="provider-card"><span>Immediately executable BTC supply</span><strong>Order-book depth provider needed</strong><p>${escapeHtml(macroSupplyData?.order_book?.message ?? 'Historical ask-side depth requires a commercial market-data source.')}</p></article>`;
+  document.querySelector('#macroSupplyPane').innerHTML = `<div class="macro-section-heading"><div><h3>BTC market supply</h3><p>Separates exchange custody inventory, flow pressure, stablecoin liquidity, and actual sell-side order-book depth.</p></div></div><div class="supply-warning">${escapeHtml(macroSupplyData?.warning ?? 'Exchange custody inventory is not equivalent to coins offered for sale.')}</div><div class="macro-chart-grid">${exchangeCards}${stablecoin ? macroMetricCard(stablecoin, '#22c55e') : ''}${providerMessage}${orderBook}</div>`;
+
+  const refreshWarnings = (data.refresh_errors ?? []).filter((warning) => !warning.startsWith('Glassnode exchange supply'));
+  document.querySelector('#macroSources').innerHTML = `<p>${escapeHtml(data.methodology.warning)}</p><p><strong>Net liquidity:</strong> ${escapeHtml(data.methodology.net_liquidity_formula)}. <strong>Treasury countries:</strong> ${escapeHtml(data.methodology.country_warning)}</p><p><strong>Official sources:</strong> Federal Reserve/FRED, U.S. Treasury FiscalData, and Treasury International Capital. <strong>Crypto liquidity:</strong> DefiLlama stablecoin history; Glassnode exchange metrics when an API key is configured.</p>${refreshWarnings.length ? `<p><strong>Refresh warnings:</strong> ${escapeHtml(refreshWarnings.join(' | '))}</p>` : ''}<p><strong>Cycle Signals:</strong> ISM is a manual snapshot; copper, gold and oil are market proxies; DVOL is from Deribit.</p>`;
+}
+
+function setupMacroControls() {
+  document.querySelectorAll('[data-macro-tab]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.macroTab;
+      document.querySelectorAll('[data-macro-tab]').forEach((item) => {
+        const active = item === button;
+        item.classList.toggle('active', active);
+        item.setAttribute('aria-selected', String(active));
+      });
+      const panes = { overview: 'macroOverviewPane', liquidity: 'macroLiquidityPane', fiscal: 'macroFiscalPane', supply: 'macroSupplyPane', cycle: 'macroCyclePane' };
+      Object.entries(panes).forEach(([key, id]) => {
+        const pane = document.querySelector(`#${id}`);
+        pane.hidden = key !== target;
+        pane.classList.toggle('active', key === target);
+      });
+    });
+  });
+  document.querySelectorAll('[data-macro-range]').forEach((button) => {
+    button.addEventListener('click', () => {
+      activeMacroRange = button.dataset.macroRange;
+      document.querySelectorAll('[data-macro-range]').forEach((item) => item.classList.toggle('active', item === button));
+      renderMacroWorkspace();
+    });
+  });
 }
 
 function renderAssetButtons(index) {
@@ -98,7 +248,7 @@ function renderAssetButtons(index) {
     <button class="asset-button" type="button" data-asset-id="${escapeHtml(asset.id)}">
       <strong>${escapeHtml(asset.symbol)}</strong>
       <span>${escapeHtml(asset.name)}</span>
-      <small>${fmtMoney(asset.latest.close)} · ${escapeHtml(asset.latest.zone)}</small>
+      <small>${asset.category ? `${escapeHtml(asset.category)} · ` : ''}${fmtMoney(asset.latest.close)} · ${escapeHtml(asset.latest.zone)}</small>
     </button>
   `).join('');
   document.querySelectorAll('[data-asset-id]').forEach((button) => {
@@ -108,7 +258,7 @@ function renderAssetButtons(index) {
     <article>
       <span>${escapeHtml(asset.name)}</span>
       <strong>${fmtMoney(asset.latest.close)}</strong>
-      <small>${escapeHtml(asset.regime.label)} · ${escapeHtml(asset.latest.date)}</small>
+      <small>${asset.category ? `${escapeHtml(asset.category)} · ` : ''}${escapeHtml(asset.regime.label)} · ${escapeHtml(asset.latest.date)}</small>
     </article>
   `).join('');
 }
@@ -344,7 +494,7 @@ function renderReadouts(data) {
 
 function renderAll(data) {
   renderStatus(data);
-  renderMacroCycle(macroData);
+  renderMacroWorkspace();
   renderLogChart(data);
   if (!document.querySelector('#movingAveragePane').hidden) renderMovingAverageChart(data);
   renderRainbowChart(data);
@@ -353,15 +503,20 @@ function renderAll(data) {
 }
 
 async function main() {
-  const [res, macroRes] = await Promise.all([
+  const [res, macroRes, macroDashboardRes, macroSupplyRes] = await Promise.all([
     fetch('/public/data/assets.json', { cache: 'no-store' }),
     fetch('/public/data/macro-cycle.json', { cache: 'no-store' }),
+    fetch('/public/data/btc-macro.json', { cache: 'no-store' }),
+    fetch('/public/data/btc-market-supply.json', { cache: 'no-store' }),
   ]);
   if (!res.ok) throw new Error(`Asset index fetch failed: ${res.status}`);
   dashboardIndex = await res.json();
   macroData = macroRes.ok ? await macroRes.json() : null;
+  macroDashboardData = macroDashboardRes.ok ? await macroDashboardRes.json() : null;
+  macroSupplyData = macroSupplyRes.ok ? await macroSupplyRes.json() : null;
   renderAssetButtons(dashboardIndex);
   setupTabs();
+  setupMacroControls();
   await selectAsset(dashboardIndex.assets[0].id);
   window.addEventListener('resize', () => {
     if (!document.querySelector('#logPane').hidden) logChart?.applyOptions({ width: document.querySelector('#logChart').clientWidth });

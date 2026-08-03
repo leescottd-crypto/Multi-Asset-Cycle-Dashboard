@@ -1,6 +1,6 @@
 {
   "source": "Yahoo Finance chart endpoint",
-  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=0&period2=1785168010&interval=1d&events=history&includeAdjustedClose=true",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=0&period2=1785859210&interval=1d&events=history&includeAdjustedClose=true",
   "provenance": "live-public-no-key-daily-history",
   "asset_id": "sp500",
   "name": "S&P 500 Index",
@@ -9,11 +9,11 @@
   "currency": "USD",
   "exchange": "SNP",
   "instrument_type": "INDEX",
-  "regular_market_price": 7411.98,
-  "regular_market_time": 1784928395,
-  "rows": 14261,
+  "regular_market_price": 7584.62,
+  "regular_market_time": 1785772810,
+  "rows": 14267,
   "first_date": "1970-01-02",
-  "last_date": "2026-07-24",
-  "fetched_at": "2026-07-26T16:00:11.265580+00:00",
+  "last_date": "2026-08-03",
+  "fetched_at": "2026-08-03T16:00:11.354176+00:00",
   "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
 }

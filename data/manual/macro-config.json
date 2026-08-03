@@ -1,0 +1,27 @@
+{
+  "display_start": "2014-01-01",
+  "default_range": "10Y",
+  "net_liquidity": {
+    "formula": "WALCL - WTREGEN - RRPONTSYD",
+    "unit": "USD billions",
+    "label": "Net liquidity proxy"
+  },
+  "foreign_holders": {
+    "buying_threshold_3m_usd_billions": 5,
+    "buying_threshold_12m_usd_billions": 10,
+    "show_top": 15,
+    "custodial_warning_required": true
+  },
+  "freshness_days": {
+    "daily": 5,
+    "weekly": 12,
+    "monthly": 50,
+    "quarterly": 125
+  },
+  "providers": {
+    "exchange_supply": "Glassnode",
+    "exchange_supply_environment_key": "GLASSNODE_API_KEY",
+    "order_book_history": "Kaiko or Coin Metrics",
+    "stablecoin_supply": "DefiLlama"
+  }
+}
