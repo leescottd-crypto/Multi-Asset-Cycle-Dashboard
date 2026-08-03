@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Multi-Asset Cycle Dashboard</title>
-    <link rel="stylesheet" href="/src/styles.css?v=multi-asset-20260726-moving-averages" />
+    <link rel="stylesheet" href="/src/styles.css?v=multi-asset-20260803-reserve-axes" />
     <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
   </head>
   <body>
@@ -12,7 +12,7 @@
       <div>
         <p class="eyebrow">Cross-asset secular trend dashboard</p>
         <h1>Cycle Command Center</h1>
-        <p class="lede">Bitcoin's log channel, rainbow bands, moving-average readouts, regime scoring, and Elliott scenario lab — rebuilt as a repeatable kit for BTC, gold, silver, MAGS, S&P 500, and NASDAQ.</p>
+        <p class="lede">Bitcoin's log channel, rainbow bands, moving-average readouts, regime scoring, and Elliott scenario lab — rebuilt as a repeatable kit for BTC, gold, silver, MAGS, MSTR, S&P 500, and NASDAQ.</p>
       </div>
       <div class="hero-warning">
         <strong>Decision support only.</strong><br />Not financial advice. No autopilot. No clown lever.
@@ -37,15 +37,43 @@
       <section id="macroCyclePanel" class="panel macro-cycle-panel" hidden>
         <div class="panel-title-row">
           <div>
-            <p class="eyebrow">Bitcoin macro cycle</p>
-            <h2>Four-Domino Sequence</h2>
-            <p id="macroCycleSummary">Business cycle → copper/gold → volatility → cycle top.</p>
+            <p class="eyebrow">Bitcoin macro environment</p>
+            <h2>Macro, Fiscal &amp; Market Supply</h2>
+            <p>Long-cycle liquidity, rates, energy, U.S. debt absorption, foreign Treasury holders, and BTC market supply.</p>
           </div>
-          <div id="macroCycleCount" class="pill"></div>
+          <div id="macroAsOf" class="pill">Loading macro data…</div>
         </div>
-        <div id="dominoSequence" class="domino-sequence"></div>
-        <div id="macroIndicators" class="macro-indicators"></div>
-        <div id="macroRisk" class="macro-risk"></div>
+
+        <div id="macroPillars" class="macro-pillars"></div>
+        <div class="macro-toolbar">
+          <div class="macro-tabs" role="tablist" aria-label="Bitcoin macro views">
+            <button class="macro-tab active" type="button" role="tab" aria-selected="true" data-macro-tab="overview">Overview</button>
+            <button class="macro-tab" type="button" role="tab" aria-selected="false" data-macro-tab="liquidity">Liquidity &amp; Rates</button>
+            <button class="macro-tab" type="button" role="tab" aria-selected="false" data-macro-tab="fiscal">Fiscal &amp; Holders</button>
+            <button class="macro-tab" type="button" role="tab" aria-selected="false" data-macro-tab="supply">BTC Market Supply</button>
+            <button class="macro-tab" type="button" role="tab" aria-selected="false" data-macro-tab="cycle">Cycle Signals</button>
+          </div>
+          <div class="macro-ranges" role="group" aria-label="Macro chart range">
+            <button type="button" data-macro-range="1Y">1Y</button>
+            <button type="button" data-macro-range="5Y">5Y</button>
+            <button class="active" type="button" data-macro-range="10Y">10Y</button>
+            <button type="button" data-macro-range="Max">Max</button>
+          </div>
+        </div>
+
+        <div id="macroOverviewPane" class="macro-pane active" role="tabpanel"></div>
+        <div id="macroLiquidityPane" class="macro-pane" role="tabpanel" hidden></div>
+        <div id="macroFiscalPane" class="macro-pane" role="tabpanel" hidden></div>
+        <div id="macroSupplyPane" class="macro-pane" role="tabpanel" hidden></div>
+        <div id="macroCyclePane" class="macro-pane" role="tabpanel" hidden>
+          <div class="macro-section-heading">
+            <div><h3>Four-Domino Sequence</h3><p id="macroCycleSummary">Business cycle → copper/gold → volatility → cycle top.</p></div>
+            <div id="macroCycleCount" class="pill"></div>
+          </div>
+          <div id="dominoSequence" class="domino-sequence"></div>
+          <div id="macroIndicators" class="macro-indicators"></div>
+          <div id="macroRisk" class="macro-risk"></div>
+        </div>
         <details class="macro-methodology">
           <summary>Methodology, sources, and limitations</summary>
           <div id="macroSources"></div>
@@ -123,6 +151,6 @@
       </section>
     </main>
 
-    <script type="module" src="/src/app.js?v=multi-asset-20260726-moving-averages"></script>
+    <script type="module" src="/src/app.js?v=multi-asset-20260803-reserve-axes"></script>
   </body>
 </html>

@@ -26,6 +26,7 @@ ASSETS: list[dict[str, str]] = [
     {"id": "gold", "name": "Gold", "symbol": "GLD", "type": "etf", "proxy_note": "ETF proxy for gold spot"},
     {"id": "silver", "name": "Silver", "symbol": "SLV", "type": "etf", "proxy_note": "ETF proxy for silver spot"},
     {"id": "mags", "name": "Roundhill Magnificent Seven ETF", "symbol": "MAGS", "type": "etf"},
+    {"id": "mstr", "name": "Strategy (MicroStrategy)", "symbol": "MSTR", "type": "equity", "category": "Bitcoin Treasury Company"},
     {"id": "sp500", "name": "S&P 500 Index", "symbol": "^GSPC", "type": "index"},
     {"id": "nasdaq", "name": "NASDAQ Composite", "symbol": "^IXIC", "type": "index"},
 ]
@@ -121,6 +122,7 @@ def fetch_yahoo_daily(asset: dict[str, str]) -> tuple[list[dict[str, object]], d
         "currency": meta.get("currency", "USD"),
         "exchange": meta.get("exchangeName"),
         "instrument_type": meta.get("instrumentType"),
+        "category": asset.get("category"),
         "regular_market_price": meta.get("regularMarketPrice"),
         "regular_market_time": meta.get("regularMarketTime"),
         "rows": len(rows),
@@ -131,6 +133,8 @@ def fetch_yahoo_daily(asset: dict[str, str]) -> tuple[list[dict[str, object]], d
     }
     if asset.get("proxy_note"):
         provenance["proxy_note"] = asset["proxy_note"]
+    if not provenance.get("category"):
+        provenance.pop("category", None)
     return rows, provenance
 
 

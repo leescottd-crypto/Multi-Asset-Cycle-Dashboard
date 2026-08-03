@@ -20,6 +20,7 @@ ASSETS = [
     {"id": "gold", "name": "Gold", "symbol": "GLD", "price_label": "GLD Price", "fit_start": "2005-01-01"},
     {"id": "silver", "name": "Silver", "symbol": "SLV", "price_label": "SLV Price", "fit_start": "2007-01-01"},
     {"id": "mags", "name": "Roundhill Magnificent Seven ETF", "symbol": "MAGS", "price_label": "MAGS Price", "fit_start": "2023-04-11"},
+    {"id": "mstr", "name": "Strategy (MicroStrategy)", "symbol": "MSTR", "price_label": "MSTR Price", "fit_start": "1998-06-11", "category": "Bitcoin Treasury Company"},
     {"id": "sp500", "name": "S&P 500 Index", "symbol": "^GSPC", "price_label": "S&P 500", "fit_start": "1990-01-01"},
     {"id": "nasdaq", "name": "NASDAQ Composite", "symbol": "^IXIC", "price_label": "NASDAQ", "fit_start": "1990-01-01"},
 ]
@@ -459,7 +460,7 @@ def build_asset(asset: dict[str, str]) -> dict[str, object]:
     meta = json.loads(meta_path.read_text()) if meta_path.exists() else {}
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "asset": {"id": asset["id"], "name": asset["name"], "symbol": asset["symbol"], "price_label": asset["price_label"]},
+        "asset": {"id": asset["id"], "name": asset["name"], "symbol": asset["symbol"], "price_label": asset["price_label"], "category": asset.get("category")},
         "model": {"formula": "ln(price) = intercept + slope * ln(days_since_first_price)", "intercept": intercept, "slope": slope, "residual_std_dev": std, "fit_start_date": fit_start, "band_calibration": "Residual standard deviation from asset-specific mature/history window."},
         "source": meta,
         "latest": {**latest, "zone_note": zone_note(str(latest["zone"]), asset["name"]), "distance_to_minus_1_5_pct": round((as_float(latest["close"]) / as_float(latest["band_minus_1_5"]) - 1) * 100, 2), "distance_to_plus_2_pct": round((as_float(latest["band_plus_2"]) / as_float(latest["close"]) - 1) * 100, 2), "latest_available_mvrv": latest_mvrv_point["mvrv"] if latest_mvrv_point else None, "latest_available_mvrv_date": latest_mvrv_point["date"] if latest_mvrv_point else None},
@@ -478,7 +479,7 @@ def main() -> int:
         payload = build_asset(asset)
         out = PUBLIC_DIR / f"{asset['id']}.json"
         out.write_text(json.dumps(payload, indent=2))
-        index.append({"id": asset["id"], "name": asset["name"], "symbol": asset["symbol"], "url": f"/public/data/{asset['id']}.json", "latest": payload["latest"], "regime": payload["regime"], "source": payload["source"]})
+        index.append({"id": asset["id"], "name": asset["name"], "symbol": asset["symbol"], "category": asset.get("category"), "url": f"/public/data/{asset['id']}.json", "latest": payload["latest"], "regime": payload["regime"], "source": payload["source"]})
     assets_index = {"generated_at": datetime.now(timezone.utc).isoformat(), "assets": index}
     (PUBLIC_DIR / "assets.json").write_text(json.dumps(assets_index, indent=2))
     print(json.dumps({"output_dir": str(PUBLIC_DIR), "assets": [{"id": a["id"], "close": a["latest"]["close"], "date": a["latest"]["date"]} for a in index]}, indent=2))

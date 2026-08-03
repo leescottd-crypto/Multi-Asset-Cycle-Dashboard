@@ -1,6 +1,6 @@
 {
   "source": "Yahoo Finance chart endpoint",
-  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SLV?period1=0&period2=1785168009&interval=1d&events=history&includeAdjustedClose=true",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SLV?period1=0&period2=1785859209&interval=1d&events=history&includeAdjustedClose=true",
   "provenance": "live-public-no-key-daily-history",
   "asset_id": "silver",
   "name": "Silver",
@@ -9,12 +9,12 @@
   "currency": "USD",
   "exchange": "PCX",
   "instrument_type": "ETF",
-  "regular_market_price": 52.59,
-  "regular_market_time": 1784923200,
-  "rows": 5091,
+  "regular_market_price": 51.935,
+  "regular_market_time": 1785772806,
+  "rows": 5097,
   "first_date": "2006-04-28",
-  "last_date": "2026-07-24",
-  "fetched_at": "2026-07-26T16:00:10.371753+00:00",
+  "last_date": "2026-08-03",
+  "fetched_at": "2026-08-03T16:00:09.838801+00:00",
   "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues.",
   "proxy_note": "ETF proxy for silver spot"
 }
