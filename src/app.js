@@ -96,35 +96,60 @@ function macroRangeStart(rows) {
   return latest.toISOString().slice(0, 10);
 }
 
-function macroChart(rows, color = '#38bdf8', ariaLabel = 'Macro history') {
+function niceAxisStep(span, targetTicks = 5) {
+  const rough = Math.max(span, 1e-9) / targetTicks;
+  const magnitude = 10 ** Math.floor(Math.log10(rough));
+  const normalized = rough / magnitude;
+  const multiple = normalized <= 1 ? 1 : normalized <= 2 ? 2 : normalized <= 2.5 ? 2.5 : normalized <= 5 ? 5 : 10;
+  return multiple * magnitude;
+}
+
+function fmtBtcAxis(value) {
+  const absolute = Math.abs(value);
+  if (absolute >= 1e6) return `${(value / 1e6).toFixed(absolute % 1e6 === 0 ? 1 : 2)}M`;
+  if (absolute >= 1e3) return `${num.format(value / 1e3)}k`;
+  return num.format(value);
+}
+
+function macroChart(rows, color = '#38bdf8', ariaLabel = 'Macro history', expanded = false) {
   const start = macroRangeStart(rows);
   const clean = (rows ?? [])
     .filter((row) => !start || row.date >= start)
     .map((row) => ({ date: row.date, value: Number(row.value) }))
     .filter((row) => Number.isFinite(row.value));
   if (clean.length < 2) return '<div class="macro-chart-empty">Historical series unavailable</div>';
-  const width = 760;
-  const height = 230;
-  const pad = { top: 20, right: 18, bottom: 34, left: 58 };
+  const width = expanded ? 1200 : 760;
+  const height = expanded ? 390 : 230;
+  const pad = expanded
+    ? { top: 34, right: 24, bottom: 48, left: 86 }
+    : { top: 20, right: 18, bottom: 34, left: 58 };
   const values = clean.map((row) => row.value);
   let min = Math.min(...values);
   let max = Math.max(...values);
   const range = Math.max(max - min, Math.abs(max) * 0.01, 1e-9);
-  min -= range * 0.08;
-  max += range * 0.08;
+  const yStep = expanded ? niceAxisStep(range, 5) : null;
+  min = expanded ? Math.floor(min / yStep) * yStep : min - range * 0.08;
+  max = expanded ? Math.ceil(max / yStep) * yStep : max + range * 0.08;
   const x = (index) => pad.left + (index / Math.max(clean.length - 1, 1)) * (width - pad.left - pad.right);
   const y = (value) => pad.top + (1 - (value - min) / (max - min)) * (height - pad.top - pad.bottom);
   const path = clean.map((row, index) => `${index ? 'L' : 'M'}${x(index).toFixed(1)},${y(row.value).toFixed(1)}`).join(' ');
   const zero = min < 0 && max > 0 ? `<line class="macro-zero" x1="${pad.left}" x2="${width - pad.right}" y1="${y(0).toFixed(1)}" y2="${y(0).toFixed(1)}" />` : '';
+  const yTicks = expanded
+    ? Array.from({ length: Math.round((max - min) / yStep) + 1 }, (_, index) => min + index * yStep)
+    : [];
+  const yearTicks = expanded
+    ? clean.reduce((ticks, row, index) => {
+      const year = row.date.slice(0, 4);
+      if (!ticks.some((tick) => tick.year === year)) ticks.push({ year, index });
+      return ticks;
+    }, [])
+    : [];
+  const detailedGrid = expanded ? `${yTicks.map((tick) => `<g><line class="macro-grid" x1="${pad.left}" x2="${width - pad.right}" y1="${y(tick).toFixed(1)}" y2="${y(tick).toFixed(1)}"/><text class="macro-axis macro-y-tick end" x="${pad.left - 12}" y="${(y(tick) + 4).toFixed(1)}">${escapeHtml(fmtBtcAxis(tick))}</text></g>`).join('')}${yearTicks.map((tick) => `<g><line class="macro-grid macro-grid-year" x1="${x(tick.index).toFixed(1)}" x2="${x(tick.index).toFixed(1)}" y1="${pad.top}" y2="${height - pad.bottom}"/><text class="macro-axis macro-year-tick" text-anchor="middle" x="${x(tick.index).toFixed(1)}" y="${height - 17}">${tick.year}</text></g>`).join('')}<text class="macro-axis macro-axis-title" x="${pad.left}" y="18">BTC held</text>` : '';
   return `<svg class="macro-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(ariaLabel)}">
-    <line class="macro-grid" x1="${pad.left}" x2="${width - pad.right}" y1="${y(max - (max - min) * .15).toFixed(1)}" y2="${y(max - (max - min) * .15).toFixed(1)}" />
-    <line class="macro-grid" x1="${pad.left}" x2="${width - pad.right}" y1="${y(min + (max - min) * .15).toFixed(1)}" y2="${y(min + (max - min) * .15).toFixed(1)}" />
+    ${expanded ? detailedGrid : `<line class="macro-grid" x1="${pad.left}" x2="${width - pad.right}" y1="${y(max - (max - min) * .15).toFixed(1)}" y2="${y(max - (max - min) * .15).toFixed(1)}" /><line class="macro-grid" x1="${pad.left}" x2="${width - pad.right}" y1="${y(min + (max - min) * .15).toFixed(1)}" y2="${y(min + (max - min) * .15).toFixed(1)}" />`}
     ${zero}<path d="${path}" fill="none" stroke="${color}" stroke-width="3" vector-effect="non-scaling-stroke" />
     <circle cx="${x(clean.length - 1).toFixed(1)}" cy="${y(clean[clean.length - 1].value).toFixed(1)}" r="4" fill="${color}" />
-    <text class="macro-axis" x="${pad.left}" y="${height - 10}">${escapeHtml(clean[0].date.slice(0, 7))}</text>
-    <text class="macro-axis end" x="${width - pad.right}" y="${height - 10}">${escapeHtml(clean[clean.length - 1].date.slice(0, 7))}</text>
-    <text class="macro-axis" x="4" y="${(pad.top + 12).toFixed(1)}">${escapeHtml(fmtCompact(max))}</text>
-    <text class="macro-axis" x="4" y="${(height - pad.bottom).toFixed(1)}">${escapeHtml(fmtCompact(min))}</text>
+    ${expanded ? '' : `<text class="macro-axis" x="${pad.left}" y="${height - 10}">${escapeHtml(clean[0].date.slice(0, 7))}</text><text class="macro-axis end" x="${width - pad.right}" y="${height - 10}">${escapeHtml(clean[clean.length - 1].date.slice(0, 7))}</text><text class="macro-axis" x="4" y="${(pad.top + 12).toFixed(1)}">${escapeHtml(fmtCompact(max))}</text><text class="macro-axis" x="4" y="${(height - pad.bottom).toFixed(1)}">${escapeHtml(fmtCompact(min))}</text>`}
   </svg>`;
 }
 
@@ -147,12 +172,12 @@ function fmtMacroValue(metric) {
   return `${num.format(value)} ${metric.unit ?? ''}`.trim();
 }
 
-function macroMetricCard(metric, color = '#38bdf8') {
+function macroMetricCard(metric, color = '#38bdf8', expanded = false) {
   if (!metric) return '';
   const change3m = metric.change_3m_pct === null ? 'n/a' : `${metric.change_3m_pct > 0 ? '+' : ''}${fmtNum(metric.change_3m_pct)}% over 3M`;
   return `<article class="macro-chart-card">
     <div class="macro-chart-title"><div><span>${escapeHtml(metric.label)}</span><strong>${escapeHtml(fmtMacroValue(metric))}</strong></div><small>${escapeHtml(metric.date ?? 'unavailable')}</small></div>
-    ${macroChart(metric.series, color, `${metric.label} history`)}
+    ${macroChart(metric.series, color, `${metric.label} history`, expanded)}
     <div class="macro-chart-meta"><span>${escapeHtml(change3m)}</span><span>Percentile ${escapeHtml(fmtNum(metric.percentile_since_2015))}</span></div>
     <p>${escapeHtml(metric.supportive_when)}</p>
     <small>${escapeHtml(metric.source)} · ${escapeHtml(metric.cadence)}${metric.caveat ? ` · ${escapeHtml(metric.caveat)}` : ''}</small>
@@ -207,7 +232,7 @@ function renderMacroWorkspace() {
   renderHolderCountry(activeHolderCountry && holders.some((holder) => holder.country === activeHolderCountry) ? activeHolderCountry : holders[0]?.country);
 
   const exchangeReserve = (macroSupplyData?.exchange_metrics ?? []).find((metric) => metric.key === 'exchange_reserve');
-  const exchangeCards = exchangeReserve ? macroMetricCard(exchangeReserve, '#22d3ee') : '';
+  const exchangeCards = exchangeReserve ? macroMetricCard(exchangeReserve, '#22d3ee', true) : '';
   const providerMessage = exchangeCards ? '' : `<article class="provider-card"><span>BTC on tracked exchanges</span><strong>Provider connection needed</strong><p>${escapeHtml(macroSupplyData?.status_message ?? 'Configure an approved labelled-address provider.')}</p><small>The dashboard pipeline is ready for Glassnode and keeps this absence isolated from the macro charts.</small></article>`;
   document.querySelector('#macroSupplyPane').innerHTML = `<div class="macro-section-heading"><div><h3>BTC on tracked exchanges</h3><p>Ten years of the Bitcoin balance held by exchange wallets identified by Coin Metrics.</p></div></div><div class="supply-warning">${escapeHtml(macroSupplyData?.warning ?? 'Exchange custody inventory is not equivalent to coins offered for sale.')}</div><div class="macro-chart-grid supply">${exchangeCards}${providerMessage}</div>`;
 
