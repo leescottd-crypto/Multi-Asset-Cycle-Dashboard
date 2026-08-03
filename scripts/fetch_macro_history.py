@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Fetch official long-history macro and U.S. Treasury-holder data.
+"""Fetch long-history macro, Treasury-holder, and BTC exchange-supply data.
 
-Paid crypto-market providers are optional. If a Glassnode key is absent, the
-macro dashboard still builds and exposes an explicit provider-required state.
+Coin Metrics Community API supplies the no-key ten-year exchange-balance series.
+Paid crypto-market providers remain optional enrichment.
 """
 from __future__ import annotations
 
@@ -42,6 +42,10 @@ TIC_HISTORY_URL = "https://ticdata.treasury.gov/resource-center/data-chart-cente
 TIC_LATEST_URL = "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.txt"
 GLASSNODE_URL = "https://api.glassnode.com/v1/metrics/distribution/{metric}"
 STABLECOIN_URL = "https://stablecoins.llama.fi/stablecoincharts/all"
+COIN_METRICS_EXCHANGE_SUPPLY_URL = (
+    "https://community-api.coinmetrics.io/v4/timeseries/asset-metrics"
+    "?assets=btc&metrics=SplyExNtv&frequency=1d&start_time=2014-01-01&page_size=10000"
+)
 
 
 def fetch_text(url: str, timeout: int = 60) -> str:
@@ -179,6 +183,24 @@ def fetch_glassnode(api_key: str) -> dict[str, Any]:
     return result
 
 
+def fetch_coinmetrics_exchange_supply() -> list[dict[str, float | str]]:
+    payload = fetch_json(COIN_METRICS_EXCHANGE_SUPPLY_URL)
+    if not isinstance(payload, dict):
+        raise RuntimeError("unexpected Coin Metrics response")
+    rows = []
+    for row in payload.get("data", []):
+        try:
+            rows.append({
+                "date": str(row["time"])[:10],
+                "value": float(row["SplyExNtv"]),
+            })
+        except (KeyError, TypeError, ValueError):
+            continue
+    if len(rows) < 3650:
+        raise RuntimeError(f"only {len(rows)} daily observations; ten years required")
+    return rows
+
+
 def main() -> int:
     fetched_at = datetime.now(timezone.utc).isoformat()
     errors: list[str] = []
@@ -248,6 +270,24 @@ def main() -> int:
         })
     except Exception as exc:
         errors.append(f"Stablecoin supply: {exc}")
+
+    try:
+        write_json("coinmetrics-exchange-supply.json", {
+            "source": "Coin Metrics Community API",
+            "source_url": "https://docs.coinmetrics.io/api/v4/",
+            "api_url": COIN_METRICS_EXCHANGE_SUPPLY_URL,
+            "metric": "SplyExNtv",
+            "fetched_at": fetched_at,
+            "unit": "BTC",
+            "methodology_warning": (
+                "Coin Metrics includes balances held by exchanges and addresses it has identified. "
+                "Label coverage can change, and the balance is exchange custody inventory rather "
+                "than BTC necessarily posted in live sell orders."
+            ),
+            "observations": fetch_coinmetrics_exchange_supply(),
+        })
+    except Exception as exc:
+        errors.append(f"Coin Metrics exchange supply: {exc}")
 
     api_key = os.environ.get("GLASSNODE_API_KEY", "").strip()
     if api_key:

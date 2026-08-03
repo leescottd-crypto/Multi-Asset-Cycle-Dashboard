@@ -98,15 +98,9 @@ public/data/btc-macro.json
 public/data/btc-market-supply.json
 ```
 
-### Optional paid market-supply data
+### BTC exchange-supply data
 
-Set `GLASSNODE_API_KEY` in the environment used by the refresh service to populate:
-
-- BTC held in labelled exchange addresses
-- exchange balance as a percentage of circulating BTC supply
-- 30-day exchange net-position change
-
-Without the key, the BTC Market Supply tab still shows the latest reviewed CoinGlass estimate of BTC held across tracked exchanges from `data/manual/btc-exchange-reserve.json`. This is a provider-specific exchange-reserve estimate and is not the amount currently posted in sell orders. Historical ask-side order-book depth requires a separate provider such as Kaiko or Coin Metrics and is intentionally kept distinct from exchange custody balances.
+The BTC Market Supply tab uses Coin Metrics Community API metric `SplyExNtv` to show a consistent daily history of BTC held in identified exchange wallets. The 10Y view is available without a paid API key. Label coverage can change over time, and exchange custody inventory is not the amount currently posted in sell orders.
 
 ### Foreign holders of U.S. Treasury debt
 

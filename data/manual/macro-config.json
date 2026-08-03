@@ -19,8 +19,7 @@
     "quarterly": 125
   },
   "providers": {
-    "exchange_supply": "Glassnode",
-    "exchange_supply_environment_key": "GLASSNODE_API_KEY",
+    "exchange_supply": "Coin Metrics Community API",
     "order_book_history": "Kaiko or Coin Metrics",
     "stablecoin_supply": "DefiLlama"
   }

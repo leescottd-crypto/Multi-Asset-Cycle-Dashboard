@@ -238,46 +238,25 @@ def build_market_supply() -> dict[str, Any]:
             "Shorter history; stablecoin supply is potential crypto liquidity, not committed BTC demand.",
         )
 
-    exchange_metrics = []
+    exchange_metrics: list[dict[str, Any]] = []
     status = "provider_required"
-    status_message = "Add GLASSNODE_API_KEY to populate labelled exchange inventory and net-flow history."
+    status_message = "Coin Metrics exchange-supply history is unavailable."
 
-    reviewed_reserve_path = ROOT / "data" / "manual" / "btc-exchange-reserve.json"
-    if reviewed_reserve_path.exists():
-        reviewed = read_json(reviewed_reserve_path)
-        reserve_rows = clean_series(reviewed.get("observations", []))
+    exchange_supply_path = RAW_DIR / "coinmetrics-exchange-supply.json"
+    if exchange_supply_path.exists():
+        exchange_supply = read_json(exchange_supply_path)
+        reserve_rows = clean_series(exchange_supply.get("observations", []))
         if reserve_rows:
             reserve_metric = metric(
                 "exchange_reserve", "BTC on Tracked Exchanges", reserve_rows, "BTC",
-                reviewed["cadence"], reviewed["source"], reviewed["source_url"],
+                "daily", exchange_supply["source"], exchange_supply["source_url"],
                 "falling exchange inventory is generally supportive",
-                reviewed["methodology_warning"],
+                exchange_supply["methodology_warning"],
             )
-            reserve_metric["exchange_count"] = reviewed.get("exchange_count_latest")
-            reserve_metric["reviewed_at"] = reviewed.get("reviewed_at")
+            reserve_metric["metric_id"] = exchange_supply.get("metric")
             exchange_metrics.append(reserve_metric)
-            status = "reviewed_snapshot"
-            status_message = "A reviewed CoinGlass exchange-reserve estimate is available; paid-provider flow history remains optional."
-
-    glassnode_path = RAW_DIR / "glassnode-exchange-supply.json"
-    if glassnode_path.exists():
-        glassnode = read_json(glassnode_path)
-        observations = glassnode.get("observations", {})
-        exchange_metric_count = len(exchange_metrics)
-        specs = [
-            ("exchange_balance_relative", "Exchange Balance / BTC Supply", "%", 100.0, "falling share is generally supportive"),
-            ("exchange_net_position_change", "30D Exchange Net Position", "BTC", 1.0, "negative values indicate net outflow"),
-        ]
-        for key, label, unit, scale, supportive in specs:
-            rows = clean_series(observations.get(key, []), scale)
-            if rows:
-                exchange_metrics.append(metric(
-                    key, label, rows, unit, "daily", glassnode["source"], glassnode["source_url"], supportive,
-                    "Labelled-address estimates can be revised; exchange custody inventory is not an order book.",
-                ))
-        if len(exchange_metrics) > exchange_metric_count:
             status = "live"
-            status_message = "Exchange inventory and paid-provider flow metrics are available."
+            status_message = "Ten-year daily exchange-supply history is available."
 
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -289,7 +268,7 @@ def build_market_supply() -> dict[str, Any]:
             "status": "provider_required",
             "message": "Historical ask-side depth within 1% and 2% requires a market-data provider such as Kaiko or Coin Metrics.",
         },
-        "warning": "Exchange reserve is the buyable inventory proxy you requested; only the smaller ask-side order book is immediately executable at current prices.",
+        "warning": "Tracked-exchange balances are labelled-wallet estimates; not every coin held in exchange custody is posted for sale at the current market price.",
     }
 
 
@@ -348,7 +327,7 @@ def main() -> int:
             {"key": "liquidity", "label": "Dollar Liquidity", "state": "supportive" if liquidity_score > 0 else "restrictive" if liquidity_score < 0 else "mixed", "detail": "Net liquidity and M2 impulse"},
             {"key": "rates", "label": "Dollar & Rates", "state": "supportive" if rates_score > 0 else "restrictive" if rates_score < 0 else "mixed", "detail": "Dollar, real yields and financial conditions"},
             {"key": "fiscal", "label": "Fiscal Absorption", "state": fiscal_state, "detail": "Debt growth, Fed and foreign holders"},
-            {"key": "supply", "label": "BTC Market Supply", "state": supply_state, "detail": "Exchange reserve, live asks and stablecoins"},
+            {"key": "supply", "label": "BTC Market Supply", "state": supply_state, "detail": "10-year tracked-exchange reserve"},
         ],
         "metrics": metrics,
         "holders": holders,

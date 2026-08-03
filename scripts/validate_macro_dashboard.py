@@ -72,6 +72,9 @@ def main() -> int:
             fail(f"exchange-reserve units are implausible: {reserve} BTC")
         if not exchange_reserve.get("source_url") or not exchange_reserve.get("date"):
             fail("exchange reserve is missing source or date")
+        reserve_series = exchange_reserve.get("series", [])
+        if len(reserve_series) < 120 or str(reserve_series[0]["date"]) > "2016-08-03":
+            fail("exchange reserve does not cover ten years")
 
     print(json.dumps({
         "valid": True,

@@ -684,6 +684,7 @@ code {
 .macro-section-heading p { margin: 0; }
 
 .macro-chart-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.macro-chart-grid.supply { grid-template-columns: minmax(0, 1fr); }
 .macro-chart-grid.fiscal { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .macro-chart-card, .provider-card {
   min-width: 0;
