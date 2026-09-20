@@ -1,0 +1,19 @@
+{
+  "source": "Coinbase Exchange daily candles + spot ticker",
+  "source_url": "https://api.exchange.coinbase.com/products/ETH-USD",
+  "provenance": "live-public-full-available-coinbase-history-with-spot-overlay",
+  "asset_id": "eth",
+  "name": "Ethereum",
+  "symbol": "ETH-USD",
+  "type": "crypto",
+  "currency": "USD",
+  "exchange": "Coinbase Exchange",
+  "instrument_type": "CRYPTOCURRENCY",
+  "category": "Smart-contract blockchain",
+  "rows": 3776,
+  "first_date": "2016-05-18",
+  "last_date": "2026-09-20",
+  "fetched_at": "2026-09-20T17:14:57.154739+00:00",
+  "request_count": 15,
+  "limitation": "History begins when the USD product became available on Coinbase. The current-day close is a provisional spot price until the daily candle finalizes; short-history assets may not yet have a 200-week moving average."
+}

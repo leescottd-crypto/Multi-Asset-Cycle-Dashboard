@@ -23,6 +23,7 @@ RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 ASSETS: list[dict[str, str]] = [
     {"id": "btc", "name": "Bitcoin", "symbol": "BTC-USD", "type": "crypto"},
+    {"id": "eth", "name": "Ethereum", "symbol": "ETH-USD", "type": "crypto", "provider": "coinbase", "history_start": "2015-07-30", "category": "Smart-contract blockchain"},
     {"id": "sol", "name": "Solana", "symbol": "SOL-USD", "type": "crypto", "provider": "coinbase", "history_start": "2020-01-01", "category": "Layer 1 blockchain"},
     {"id": "sui", "name": "Sui", "symbol": "SUI-USD", "type": "crypto", "provider": "coinbase", "history_start": "2023-01-01", "category": "Layer 1 blockchain"},
     {"id": "hype", "name": "Hyperliquid", "symbol": "HYPE-USD", "type": "crypto", "provider": "coinbase", "history_start": "2024-11-01", "category": "Decentralized exchange network"},

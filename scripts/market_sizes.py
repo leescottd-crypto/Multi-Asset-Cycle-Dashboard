@@ -13,9 +13,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "public/data/market-sizes.json"
-COINS = {"bitcoin": "btc", "solana": "sol", "sui": "sui", "hyperliquid": "hype"}
+COINS = {"bitcoin": "btc", "ethereum": "eth", "solana": "sol", "sui": "sui", "hyperliquid": "hype"}
 OZ_PER_TONNE = 32150.746568627
-COIN_URL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,solana,sui,hyperliquid"
+COIN_URL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=" + ",".join(COINS)
 
 
 def request_json(url):

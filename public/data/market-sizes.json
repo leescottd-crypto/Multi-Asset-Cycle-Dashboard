@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T16:00:50.790084+00:00",
+  "generated_at": "2026-09-20T17:14:51.343789+00:00",
   "assets": {
     "gold": {
       "label": "Metal value (est.)",
@@ -76,7 +76,7 @@
     },
     "btc": {
       "label": "Market cap",
-      "value_usd": 1625037270877,
+      "value_usd": 1631668044438,
       "as_of": "2026-09-20",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/bitcoin",
@@ -86,7 +86,7 @@
     },
     "sol": {
       "label": "Market cap",
-      "value_usd": 63836463666,
+      "value_usd": 64491767751,
       "as_of": "2026-09-20",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/solana",
@@ -96,7 +96,7 @@
     },
     "sui": {
       "label": "Market cap",
-      "value_usd": 3449020182,
+      "value_usd": 3705703693,
       "as_of": "2026-09-20",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/sui",
@@ -106,10 +106,20 @@
     },
     "hype": {
       "label": "Market cap",
-      "value_usd": 20466756895,
+      "value_usd": 20669771248,
       "as_of": "2026-09-20",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/hyperliquid",
+      "method": "Circulating-supply market capitalization in USD, not fully diluted valuation. Provider price timing may differ from the chart price.",
+      "refresh_mode": "on asset refresh",
+      "status": "ok"
+    },
+    "eth": {
+      "label": "Market cap",
+      "value_usd": 322063318863,
+      "as_of": "2026-09-20",
+      "source": "CoinGecko",
+      "source_url": "https://www.coingecko.com/en/coins/ethereum",
       "method": "Circulating-supply market capitalization in USD, not fully diluted valuation. Provider price timing may differ from the chart price.",
       "refresh_mode": "on asset refresh",
       "status": "ok"

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T16:00:51.939472+00:00",
+  "generated_at": "2026-09-20T17:15:03.228280+00:00",
   "assets": [
     {
       "id": "btc",
@@ -124,6 +124,92 @@
         "symbol": "BTC-USD",
         "type": "crypto",
         "currency": "USD"
+      }
+    },
+    {
+      "id": "eth",
+      "name": "Ethereum",
+      "symbol": "ETH-USD",
+      "category": "Smart-contract blockchain",
+      "url": "/public/data/eth.json",
+      "latest": {
+        "date": "2026-09-20",
+        "close": 2635.8,
+        "trend": 2891.27,
+        "band_minus_2": 549.42,
+        "band_minus_1_5": 832.15,
+        "band_minus_1": 1260.36,
+        "band_plus_1": 6632.58,
+        "band_plus_2": 15215.14,
+        "z_score": -0.1114,
+        "zone": "Fair",
+        "ma_50d": 2273.2,
+        "ma_100d": 2024.91,
+        "ma_111d": 1991.48,
+        "ma_200d": 2076.17,
+        "ma_200w": 2515.54,
+        "ma_350d_x2": 4969.86,
+        "rsi_14d": 65.58,
+        "drawdown_from_ath_pct": -45.44,
+        "mvrv": null,
+        "market_cap_usd": null,
+        "realized_cap_usd": null,
+        "zone_note": "Ethereum is near long-term trend fair value.",
+        "distance_to_minus_1_5_pct": 216.75,
+        "distance_to_plus_2_pct": 477.25,
+        "latest_available_mvrv": null,
+        "latest_available_mvrv_date": null
+      },
+      "regime": {
+        "score": 2,
+        "label": "Constructive",
+        "components": [
+          {
+            "name": "Log regression valuation",
+            "score": 0,
+            "detail": "z-score -0.11"
+          },
+          {
+            "name": "200D trend",
+            "score": 1,
+            "detail": "above 200D MA"
+          },
+          {
+            "name": "RSI momentum",
+            "score": 0,
+            "detail": "neutral RSI 65.6"
+          },
+          {
+            "name": "Drawdown reset",
+            "score": 1,
+            "detail": "-45.4% from ATH"
+          },
+          {
+            "name": "MVRV valuation",
+            "score": 0,
+            "detail": "not available for this asset"
+          }
+        ],
+        "scale": "rough MVP score, -10 to +10 target as more indicators are added"
+      },
+      "source": {
+        "source": "Coinbase Exchange daily candles + spot ticker",
+        "source_url": "https://api.exchange.coinbase.com/products/ETH-USD",
+        "provenance": "live-public-full-available-coinbase-history-with-spot-overlay",
+        "asset_id": "eth",
+        "name": "Ethereum",
+        "symbol": "ETH-USD",
+        "type": "crypto",
+        "currency": "USD",
+        "exchange": "Coinbase Exchange",
+        "instrument_type": "CRYPTOCURRENCY",
+        "category": "Smart-contract blockchain",
+        "rows": 3776,
+        "first_date": "2016-05-18",
+        "last_date": "2026-09-20",
+        "fetched_at": "2026-09-20T17:14:57.154739+00:00",
+        "request_count": 15,
+        "limitation": "History begins when the USD product became available on Coinbase. The current-day close is a provisional spot price until the daily candle finalizes; short-history assets may not yet have a 200-week moving average."
       }
     },
     {

@@ -17,6 +17,7 @@ PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
 
 ASSETS = [
     {"id": "btc", "name": "Bitcoin", "symbol": "BTC-USD", "price_label": "BTC Price", "fit_start": "2015-01-01"},
+    {"id": "eth", "name": "Ethereum", "symbol": "ETH-USD", "price_label": "ETH Price", "fit_start": "2015-07-30", "category": "Smart-contract blockchain"},
     {"id": "sol", "name": "Solana", "symbol": "SOL-USD", "price_label": "SOL Price", "fit_start": "2020-01-01", "category": "Layer 1 blockchain"},
     {"id": "sui", "name": "Sui", "symbol": "SUI-USD", "price_label": "SUI Price", "fit_start": "2023-01-01", "category": "Layer 1 blockchain"},
     {"id": "hype", "name": "Hyperliquid", "symbol": "HYPE-USD", "price_label": "HYPE Price", "fit_start": "2024-11-01", "category": "Decentralized exchange network"},

@@ -47,6 +47,7 @@ function escapeHtml(value) {
 
 const ASSET_IDENTITY = {
   btc: { display: 'Bitcoin', unit: 'USD' },
+  eth: { display: 'Ethereum', unit: 'USD' },
   sol: { display: 'Solana', unit: 'USD' },
   sui: { display: 'SUI', unit: 'USD' },
   hype: { display: 'Hyperliquid', unit: 'USD' },
