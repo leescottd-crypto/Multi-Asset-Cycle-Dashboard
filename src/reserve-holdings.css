@@ -1,0 +1,25 @@
+.reserve-holdings {color:#e5ddc9;background:#07191d;padding:24px;border-top:1px solid #52625e}
+.reserve-holdings header {display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.reserve-holdings h3 {margin:4px 0 12px;font-size:clamp(24px,3vw,36px)}
+.reserve-holdings p {max-width:100ch;line-height:1.55;font-size:15px}
+.reserve-holdings header>span {white-space:nowrap;color:#acb5aa;font-size:14px}
+.reserve-holdings-values {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:24px 0 12px;border-block:1px solid #344a48}
+.reserve-holdings-values>div {display:flex;flex-direction:column;gap:8px;padding:18px;border-right:1px solid #344a48}
+.reserve-holdings-values>div:last-child {border-right:0}
+.reserve-holdings-values strong {font-size:30px;color:#dba347;font-variant-numeric:tabular-nums}
+.reserve-holdings-values small {font-size:13px;color:#acb5aa}
+.reserve-holdings-chart {height:440px;width:100%;min-width:0}
+.reserve-holdings-cursor {min-height:46px;color:#c7cdbf;font-variant-numeric:tabular-nums}
+.reserve-holdings-explanation {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid #344a48;padding-top:18px}
+.reserve-holdings h4 {font-size:16px;color:#dba347;margin:0}
+.reserve-holdings details {border-top:1px solid #344a48;padding:18px 0;font-size:15px}
+.reserve-holdings summary {cursor:pointer}
+.reserve-holdings a {color:#dba347}
+@media(max-width:700px){
+.reserve-holdings {padding:16px 8px}
+.reserve-holdings header {display:block}
+.reserve-holdings-values>div {padding:12px 8px}
+.reserve-holdings-values strong {font-size:24px}
+.reserve-holdings-values span,.reserve-holdings-values small {font-size:12px}
+.reserve-holdings-explanation {grid-template-columns:1fr;gap:12px}
+}

@@ -1,0 +1,165 @@
+{
+  "deficit_dollars": 247698000000,
+  "fiscal_year": 2006,
+  "label": "FY2006",
+  "net_interest_dollars": 226635000000,
+  "net_outlays_dollars": 2654379000000,
+  "offsetting_outlays": [
+    {
+      "amount_dollars": -68249000000,
+      "label": "Undistributed offsetting receipts",
+      "line_code": 330
+    }
+  ],
+  "period_end": "2006-09-30",
+  "positive_outlays": [
+    {
+      "amount_dollars": 528820000000,
+      "label": "National defense",
+      "line_code": 140
+    },
+    {
+      "amount_dollars": 28983000000,
+      "label": "International affairs",
+      "line_code": 150
+    },
+    {
+      "amount_dollars": 20224000000,
+      "label": "General science, space, and technology",
+      "line_code": 160
+    },
+    {
+      "amount_dollars": 757000000,
+      "label": "Energy",
+      "line_code": 170
+    },
+    {
+      "amount_dollars": 52122000000,
+      "label": "Natural resources and environment",
+      "line_code": 180
+    },
+    {
+      "amount_dollars": 8847000000,
+      "label": "Agriculture",
+      "line_code": 190
+    },
+    {
+      "amount_dollars": 6085000000,
+      "label": "Commerce and housing credit",
+      "line_code": 200
+    },
+    {
+      "amount_dollars": 70801000000,
+      "label": "Transportation",
+      "line_code": 210
+    },
+    {
+      "amount_dollars": 53925000000,
+      "label": "Community and regional development",
+      "line_code": 220
+    },
+    {
+      "amount_dollars": 116472000000,
+      "label": "Education, training, employment and social services",
+      "line_code": 230
+    },
+    {
+      "amount_dollars": 252587000000,
+      "label": "Health",
+      "line_code": 240
+    },
+    {
+      "amount_dollars": 329867000000,
+      "label": "Medicare",
+      "line_code": 250
+    },
+    {
+      "amount_dollars": 353701000000,
+      "label": "Income security",
+      "line_code": 260
+    },
+    {
+      "amount_dollars": 548573000000,
+      "label": "Social security",
+      "line_code": 270
+    },
+    {
+      "amount_dollars": 69843000000,
+      "label": "Veterans benefits and services",
+      "line_code": 280
+    },
+    {
+      "amount_dollars": 35503000000,
+      "label": "Administration of justice",
+      "line_code": 290
+    },
+    {
+      "amount_dollars": 18881000000,
+      "label": "General government",
+      "line_code": 300
+    },
+    {
+      "amount_dollars": 226635000000,
+      "label": "Net interest",
+      "line_code": 320
+    }
+  ],
+  "precision": "whole USD millions converted to dollars",
+  "receipts": [
+    {
+      "amount_dollars": 1043908000000,
+      "label": "Individual income taxes",
+      "line_code": 20
+    },
+    {
+      "amount_dollars": 353915000000,
+      "label": "Corporation income taxes",
+      "line_code": 30
+    },
+    {
+      "amount_dollars": 790042000000,
+      "label": "Employment and general retirement",
+      "line_code": 50
+    },
+    {
+      "amount_dollars": 43420000000,
+      "label": "Unemployment insurance",
+      "line_code": 60
+    },
+    {
+      "amount_dollars": 4358000000,
+      "label": "Other retirement",
+      "line_code": 70
+    },
+    {
+      "amount_dollars": 73962000000,
+      "label": "Excise taxes",
+      "line_code": 80
+    },
+    {
+      "amount_dollars": 27877000000,
+      "label": "Estate and gift taxes",
+      "line_code": 90
+    },
+    {
+      "amount_dollars": 24810000000,
+      "label": "Customs duties",
+      "line_code": 100
+    },
+    {
+      "amount_dollars": 44390000000,
+      "label": "Miscellaneous receipts",
+      "line_code": 110
+    }
+  ],
+  "reconciliation": {
+    "identity_difference_dollars": 0,
+    "outlay_detail_less_total_dollars": -2000000,
+    "receipt_detail_less_total_dollars": 1000000
+  },
+  "source_sha256": "3f3ca5e1fb413ab5a6f1a1acee4f0d06bd50a041377082e3f6f33329a0951dae",
+  "source_type": "Monthly Treasury Statement September PDF, Table 9",
+  "source_url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_200609.pdf",
+  "status": "final-frozen",
+  "total_receipts_dollars": 2406681000000
+}

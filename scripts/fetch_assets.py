@@ -13,7 +13,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -23,6 +23,9 @@ RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 ASSETS: list[dict[str, str]] = [
     {"id": "btc", "name": "Bitcoin", "symbol": "BTC-USD", "type": "crypto"},
+    {"id": "sol", "name": "Solana", "symbol": "SOL-USD", "type": "crypto", "provider": "coinbase", "history_start": "2020-01-01", "category": "Layer 1 blockchain"},
+    {"id": "sui", "name": "Sui", "symbol": "SUI-USD", "type": "crypto", "provider": "coinbase", "history_start": "2023-01-01", "category": "Layer 1 blockchain"},
+    {"id": "hype", "name": "Hyperliquid", "symbol": "HYPE-USD", "type": "crypto", "provider": "coinbase", "history_start": "2024-11-01", "category": "Decentralized exchange network"},
     {"id": "gold", "name": "Gold", "symbol": "GLD", "type": "etf", "proxy_note": "ETF proxy for gold spot"},
     {"id": "silver", "name": "Silver", "symbol": "SLV", "type": "etf", "proxy_note": "ETF proxy for silver spot"},
     {"id": "mags", "name": "Roundhill Magnificent Seven ETF", "symbol": "MAGS", "type": "etf"},
@@ -32,7 +35,7 @@ ASSETS: list[dict[str, str]] = [
 ]
 
 
-def request_json(url: str, timeout: int = 90) -> dict[str, Any]:
+def request_data(url: str, timeout: int = 90) -> Any:
     last_error: Exception | None = None
     for attempt in range(3):
         try:
@@ -45,6 +48,97 @@ def request_json(url: str, timeout: int = 90) -> dict[str, Any]:
             last_error = exc
             time.sleep(1 + attempt)
     raise RuntimeError(f"request failed after retries for {url}: {last_error}")
+
+
+def request_json(url: str, timeout: int = 90) -> dict[str, Any]:
+    payload = request_data(url, timeout)
+    if not isinstance(payload, dict):
+        raise RuntimeError(f"Expected an object response from {url}")
+    return payload
+
+
+def fetch_coinbase_daily(asset: dict[str, str]) -> tuple[list[dict[str, object]], dict[str, object]]:
+    product = asset["symbol"]
+    start = datetime.fromisoformat(asset["history_start"]).replace(tzinfo=timezone.utc)
+    end = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+    rows_by_date: dict[str, dict[str, object]] = {}
+    current = start
+    request_count = 0
+    while current < end:
+        chunk_end = min(current + timedelta(days=299), end)
+        params = urllib.parse.urlencode(
+            {
+                "start": current.isoformat().replace("+00:00", "Z"),
+                "end": chunk_end.isoformat().replace("+00:00", "Z"),
+                "granularity": 86400,
+            }
+        )
+        url = f"https://api.exchange.coinbase.com/products/{product}/candles?{params}"
+        candles = request_data(url, timeout=30)
+        if not isinstance(candles, list):
+            raise RuntimeError(f"Coinbase returned an invalid candle response for {product}")
+        request_count += 1
+        for candle in candles:
+            if not isinstance(candle, list) or len(candle) < 6:
+                continue
+            ts, low, high, open_, close, volume = candle[:6]
+            close_value = float(close)
+            if close_value <= 0:
+                continue
+            date = datetime.fromtimestamp(int(ts), tz=timezone.utc).date().isoformat()
+            rows_by_date[date] = {
+                "date": date,
+                "open": float(open_),
+                "high": float(high),
+                "low": float(low),
+                "close": close_value,
+                "adj_close": close_value,
+                "volume": float(volume),
+                "source": "coinbase-exchange",
+            }
+        current = chunk_end + timedelta(days=1)
+        time.sleep(0.15)
+
+    rows = [rows_by_date[date] for date in sorted(rows_by_date)]
+    if len(rows) < 120:
+        raise RuntimeError(f"Coinbase returned too few daily rows for {product}: {len(rows)}")
+
+    ticker_url = f"https://api.exchange.coinbase.com/products/{product}/ticker"
+    ticker = request_json(ticker_url, timeout=30)
+    spot = _at([ticker.get("price")], 0)
+    ticker_time = ticker.get("time")
+    if spot is not None and spot > 0 and ticker_time:
+        spot_date = str(ticker_time)[:10]
+        if spot_date >= str(rows[-1]["date"]):
+            if spot_date == str(rows[-1]["date"]):
+                rows[-1]["close"] = spot
+                rows[-1]["adj_close"] = spot
+                rows[-1]["high"] = max(float(rows[-1]["high"]), spot)
+                rows[-1]["low"] = min(float(rows[-1]["low"]), spot)
+                rows[-1]["source"] = "coinbase-daily-plus-spot-ticker"
+            else:
+                rows.append({"date": spot_date, "open": spot, "high": spot, "low": spot, "close": spot, "adj_close": spot, "volume": None, "source": "coinbase-spot-ticker"})
+
+    meta = {
+        "source": "Coinbase Exchange daily candles + spot ticker",
+        "source_url": f"https://api.exchange.coinbase.com/products/{product}",
+        "provenance": "live-public-full-available-coinbase-history-with-spot-overlay",
+        "asset_id": asset["id"],
+        "name": asset["name"],
+        "symbol": product,
+        "type": asset["type"],
+        "currency": "USD",
+        "exchange": "Coinbase Exchange",
+        "instrument_type": "CRYPTOCURRENCY",
+        "category": asset.get("category"),
+        "rows": len(rows),
+        "first_date": rows[0]["date"],
+        "last_date": rows[-1]["date"],
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "request_count": request_count + 1,
+        "limitation": "History begins when the USD product became available on Coinbase. The current-day close is a provisional spot price until the daily candle finalizes; short-history assets may not yet have a 200-week moving average.",
+    }
+    return rows, meta
 
 
 def fetch_yahoo_daily(asset: dict[str, str]) -> tuple[list[dict[str, object]], dict[str, object]]:
@@ -215,12 +309,21 @@ def main() -> int:
         try:
             if asset["id"] == "btc":
                 meta = run_btc_fetch()
+            elif asset.get("provider") == "coinbase":
+                rows, meta = fetch_coinbase_daily(asset)
+                write_asset_csv(asset["id"], rows, meta)
             else:
                 rows, meta = fetch_yahoo_daily(asset)
                 write_asset_csv(asset["id"], rows, meta)
             results.append({"asset_id": asset["id"], "symbol": asset["symbol"], "rows": meta.get("rows"), "last_date": meta.get("last_date"), "source": meta.get("source")})
         except Exception as exc:  # noqa: BLE001
             errors.append(f"{asset['id']}: {exc}")
+    # An optional size feed must not prevent the price history from refreshing.
+    try:
+        from market_sizes import refresh_market_sizes
+        refresh_market_sizes()
+    except Exception as exc:
+        print(f"Market-size refresh unavailable: {type(exc).__name__}", file=sys.stderr)
     out = {"fetched_at": datetime.now(timezone.utc).isoformat(), "assets": results, "errors": errors}
     print(json.dumps(out, indent=2))
     if errors:

@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-09-19",
+  "title": "Policy & Sovereign Adoption",
+  "cards": [
+    {
+      "key": "central_banks",
+      "eyebrow": "Central-bank adoption",
+      "status": "Pilot",
+      "detail": "1 operational pilot among 2 tracked official positions",
+      "impact": "supportive",
+      "confidence": "Official central-bank sources",
+      "note": "The Czech National Bank pilot is outside its international reserves; this is not yet reserve adoption."
+    },
+    {
+      "key": "clarity",
+      "eyebrow": "CLARITY Act · H.R. 3633",
+      "status": "Senate reported",
+      "detail": "4 of 6 legislative stages complete",
+      "impact": "supportive",
+      "confidence": "Official congressional sources",
+      "note": "Not law. A Senate floor vote, House agreement on final text and presidential signature remain unresolved."
+    },
+    {
+      "key": "us_reserve",
+      "eyebrow": "U.S. Strategic Bitcoin Reserve",
+      "status": "Established",
+      "detail": "Treasury administered · public balance unavailable",
+      "impact": "supportive",
+      "confidence": "Executive order and White House report",
+      "note": "This is a U.S. government reserve administered through Treasury—not a Federal Reserve holding."
+    }
+  ],
+  "clarity_stages": [
+    {"label": "Introduced", "state": "complete", "date": "2025-05-29"},
+    {"label": "House passed", "state": "complete", "date": "2025-07-17"},
+    {"label": "Senate committee", "state": "complete", "date": "2026-05-14"},
+    {"label": "Senate reported", "state": "complete", "date": "2026-06-01"},
+    {"label": "Final passage", "state": "pending", "date": null},
+    {"label": "Enacted", "state": "pending", "date": null}
+  ],
+  "arma_tracker": {
+    "title": "American Reserve Modernization Act progress",
+    "bill": "H.R. 8957 · 119th Congress · 2026",
+    "checked_on": "2026-09-19",
+    "status": "Introduced · referred to House Financial Services",
+    "source_url": "https://www.govinfo.gov/app/details/BILLS-119hr8957ih",
+    "actions_url": "https://www.congress.gov/bill/119th-congress/house-bill/8957/all-actions",
+    "summary": "Would put a Treasury-administered Strategic Bitcoin Reserve into statute, establish long-term holding requirements and require public proof-of-reserve reporting. This is proposed legislation, not an enacted law or a Federal Reserve purchase announcement.",
+    "impact": "Potentially supportive for Bitcoin if enacted: more durable custody and retention rules. It does not itself demonstrate new purchases or guarantee price gains.",
+    "next_step": "Watch for House Financial Services committee action, followed by House passage. Both chambers must agree on the same text before enactment; the stages are milestones, not a probability or timetable.",
+    "verification_note": "Introduction and referral verified against the official GovInfo bill record. No later milestone verified. Congress.gov's live action feed could not be accessed during this check; pending means not verified complete in this dated snapshot, not a live legislative feed.",
+    "stages": [
+      {"label": "Introduced", "state": "complete", "date": "2026-05-21"},
+      {"label": "House referral", "state": "complete", "date": "2026-05-21"},
+      {"label": "Committee approval", "state": "pending", "date": null},
+      {"label": "House passed", "state": "pending", "date": null},
+      {"label": "Senate / final passage", "state": "pending", "date": null},
+      {"label": "Enacted", "state": "pending", "date": null}
+    ]
+  },
+  "central_banks": [
+    {
+      "jurisdiction": "Czech Republic",
+      "institution": "Czech National Bank",
+      "stage": "Pilot",
+      "reserve_status": "Outside official reserves",
+      "impact": "supportive",
+      "as_of": "2025-11-13",
+      "summary": "A US$1 million digital-asset test portfolio includes Bitcoin, stablecoins and a tokenized deposit. The bank plans a two-to-three-year evaluation.",
+      "source_id": "cnb-pilot"
+    },
+    {
+      "jurisdiction": "Euro area",
+      "institution": "ECB / Eurosystem",
+      "stage": "Declined",
+      "reserve_status": "No Bitcoin reserve adoption",
+      "impact": "restrictive",
+      "as_of": "2025-05-01",
+      "summary": "The ECB's May 2025 Financial Stability Review records the ECB President's position that Bitcoin would not enter General Council central-bank reserves.",
+      "source_id": "ecb-fsr"
+    }
+  ],
+  "events": [
+    {
+      "date": "2025-01-29",
+      "lane": "Central banks",
+      "headline": "Czech central bank proposes Bitcoin portfolio analysis",
+      "status": "Study",
+      "impact": "neutral",
+      "change": "The governor proposed formally studying a Bitcoin test portfolio.",
+      "why": "Official study is an early adoption signal, but it is neither approval nor a purchase.",
+      "source_id": "cnb-study"
+    },
+    {
+      "date": "2025-03-06",
+      "lane": "U.S. reserve",
+      "headline": "United States establishes Strategic Bitcoin Reserve policy",
+      "status": "Established",
+      "impact": "supportive",
+      "change": "The executive order directed Treasury to administer qualifying forfeited government Bitcoin as reserve assets and generally not sell it.",
+      "why": "It changes federal policy from disposal toward strategic retention, while additional acquisition must be budget neutral.",
+      "source_id": "whitehouse-eo"
+    },
+    {
+      "date": "2025-07-17",
+      "lane": "CLARITY Act",
+      "headline": "House passes H.R. 3633",
+      "status": "House passed",
+      "impact": "supportive",
+      "change": "The bill cleared the House and moved to the Senate.",
+      "why": "Progress toward a federal market-structure framework may reduce regulatory uncertainty, but the bill was not yet law.",
+      "source_id": "govinfo-house"
+    },
+    {
+      "date": "2025-07-30",
+      "lane": "U.S. reserve",
+      "headline": "White House report confirms Treasury operating direction",
+      "status": "Implementation",
+      "impact": "supportive",
+      "change": "The report says Treasury will administer the reserve and continue coordinating on operational next steps.",
+      "why": "It confirms policy continuity, but does not publish a fully reconciled Bitcoin balance or announce open-market purchases.",
+      "source_id": "whitehouse-report"
+    },
+    {
+      "date": "2025-11-13",
+      "lane": "Central banks",
+      "headline": "Czech National Bank launches digital-asset pilot",
+      "status": "Pilot",
+      "impact": "supportive",
+      "change": "The bank purchased a small test portfolio containing Bitcoin outside its international reserves.",
+      "why": "It is verified operational adoption by a central bank, but not a reserve allocation.",
+      "source_id": "cnb-pilot"
+    },
+    {
+      "date": "2026-05-14",
+      "lane": "CLARITY Act",
+      "headline": "Senate Banking advances CLARITY Act 15–9",
+      "status": "Committee passed",
+      "impact": "supportive",
+      "change": "The Senate Banking Committee advanced H.R. 3633 in a bipartisan vote.",
+      "why": "The bill moved closer to floor consideration but still had no force of law.",
+      "source_id": "senate-banking"
+    },
+    {
+      "date": "2026-06-01",
+      "lane": "CLARITY Act",
+      "headline": "Senate-reported version published",
+      "status": "Senate reported",
+      "impact": "supportive",
+      "change": "GovInfo lists the bill as reported in the Senate with an amendment.",
+      "why": "This is the latest formal congressional status in the official bill record used here; reported does not mean enacted.",
+      "source_id": "govinfo-senate"
+    },
+    {
+      "date": "2026-07-22",
+      "lane": "CLARITY Act",
+      "headline": "Updated merged Senate text released",
+      "status": "Negotiation",
+      "impact": "neutral",
+      "change": "Senator Lummis released text combining Banking and Agriculture committee work.",
+      "why": "Updated text signals active negotiation, but it is not a floor vote or enactment.",
+      "source_id": "lummis-update"
+    }
+  ],
+  "sources": [
+    {"id":"cnb-study","label":"Czech National Bank — governor's Bitcoin analysis proposal","url":"https://www.cnb.cz/en/public/media-service/interviews-articles/Governor-Michls-thoughts-on-bitcoin-in-foreign-exchange-reserves/"},
+    {"id":"cnb-pilot","label":"Czech National Bank — first digital-asset test portfolio","url":"https://www.cnb.cz/cs/o_cnb/cnblog/Prvni-testovaci-portfolio-digitalnich-aktiv-v-CNB"},
+    {"id":"ecb-fsr","label":"ECB Financial Stability Review — May 2025","url":"https://www.ecb.europa.eu/press/financial-stability-publications/fsr/pdf/ecb.fsr202505~0cde5244f6.en.pdf"},
+    {"id":"whitehouse-eo","label":"White House — Strategic Bitcoin Reserve executive order","url":"https://www.whitehouse.gov/presidential-actions/2025/03/establishment-of-the-strategic-bitcoin-reserve-and-united-states-digital-asset-stockpile/"},
+    {"id":"whitehouse-report","label":"White House — Digital Assets Report","url":"https://www.whitehouse.gov/wp-content/uploads/2025/07/digital-Assets-Report-EO14178.pdf"},
+    {"id":"govinfo-house","label":"GovInfo — H.R. 3633 House-passed record","url":"https://www.govinfo.gov/app/details/BILLS-119hr3633eh"},
+    {"id":"senate-banking","label":"U.S. Senate Banking Committee — May 14, 2026 markup","url":"https://www.banking.senate.gov/newsroom/majority/chairman-scott-senate-banking-committee-advance-clarity-act-in-historic-bipartisan-vote"},
+    {"id":"govinfo-senate","label":"GovInfo — H.R. 3633 reported in Senate","url":"https://www.govinfo.gov/app/details/BILLS-119hr3633rs"},
+    {"id":"lummis-update","label":"Senator Lummis — updated CLARITY Act text","url":"https://www.lummis.senate.gov/press-releases/lummis-releases-updated-clarity-act-text/"}
+  ],
+  "methodology": "Only dated primary-government or central-bank statements are treated as verified events. Status describes legal or operational progress; impact is a separate directional interpretation for Bitcoin. Supportive does not mean the event guarantees a higher Bitcoin price. Proposals, studies and pilots are not counted as official reserve allocations."
+}

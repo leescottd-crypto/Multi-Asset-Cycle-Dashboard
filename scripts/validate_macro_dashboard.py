@@ -14,6 +14,7 @@ SUPPLY_PATH = ROOT / "public" / "data" / "btc-market-supply.json"
 CORE_METRICS = {
     "net_liquidity", "m2", "broad_dollar", "real_yield_10y", "nfci", "wti",
     "debt_held_public", "gross_debt", "fed_treasuries",
+    "m2_yoy", "dxy", "vix", "cpi_yoy",
 }
 
 

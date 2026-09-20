@@ -1,0 +1,67 @@
+{
+  "gold": {
+    "label": "Metal value (est.)",
+    "value_usd": 29000000000000,
+    "as_of": "2026-06-30",
+    "estimated": true,
+    "stock_quantity": 222600,
+    "stock_unit": "tonnes",
+    "stock_as_of": "2026-06-30",
+    "source": "World Gold Council",
+    "source_url": "https://www.gold.org/goldhub/data/how-much-gold",
+    "method": "Estimated entire above-ground gold stock, including jewellery, central banks, investment holdings and other uses. Not GLD fund assets and not freely tradable supply."
+  },
+  "silver": {
+    "label": "Metal value (est.)",
+    "value_usd": null,
+    "as_of": null,
+    "estimated": true,
+    "stock_quantity": 19300000000,
+    "stock_unit": "troy ounces",
+    "stock_as_of": "2023-12-31",
+    "source": "Silver Institute / Precious Metals Insights",
+    "source_url": "https://silverinstitute.org/wp-content/uploads/2025/02/Final_Price_Sensitivity_of_Above-Ground-Silver-Stocks.pdf",
+    "corroborating_url": "https://www.strategicmetals.org/silver-supply-deficit/",
+    "method": "Estimated entire above-ground silver stock in all forms: 19.3 billion troy ounces at end-2023, repriced at the quoted silver spot price. Stock estimate is older than price; no extrapolation of stock growth. Includes largely immobile fabricated metal, not just investment bullion. Not SLV fund assets or liquid supply."
+  },
+  "mstr": {
+    "label": "Market cap",
+    "value_usd": 54870000000,
+    "as_of": "2026-09-04",
+    "source": "Stock Analysis / Nasdaq Data Link",
+    "source_url": "https://stockanalysis.com/stocks/mstr/market-cap/",
+    "method": "Reported common-equity market capitalization. Not enterprise value or the value of Strategy's bitcoin holdings.",
+    "refresh_mode": "dated reference"
+  },
+  "mags": {
+    "label": "Fund assets",
+    "value_usd": 4390000000,
+    "as_of": "2026-09-04",
+    "source": "ETF Central",
+    "source_url": "https://www.etfcentral.com/fund/MAGS",
+    "method": "Assets under management of the MAGS ETF, not the combined market capitalization of the seven underlying companies.",
+    "refresh_mode": "dated reference"
+  },
+  "sp500": {
+    "label": "Tracked cap*",
+    "value_usd": 62740000000000,
+    "as_of": null,
+    "observed_on": "2026-09-06",
+    "estimated": true,
+    "source": "Marketcap.company",
+    "source_url": "https://marketcap.company/stock-indices-by-market-cap/",
+    "method": "Sum reported for 499 of 503 constituents (99.2% coverage by count, not by value). Incomplete, third-party aggregate; not the official float-adjusted index capitalization. Underlying observation date not supplied; source checked on the displayed date. Do not add to Nasdaq: constituents overlap.",
+    "refresh_mode": "dated reference"
+  },
+  "nasdaq": {
+    "label": "Tracked cap*",
+    "value_usd": 41250000000000,
+    "as_of": null,
+    "observed_on": "2026-09-06",
+    "estimated": true,
+    "source": "Marketcap.company",
+    "source_url": "https://marketcap.company/stock-indices-by-market-cap/",
+    "method": "Sum reported for 2,930 of 3,165 Nasdaq Composite constituents (92.6% coverage by count, not by value). Incomplete, third-party aggregate, not Nasdaq-100 or the value of all exchange listings. Underlying observation date not supplied; source checked on the displayed date. Do not add to S&P 500: constituents overlap.",
+    "refresh_mode": "dated reference"
+  }
+}

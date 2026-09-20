@@ -1,0 +1,19 @@
+{
+  "source": "Coinbase Exchange daily candles + spot ticker",
+  "source_url": "https://api.exchange.coinbase.com/products/SOL-USD",
+  "provenance": "live-public-full-available-coinbase-history-with-spot-overlay",
+  "asset_id": "sol",
+  "name": "Solana",
+  "symbol": "SOL-USD",
+  "type": "crypto",
+  "currency": "USD",
+  "exchange": "Coinbase Exchange",
+  "instrument_type": "CRYPTOCURRENCY",
+  "category": "Layer 1 blockchain",
+  "rows": 1922,
+  "first_date": "2021-06-17",
+  "last_date": "2026-09-20",
+  "fetched_at": "2026-09-20T16:00:31.883991+00:00",
+  "request_count": 10,
+  "limitation": "History begins when the USD product became available on Coinbase. The current-day close is a provisional spot price until the daily candle finalizes; short-history assets may not yet have a 200-week moving average."
+}

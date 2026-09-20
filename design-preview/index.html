@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#08191d" />
+    <title>Multi-Asset Cycle Dashboard — A Preview</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./theme.css?v=a-system-v27-fiscal-flow" />
+    <link rel="stylesheet" href="/src/reserve-holdings.css" />
+    <link rel="stylesheet" href="/src/policy-adoption.css?v=arma-progress-v1" />
+    <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+  </head>
+  <body>
+    <!--
+      THESIS: One continuous market instrument joins asset state, long-cycle chart evidence, interpretation, and macro confirmation; it refuses a patchwork of unrelated dashboard styles.
+      OWN-WORLD: Deep petroleum canvas, warm ivory data type, amber signal marks, hairline brass rules, squared controls, and dense terminal-like evidence bands.
+      STORY: Read Bitcoin's present cycle state, test it against the chart, compare assets, then confirm or challenge the conclusion with macro evidence.
+      FIRST VIEWPORT: A compact navigation rail tops a three-column Bitcoin workspace; the asset ticker and Macro Evidence band form two continuous ruled strips beneath it.
+      FORM: Approved A-system reproduction; source comp Screenshot 2026-08-27; seed key A-20260827.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+    -->
+    <header class="hero">
+      <a class="brand" href="#top" aria-label="Multi-Asset Cycle Dashboard home">
+        <span class="brand-mark" aria-hidden="true">M <i></i> A</span>
+        <span>Multi-Asset Cycle Dashboard</span>
+      </a>
+      <nav id="primaryNavigation" class="primary-nav" aria-label="Dashboard sections">
+        <a href="#workspace">Dashboard</a>
+        <a href="#assetStrip">Assets</a>
+        <a href="#btcCycleTimeline">Cycles</a>
+        <a href="#macroCyclePanel">Macro</a>
+        <a href="#macroEvidence">Indicators</a>
+        <a href="#researchNotes">Research</a>
+        <a href="#researchNotes">Alerts</a>
+      </nav>
+      <button id="navMenu" class="nav-menu" type="button" aria-expanded="false" aria-controls="primaryNavigation">Menu</button>
+      <div class="masthead-note"><strong id="headerAsOf">Research tool</strong><button id="settingsButton" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>Settings</button><button id="exportButton" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Export</button></div>
+    </header>
+
+    <main id="top">
+      <section id="assetStrip" class="asset-selector-panel" aria-labelledby="asset-strip-title">
+        <div class="asset-strip-meta">
+          <h1 id="asset-strip-title">Cross-asset cycle index</h1>
+          <div id="globalAsOf" class="as-of">Loading current data…</div>
+        </div>
+        <div id="assetButtons" class="asset-buttons"></div>
+        <p class="asset-scroll-cue" aria-hidden="true">Swipe to compare all seven assets →</p>
+        <div id="assetOverview" class="asset-overview" hidden></div>
+      </section>
+
+      <section id="workspace" class="market-workspace" aria-label="Selected asset cycle workspace">
+        <aside id="currentStateRail" class="current-state-rail" aria-live="polite">
+          <p class="loading-line">Loading selected asset…</p>
+        </aside>
+
+        <section class="chart-workspace">
+          <div class="panel-title-row chart-heading">
+            <div>
+              <h2 id="chartTitle">Cycle charts</h2>
+              <p id="chartSubtitle">Long-cycle evidence and interpretation.</p>
+            </div>
+            <div id="asOf" class="as-of"></div>
+          </div>
+          <div class="chart-control-row" aria-label="Chart controls">
+            <div class="chart-ranges" role="group" aria-label="Chart date range">
+              <button type="button" data-chart-range="1W" aria-pressed="false">1W</button>
+              <button type="button" data-chart-range="1M" aria-pressed="false">1M</button>
+              <button type="button" data-chart-range="3M" aria-pressed="false">3M</button>
+              <button type="button" data-chart-range="1Y" aria-pressed="false">1Y</button>
+              <button class="active" type="button" data-chart-range="ALL" aria-pressed="true">All</button>
+            </div>
+            <button id="cycleOverlayToggle" class="chart-tool cycle-overlay-toggle" type="button" aria-pressed="true" aria-label="Hide Bitcoin cycle bands"><span aria-hidden="true"></span>BTC cycles</button>
+            <label class="scale-control"><span>Scale</span><select id="chartScale"><option value="log">Log</option><option value="linear">Linear</option></select></label>
+            <button id="chartFullscreen" class="chart-tool" type="button">Full screen</button>
+          </div>
+          <div class="chart-tabs" role="tablist" aria-label="Asset chart views">
+            <button id="logTab" class="chart-tab active" type="button" role="tab" aria-selected="true" aria-controls="logPane" tabindex="0" data-chart-tab="log">Log Channel</button>
+            <button id="movingAverageTab" class="chart-tab" type="button" role="tab" aria-selected="false" aria-controls="movingAveragePane" tabindex="-1" data-chart-tab="moving-average">Moving Averages</button>
+            <button id="rainbowTab" class="chart-tab" type="button" role="tab" aria-selected="false" aria-controls="rainbowPane" tabindex="-1" data-chart-tab="rainbow">Rainbow</button>
+            <button id="elliottTab" class="chart-tab" type="button" role="tab" aria-selected="false" aria-controls="elliottPane" tabindex="-1" data-chart-tab="elliott">Elliott Wave</button>
+          </div>
+
+          <div class="chart-pane active" id="logPane" role="tabpanel" aria-labelledby="logTab">
+            <div id="logChart" class="chart" role="img" aria-label="Selected asset price and logarithmic trend bands" aria-describedby="logLegend logInterpretation"></div>
+            <div id="logLegend" class="legend">
+              <span><b class="dot price"></b>Price</span>
+              <span><b class="dot trend"></b>Trend</span>
+              <span><b class="dot buy"></b>−1.5σ accumulation</span>
+              <span><b class="dot deep"></b>−2σ deep value</span>
+              <span><b class="dot sell"></b>+2σ take chips</span>
+            </div>
+            <div id="logInterpretation"></div>
+          </div>
+
+          <div class="chart-pane" id="movingAveragePane" role="tabpanel" aria-labelledby="movingAverageTab" hidden>
+            <div id="movingAverageChart" class="chart" role="img" aria-label="Selected asset price with four key moving averages" aria-describedby="movingAverageLegend movingAverageInterpretation"></div>
+            <div id="movingAverageLegend" class="legend moving-average-legend">
+              <span><b class="dot price"></b>Price</span>
+              <span><b class="dot ma-50"></b>50D</span>
+              <span><b class="dot ma-100"></b>100D</span>
+              <span><b class="dot ma-200"></b>200D</span>
+              <span><b class="dot ma-200w"></b>200W</span>
+            </div>
+            <p id="movingAverageNote" class="chart-note" hidden></p>
+            <div id="movingAverageInterpretation"></div>
+          </div>
+
+          <div class="chart-pane" id="rainbowPane" role="tabpanel" aria-labelledby="rainbowTab" hidden>
+            <div id="rainbowChart" class="rainbow-chart"></div>
+            <div id="rainbowSummary" class="rainbow-summary"></div>
+            <div id="rainbowInterpretation"></div>
+          </div>
+
+          <div class="chart-pane" id="elliottPane" role="tabpanel" aria-labelledby="elliottTab" hidden>
+            <div class="elliott-header">
+              <div>
+                <h3>Elliott Wave Scenario Lab</h3>
+                <p>Algorithmic pivot candidates plus confluence—not an analyst-certified wave count.</p>
+              </div>
+              <span class="as-of">Algorithm + manual override</span>
+            </div>
+            <div id="elliottSummary" class="elliott-summary"></div>
+            <div id="elliottChart" class="elliott-chart"></div>
+            <div id="elliottInterpretation"></div>
+            <div class="two-col elliott-scenarios">
+              <article class="subpanel"><h3>Primary Count</h3><div id="elliottPrimary"></div></article>
+              <article class="subpanel"><h3>Alternate Count</h3><div id="elliottAlternate"></div></article>
+            </div>
+            <div class="two-col elliott-scenarios">
+              <article class="subpanel"><h3>Phase 2 Confluence</h3><div id="elliottConfluence"></div></article>
+              <article class="subpanel"><h3>Manual Override</h3><div id="elliottManual"></div></article>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="btcCycleTimeline" class="cycle-ledger" aria-labelledby="cycle-ledger-title">
+        <div class="cycle-ledger-head">
+          <div>
+            <h2 id="cycle-ledger-title">Bitcoin market cycles</h2>
+            <p>A historical framing of recurring phases—not a forecast that the next cycle must repeat.</p>
+          </div>
+          <div class="cycle-view" aria-label="Cycle timeline view">Cycles <span>Regimes</span> <span>Metrics</span></div>
+        </div>
+        <div class="cycle-axis" aria-hidden="true">
+          <span>2011</span><span>2013</span><span>2017</span><span>2021</span><span>2025</span><span>Next</span>
+        </div>
+        <div class="cycle-sequence">
+          <article>
+            <h3>Cycle 1</h3><p>2011–2013</p>
+            <dl class="cycle-dates">
+              <div><dt>Start</dt><dd><time datetime="2011-01-01">Jan 1, 2011</time></dd></div>
+              <div><dt>End</dt><dd><time datetime="2013-12-31">Dec 31, 2013</time></dd></div>
+            </dl>
+            <div class="cycle-phases"><span>Accumulation</span><span>Markup</span><span>Distribution</span><span>Drawdown</span></div>
+            <small>Early adoption → first broad speculative peak</small>
+          </article>
+          <article>
+            <h3>Cycle 2</h3><p>2015–2017</p>
+            <dl class="cycle-dates">
+              <div><dt>Start</dt><dd><time datetime="2015-01-01">Jan 1, 2015</time></dd></div>
+              <div><dt>End</dt><dd><time datetime="2017-12-31">Dec 31, 2017</time></dd></div>
+            </dl>
+            <div class="cycle-phases"><span>Rebuild</span><span>Markup</span><span>Euphoria</span><span>Reset</span></div>
+            <small>Re-accumulation → global retail expansion</small>
+          </article>
+          <article>
+            <h3>Cycle 3</h3><p>2018–2021</p>
+            <dl class="cycle-dates">
+              <div><dt>Start</dt><dd><time datetime="2018-01-01">Jan 1, 2018</time></dd></div>
+              <div><dt>End</dt><dd><time datetime="2021-12-31">Dec 31, 2021</time></dd></div>
+            </dl>
+            <div class="cycle-phases"><span>Accumulation</span><span>Expansion</span><span>Distribution</span><span>De-risking</span></div>
+            <small>Institutional interest → new all-time-high cycle</small>
+          </article>
+          <article>
+            <h3>Cycle 4</h3><p>2022–present</p>
+            <dl class="cycle-dates">
+              <div><dt>Start</dt><dd><time datetime="2022-01-01">Jan 1, 2022</time></dd></div>
+              <div><dt>End</dt><dd>Present</dd></div>
+            </dl>
+            <div class="cycle-phases"><span>Reset</span><span>ETF inflows</span><span>Maturation</span><span>Transition</span></div>
+            <small>Current cycle; phase labels remain provisional</small>
+          </article>
+          <article class="future-cycle">
+            <h3>Next cycle</h3><p>Unscored</p>
+            <dl class="cycle-dates pending">
+              <div><dt>Start</dt><dd>Not set</dd></div>
+              <div><dt>End</dt><dd>Not set</dd></div>
+            </dl>
+            <div class="cycle-phases"><span>Observe</span><span>Confirm</span></div>
+            <small>No timing or return assumption is embedded.</small>
+          </article>
+        </div>
+      </section>
+
+      <section id="macroEvidence" class="macro-evidence-ledger" aria-labelledby="macro-evidence-title" hidden>
+        <div class="macro-evidence-head">
+          <div>
+            <h2 id="macro-evidence-title">Macro evidence</h2>
+            <p>High-level macro indicators that shape the multi-asset cycle backdrop.</p>
+          </div>
+          <a href="#macroCyclePanel">View all indicators ›</a>
+        </div>
+        <div id="macroEvidenceGrid" class="macro-evidence-grid" aria-live="polite"></div>
+        <p class="macro-evidence-note">Macro evidence describes the environment around Bitcoin. It should confirm—or challenge—the cycle reading, not replace valuation and risk discipline.</p>
+      </section>
+
+      <section class="metric-ledger" aria-labelledby="metric-ledger-title">
+        <div class="section-heading">
+          <h2 id="metric-ledger-title">Current metric notes</h2>
+          <p>The figures used in the selected asset’s cycle reading, with context attached.</p>
+        </div>
+        <div id="status" class="card-grid"></div>
+      </section>
+
+      <section id="macroCyclePanel" class="macro-cycle-panel" hidden>
+        <div class="panel-title-row">
+          <div>
+            <h2>Macro, fiscal &amp; market supply</h2>
+            <p>Liquidity, rates, energy, U.S. debt absorption, foreign Treasury holders, and Bitcoin market supply.</p>
+          </div>
+          <div id="macroAsOf" class="as-of">Loading macro data…</div>
+        </div>
+        <div id="macroPillars" class="macro-pillars"></div>
+        <div class="macro-toolbar">
+          <div class="macro-tabs" role="tablist" aria-label="Bitcoin macro views">
+            <button id="macroReservesTab" class="macro-tab" type="button" role="tab" aria-selected="false" aria-controls="macroReservesPane" tabindex="-1" data-macro-tab="reserves">Reserve Shift</button>
+            <button id="macroPolicyTab" class="macro-tab" type="button" role="tab" aria-selected="false" aria-controls="macroPolicyPane" tabindex="-1" data-macro-tab="policy">Policy &amp; Adoption</button>
+            <button id="macroOverviewTab" class="macro-tab active" type="button" role="tab" aria-selected="true" aria-controls="macroOverviewPane" tabindex="0" data-macro-tab="overview">Overview</button>
+            <button id="macroLiquidityTab" class="macro-tab" type="button" role="tab" aria-selected="false" aria-controls="macroLiquidityPane" tabindex="-1" data-macro-tab="liquidity">Liquidity &amp; Rates</button>
+            <button id="macroFiscalTab" class="macro-tab" type="button" role="tab" aria-selected="false" aria-controls="macroFiscalPane" tabindex="-1" data-macro-tab="fiscal">Fiscal &amp; Holders</button>
+            <button id="macroSupplyTab" class="macro-tab" type="button" role="tab" aria-selected="false" aria-controls="macroSupplyPane" tabindex="-1" data-macro-tab="supply">BTC Market Supply</button>
+            <button id="macroCycleTab" class="macro-tab" type="button" role="tab" aria-selected="false" aria-controls="macroCyclePane" tabindex="-1" data-macro-tab="cycle">Cycle Signals</button>
+          </div>
+          <div class="macro-ranges" role="group" aria-label="Macro chart range">
+            <button type="button" data-macro-range="1Y" aria-pressed="false">1Y</button>
+            <button type="button" data-macro-range="5Y" aria-pressed="false">5Y</button>
+            <button class="active" type="button" data-macro-range="10Y" aria-pressed="true">10Y</button>
+            <button type="button" data-macro-range="Max" aria-pressed="false">Max</button>
+          </div>
+        </div>
+        <div id="macroReservesPane" class="macro-pane" role="tabpanel" aria-labelledby="macroReservesTab" hidden></div>
+        <div id="macroPolicyPane" class="macro-pane" role="tabpanel" aria-labelledby="macroPolicyTab" hidden></div>
+        <div id="macroOverviewPane" class="macro-pane active" role="tabpanel" aria-labelledby="macroOverviewTab"></div>
+        <div id="macroLiquidityPane" class="macro-pane" role="tabpanel" aria-labelledby="macroLiquidityTab" hidden></div>
+        <div id="macroFiscalPane" class="macro-pane" role="tabpanel" aria-labelledby="macroFiscalTab" hidden></div>
+        <div id="macroSupplyPane" class="macro-pane" role="tabpanel" aria-labelledby="macroSupplyTab" hidden></div>
+        <div id="macroCyclePane" class="macro-pane" role="tabpanel" aria-labelledby="macroCycleTab" hidden>
+          <div class="macro-section-heading">
+            <div><h3>Four-domino sequence</h3><p id="macroCycleSummary">Business cycle → copper/gold → volatility → cycle top.</p></div>
+            <div id="macroCycleCount" class="as-of"></div>
+          </div>
+          <div id="dominoSequence" class="domino-sequence"></div>
+          <div id="macroIndicators" class="macro-indicators"></div>
+          <div id="macroRisk" class="macro-risk"></div>
+        </div>
+        <details class="macro-methodology">
+          <summary>Methodology, sources, and limitations</summary>
+          <div id="macroSources"></div>
+        </details>
+      </section>
+
+      <section id="researchNotes" class="research-ledger">
+        <article><h2>Current read</h2><div id="currentRead" class="readout"></div></article>
+        <article><h2>Data &amp; notes</h2><div id="manual"></div></article>
+      </section>
+    </main>
+    <script type="module" src="./src/app.js?v=arma-progress-v1"></script>
+  </body>
+</html>

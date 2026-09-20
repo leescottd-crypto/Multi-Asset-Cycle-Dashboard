@@ -1,0 +1,179 @@
+{
+  "archive": [
+    {
+      "file": "data/fiscal-flow/archive/fy2006.json",
+      "fiscal_year": 2006,
+      "precision": "whole USD millions converted to dollars",
+      "sha256": "261b17f5759238f283d25c2606c0c5d20bcb0501446d015af7adee6ee0479418",
+      "source_url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_200609.pdf",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2007.json",
+      "fiscal_year": 2007,
+      "precision": "whole USD millions converted to dollars",
+      "sha256": "3950e9e304d5725b5d19199b8abf172d317ce3b87c787f02bf87518237bedd22",
+      "source_url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_200709.pdf",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2008.json",
+      "fiscal_year": 2008,
+      "precision": "whole USD millions converted to dollars",
+      "sha256": "7df6c389ea2943c0da8171e646a0e5156f591901afdf34690a16bd9819561631",
+      "source_url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_200809.pdf",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2009.json",
+      "fiscal_year": 2009,
+      "precision": "whole USD millions converted to dollars",
+      "sha256": "ac6904d9c38640a752e12416a477046215cee21969ab62762eacddcefc1ccddf",
+      "source_url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_200909.pdf",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2010.json",
+      "fiscal_year": 2010,
+      "precision": "whole USD millions converted to dollars",
+      "sha256": "5b9b8c15f76f71bb1fe093a01b5186c4a93b6e870b6898605787fbd75f7af51b",
+      "source_url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_201009.pdf",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2011.json",
+      "fiscal_year": 2011,
+      "precision": "whole USD millions converted to dollars",
+      "sha256": "d65e8329401e17e94785a6d343113112f235f6214d38239d16dba3257921fa1c",
+      "source_url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_201109.pdf",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2012.json",
+      "fiscal_year": 2012,
+      "precision": "whole USD millions converted to dollars",
+      "sha256": "db0822ff84c4fb1bf73aa5c55c5c48e4e8b1b0e7b8c8cb85f670619fa9ca7bc5",
+      "source_url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_201209.pdf",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2013.json",
+      "fiscal_year": 2013,
+      "precision": "whole USD millions converted to dollars",
+      "sha256": "2afc982564448ad3abe8e4bc370809158e879f055e0e90c54355143b0aea085f",
+      "source_url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_201309.pdf",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2014.json",
+      "fiscal_year": 2014,
+      "precision": "whole USD millions converted to dollars",
+      "sha256": "098c48686623fd6477dd1923df0b77860a25b9612212f0e5a5abd2b98bc3ae3b",
+      "source_url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_201409.pdf",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2015.json",
+      "fiscal_year": 2015,
+      "precision": "cents rounded to nearest dollar",
+      "sha256": "c3cfce5b9d6277869813ed04e1e8c45a8397e61e3dbbf6dbba62739dd44daf45",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2016.json",
+      "fiscal_year": 2016,
+      "precision": "cents rounded to nearest dollar",
+      "sha256": "791b881c3df4269ffaf99868e43be24d04b172815afcd3a739b51df4bd3b12a8",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2017.json",
+      "fiscal_year": 2017,
+      "precision": "cents rounded to nearest dollar",
+      "sha256": "c74270fd027f91fa5904fac9ad51a174fbfde1ee2b8b9dc912dcfbf4f9766c03",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2018.json",
+      "fiscal_year": 2018,
+      "precision": "cents rounded to nearest dollar",
+      "sha256": "d9ae7e3b89094f7a54aea74e9028186115346e25de01cde2ae0e90e600683fff",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2019.json",
+      "fiscal_year": 2019,
+      "precision": "cents rounded to nearest dollar",
+      "sha256": "753493450d2024e4ef58c5a191c2e64f05dac36fdda22395999c01bcc029b416",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2020.json",
+      "fiscal_year": 2020,
+      "precision": "cents rounded to nearest dollar",
+      "sha256": "4a4c813810da1bc6d1313abdc96b50e352dd6f3e6efe8438825b939072e88d8b",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2021.json",
+      "fiscal_year": 2021,
+      "precision": "cents rounded to nearest dollar",
+      "sha256": "e1fa96ef9fd3dde3a02c6847529131c3f34ef63875db76acabffea5bc2ac790b",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2022.json",
+      "fiscal_year": 2022,
+      "precision": "cents rounded to nearest dollar",
+      "sha256": "6d12d7414f6ec7e44b67a8712463a450d760ffa935e26155251915b2b12718bb",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2023.json",
+      "fiscal_year": 2023,
+      "precision": "cents rounded to nearest dollar",
+      "sha256": "2ed8fc0bc6250e03f7769bb9d841cadbfd5cf32fb9c262e2ec9bab7c3fa751f4",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2024.json",
+      "fiscal_year": 2024,
+      "precision": "cents rounded to nearest dollar",
+      "sha256": "3ea50d6839845a137f1290032669a200e1a3e9874d64c7c3f7383fdda85535c4",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "status": "final-frozen"
+    },
+    {
+      "file": "data/fiscal-flow/archive/fy2025.json",
+      "fiscal_year": 2025,
+      "precision": "cents rounded to nearest dollar",
+      "sha256": "3f119edb4a16bdfb2e91fb251bb76270a70657eebb794b63c972788f9faa75ee",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "status": "final-frozen"
+    }
+  ],
+  "archive_policy": "immutable",
+  "current": {
+    "file": "data/fiscal-flow/current.json",
+    "fiscal_year": 2026,
+    "precision": "cents rounded to nearest dollar",
+    "sha256": "b90b30cf6c975e5f09204a8171a270b87d826801a6681c405975f84887359d7e",
+    "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+    "status": "current-ytd"
+  },
+  "debt": {
+    "file": "data/fiscal-flow/debt.json",
+    "sha256": "720d89031f5848d8b32fcad9d52fb2d2f5fdb4c2db581892443409efa474ea14",
+    "source_url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/"
+  },
+  "schema_version": 2
+}

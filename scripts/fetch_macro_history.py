@@ -31,6 +31,8 @@ FRED_SERIES = {
     "fed_treasuries": "TREAST",
     "wti": "DCOILWTICO",
     "credit_spread": "BAA10Y",
+    "vix": "VIXCLS",
+    "cpi": "CPIAUCSL",
 }
 FRED_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}"
 DEBT_URL = (
@@ -45,6 +47,10 @@ STABLECOIN_URL = "https://stablecoins.llama.fi/stablecoincharts/all"
 COIN_METRICS_EXCHANGE_SUPPLY_URL = (
     "https://community-api.coinmetrics.io/v4/timeseries/asset-metrics"
     "?assets=btc&metrics=SplyExNtv&frequency=1d&start_time=2014-01-01&page_size=10000"
+)
+YAHOO_CHART_URL = (
+    "https://query2.finance.yahoo.com/v8/finance/chart/{symbol}"
+    "?period1=1420070400&period2={period2}&interval=1d&events=history"
 )
 
 
@@ -201,6 +207,25 @@ def fetch_coinmetrics_exchange_supply() -> list[dict[str, float | str]]:
     return rows
 
 
+def fetch_yahoo_close(symbol: str) -> list[dict[str, float | str]]:
+    period2 = int(datetime.now(timezone.utc).timestamp()) + 86400
+    payload = fetch_json(YAHOO_CHART_URL.format(symbol=urllib.parse.quote(symbol), period2=period2))
+    result = payload.get("chart", {}).get("result", [None])[0] if isinstance(payload, dict) else None
+    if not result:
+        raise RuntimeError(f"Yahoo chart response missing for {symbol}")
+    timestamps = result.get("timestamp", [])
+    closes = result.get("indicators", {}).get("quote", [{}])[0].get("close", [])
+    rows = []
+    for stamp, close in zip(timestamps, closes):
+        if close is None:
+            continue
+        rows.append({
+            "date": datetime.fromtimestamp(int(stamp), timezone.utc).date().isoformat(),
+            "value": float(close),
+        })
+    return rows
+
+
 def main() -> int:
     fetched_at = datetime.now(timezone.utc).isoformat()
     errors: list[str] = []
@@ -220,6 +245,18 @@ def main() -> int:
             })
         except Exception as exc:
             errors.append(f"FRED {series_id}: {exc}")
+
+    try:
+        dxy_rows = fetch_yahoo_close("DX-Y.NYB")
+        write_json("market-dxy.json", {
+            "symbol": "DX-Y.NYB",
+            "source": "ICE U.S. Dollar Index via Yahoo Finance",
+            "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
+            "fetched_at": fetched_at,
+            "observations": dxy_rows,
+        })
+    except Exception as exc:
+        errors.append(f"DXY: {exc}")
 
     try:
         debt_payload = fetch_json(DEBT_URL)

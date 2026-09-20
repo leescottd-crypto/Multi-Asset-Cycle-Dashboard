@@ -1,0 +1,164 @@
+{
+  "deficit_dollars": 3131917248889,
+  "fiscal_year": 2020,
+  "label": "FY2020",
+  "net_interest_dollars": 344704683969,
+  "net_outlays_dollars": 6551872254654,
+  "offsetting_outlays": [
+    {
+      "amount_dollars": -106361878487,
+      "label": "Undistributed Offsetting Receipts",
+      "line_code": 330
+    }
+  ],
+  "period_end": "2020-09-30",
+  "positive_outlays": [
+    {
+      "amount_dollars": 726151468010,
+      "label": "National Defense",
+      "line_code": 140
+    },
+    {
+      "amount_dollars": 67660337597,
+      "label": "International Affairs",
+      "line_code": 150
+    },
+    {
+      "amount_dollars": 34058562158,
+      "label": "General Science, Space, and Technology",
+      "line_code": 160
+    },
+    {
+      "amount_dollars": 7167805888,
+      "label": "Energy",
+      "line_code": 170
+    },
+    {
+      "amount_dollars": 40690620068,
+      "label": "Natural Resources and Environment",
+      "line_code": 180
+    },
+    {
+      "amount_dollars": 49152682967,
+      "label": "Agriculture",
+      "line_code": 190
+    },
+    {
+      "amount_dollars": 571656751610,
+      "label": "Commerce and Housing Credit",
+      "line_code": 200
+    },
+    {
+      "amount_dollars": 146156220374,
+      "label": "Transportation",
+      "line_code": 210
+    },
+    {
+      "amount_dollars": 83619153718,
+      "label": "Community and Regional Development",
+      "line_code": 220
+    },
+    {
+      "amount_dollars": 236722686775,
+      "label": "Education, Training, Employment, and Social Services",
+      "line_code": 230
+    },
+    {
+      "amount_dollars": 748292683864,
+      "label": "Health",
+      "line_code": 240
+    },
+    {
+      "amount_dollars": 776224012763,
+      "label": "Medicare",
+      "line_code": 250
+    },
+    {
+      "amount_dollars": 1262558242934,
+      "label": "Income Security",
+      "line_code": 260
+    },
+    {
+      "amount_dollars": 1095817057878,
+      "label": "Social Security",
+      "line_code": 270
+    },
+    {
+      "amount_dollars": 218673996985,
+      "label": "Veterans Benefits and Services",
+      "line_code": 280
+    },
+    {
+      "amount_dollars": 72102351855,
+      "label": "Administration of Justice",
+      "line_code": 290
+    },
+    {
+      "amount_dollars": 176824813727,
+      "label": "General Government",
+      "line_code": 300
+    },
+    {
+      "amount_dollars": 344704683969,
+      "label": "Net Interest",
+      "line_code": 320
+    }
+  ],
+  "precision": "cents rounded to nearest dollar",
+  "receipts": [
+    {
+      "amount_dollars": 1608661926485,
+      "label": "Individual Income Taxes",
+      "line_code": 20
+    },
+    {
+      "amount_dollars": 211844662324,
+      "label": "Corporation Income Taxes",
+      "line_code": 30
+    },
+    {
+      "amount_dollars": 1261650036143,
+      "label": "Employment and General Retirement",
+      "line_code": 50
+    },
+    {
+      "amount_dollars": 43103787706,
+      "label": "Unemployment Insurance",
+      "line_code": 60
+    },
+    {
+      "amount_dollars": 5200612526,
+      "label": "Other Retirement",
+      "line_code": 70
+    },
+    {
+      "amount_dollars": 86782067346,
+      "label": "Excise Taxes",
+      "line_code": 80
+    },
+    {
+      "amount_dollars": 17624156022,
+      "label": "Estate and Gift Taxes",
+      "line_code": 90
+    },
+    {
+      "amount_dollars": 68550229846,
+      "label": "Customs Duties",
+      "line_code": 100
+    },
+    {
+      "amount_dollars": 116537527368,
+      "label": "Miscellaneous Receipts",
+      "line_code": 110
+    }
+  ],
+  "reconciliation": {
+    "identity_difference_dollars": 0,
+    "outlay_detail_less_total_dollars": -1,
+    "receipt_detail_less_total_dollars": 1
+  },
+  "source_type": "FiscalData API Table 9",
+  "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+  "status": "final-frozen",
+  "total_receipts_dollars": 3419955005765
+}

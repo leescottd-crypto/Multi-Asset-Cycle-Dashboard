@@ -3,6 +3,9 @@
 Central dashboard for repeating the Bitcoin cycle toolkit across multiple assets:
 
 - Bitcoin (`BTC-USD`)
+- Solana (`SOL-USD`)
+- Sui (`SUI-USD`)
+- Hyperliquid (`HYPE-USD`)
 - Gold ETF proxy (`GLD`)
 - Silver ETF proxy (`SLV`)
 - Roundhill Magnificent Seven ETF (`MAGS`)
@@ -23,12 +26,14 @@ Each asset gets the same core charting/readout stack:
 - Elliott Wave scenario lab with pivot map and confluence scoring
 - Data provenance panel
 - Bitcoin-only macro workspace with liquidity, dollar, real-yield, financial-conditions, M2, oil, federal-debt, Treasury-absorption, foreign-holder, stablecoin, and exchange-supply views
+- Source-verified Reserve Shift exhibit comparing gold with U.S. debt holdings in foreign central-bank reserves, with the Q2 2026 World Gold Council update and ECB valuation caveat
 - BTC macro domino sequence: ISM Manufacturing PMI, copper/gold breakout, BTC implied and 90-day realized volatility, plus WTI oil invalidation risk
 
 ## Data sources
 
 - BTC: CoinMetrics community BTC CSV + Coinbase Exchange daily candles + Coinbase spot ticker.
-- Non-BTC assets: Yahoo Finance no-key chart endpoint, with regular-market price overlaid as the provisional current row when available.
+- SOL, SUI, and HYPE: Coinbase Exchange daily candles plus a provisional current-day spot overlay.
+- Traditional non-BTC assets: Yahoo Finance no-key chart endpoint, with regular-market price overlaid as the provisional current row when available.
 - Macro history: Federal Reserve/FRED, U.S. Treasury FiscalData, and Treasury International Capital (TIC).
 - USD stablecoin supply: DefiLlama. This is labelled as shorter-history crypto liquidity rather than a ten-year macro series.
 - Labelled BTC exchange balances and net flows: Glassnode when `GLASSNODE_API_KEY` is configured. Exchange custody inventory is not represented as coins currently offered for sale.
@@ -41,6 +46,7 @@ MSTR is categorized as a Bitcoin Treasury Company and uses Strategy's public equ
 
 ```bash
 cd /Users/scott/Developer/Multi-Asset-Cycle-Dashboard
+python3 -m pip install -r requirements.txt
 python3 scripts/fetch_assets.py
 python3 scripts/build_indicators.py
 python3 scripts/build_macro_cycle.py
@@ -91,12 +97,39 @@ The script fetches current data for all assets and rebuilds dashboard JSON:
 ~/.hermes/bin/multi-asset-dashboard-refresh.sh
 ```
 
-It also refreshes and validates the two Bitcoin macro payloads:
+It also refreshes and validates the two Bitcoin macro payloads, plus the current U.S. fiscal-flow snapshot:
 
 ```text
 public/data/btc-macro.json
 public/data/btc-market-supply.json
+public/data/fiscal-flow.json
 ```
+
+### U.S. fiscal-flow archive
+
+The **Fiscal & Holders** tab includes a frozen FY2006–FY2025 U.S. Fiscal Flow exhibit built from official September Monthly Treasury Statements. FY2006–FY2014 use the published September PDFs (whole USD millions); FY2015 onward uses Treasury FiscalData Table 9 (dollar precision retained). Historic files under `data/fiscal-flow/archive/` are immutable and checksum-listed in `data/fiscal-flow/manifest.json`.
+
+Routine refresh updates only `data/fiscal-flow/current.json`, its manifest entry, and the generated client aggregate:
+
+```bash
+python3 scripts/fiscal_flow.py
+```
+
+A deliberate backfill creates missing frozen years but refuses to overwrite existing archive files:
+
+```bash
+python3 scripts/fiscal_flow.py --backfill
+```
+
+`--migrate-existing` is reserved for an explicitly reviewed source/parser migration. At September close, first run the routine refresh and tests, reconcile the September Table 9 totals, then promote the current snapshot exactly once:
+
+```bash
+python3 scripts/fiscal_flow.py
+python3 -m unittest discover -s tests -v
+python3 scripts/fiscal_flow.py --promote 2026
+```
+
+Promotion refuses to proceed unless the current source date is exactly September 30 for that fiscal year. Negative outlay functions are retained as offsets/recoveries outside the positive flow and included algebraically in net-outlay reconciliation.
 
 ### BTC exchange-supply data
 

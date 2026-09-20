@@ -17,6 +17,9 @@ PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
 
 ASSETS = [
     {"id": "btc", "name": "Bitcoin", "symbol": "BTC-USD", "price_label": "BTC Price", "fit_start": "2015-01-01"},
+    {"id": "sol", "name": "Solana", "symbol": "SOL-USD", "price_label": "SOL Price", "fit_start": "2020-01-01", "category": "Layer 1 blockchain"},
+    {"id": "sui", "name": "Sui", "symbol": "SUI-USD", "price_label": "SUI Price", "fit_start": "2023-01-01", "category": "Layer 1 blockchain"},
+    {"id": "hype", "name": "Hyperliquid", "symbol": "HYPE-USD", "price_label": "HYPE Price", "fit_start": "2024-11-01", "category": "Decentralized exchange network"},
     {"id": "gold", "name": "Gold", "symbol": "GLD", "price_label": "GLD Price", "fit_start": "2005-01-01"},
     {"id": "silver", "name": "Silver", "symbol": "SLV", "price_label": "SLV Price", "fit_start": "2007-01-01"},
     {"id": "mags", "name": "Roundhill Magnificent Seven ETF", "symbol": "MAGS", "price_label": "MAGS Price", "fit_start": "2023-04-11"},

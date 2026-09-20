@@ -18,3 +18,10 @@ logs/
 # Secrets/env
 .env
 .env.*
+
+# Local previews, agent state and independently versioned hosted package
+/.playwright-cli/
+/.impeccable/
+/.hermes/
+/tmp/
+/sites-hosted/

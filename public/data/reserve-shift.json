@@ -1,0 +1,59 @@
+{
+  "id": "gold-vs-us-debt-reserve-shift",
+  "status": "source-verified historical exhibit",
+  "as_of": "2026-06-30",
+  "chart": {
+    "title": "Gold has overtaken U.S. debt holdings",
+    "unit": "% of foreign central-bank reserves",
+    "cadence": "Q2 of each year",
+    "series": [
+      { "year": 2021, "gold": 13, "us_debt": 28 },
+      { "year": 2022, "gold": 14, "us_debt": 27 },
+      { "year": 2023, "gold": 15, "us_debt": 26 },
+      { "year": 2024, "gold": 17, "us_debt": 24 },
+      { "year": 2025, "gold": 24, "us_debt": 23 }
+    ],
+    "source_label": "Crescat Capital via Visual Capitalist / Statista",
+    "source_url": "https://www.statista.com/chart/35763/share-of-gold-and-us-debt-holdings-in-foreign-central-banks-reserves/",
+    "note": "Rounded published shares. Each observation is Q2 of the stated year. The crossover occurred in 2025."
+  },
+  "q2_2026_buying": {
+    "tonnes": 289,
+    "period": "Q2 2026",
+    "comparison": "Record high for a second quarter and about five times revised Q1 2026 demand of 57 tonnes.",
+    "source_label": "World Gold Council, Gold Demand Trends Q2 2026",
+    "source_url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q2-2026/central-banks"
+  },
+  "ecb_cross_check": {
+    "period": "End-2025",
+    "gold_share": 27,
+    "us_treasuries_share": 22,
+    "valuation_adjusted_gold_share": 16,
+    "valuation_adjusted_us_treasuries_share": 26,
+    "caveat": "The ECB says the observed crossover largely reflects valuation effects from the increase in gold prices. Using end-2023 gold prices, gold would be about 16% and U.S. Treasuries about 26%.",
+    "coverage_note": "The ECB estimate uses total official foreign reserves and different country coverage from the main Q2 chart. The values are a cross-check, not extra points in the same series.",
+    "source_label": "European Central Bank, The international role of the euro, June 2026",
+    "source_url": "https://www.ecb.europa.eu/press/other-publications/ire/html/ecb.ire202606.en.html"
+  },
+  "bitcoin_interpretation": {
+    "role": "Context only; excluded from the Bitcoin score.",
+    "read": "The shift supports the long-run hard-money and reserve-diversification thesis for scarce assets. It is not direct evidence of sovereign Bitcoin buying and is not a short-term BTC trade trigger."
+  },
+  "sources": [
+    {
+      "label": "Crescat Capital via Visual Capitalist / Statista",
+      "url": "https://www.statista.com/chart/35763/share-of-gold-and-us-debt-holdings-in-foreign-central-banks-reserves/",
+      "used_for": "Q2 2021–Q2 2025 rounded reserve-share series"
+    },
+    {
+      "label": "European Central Bank",
+      "url": "https://www.ecb.europa.eu/press/other-publications/ire/html/ecb.ire202606.en.html",
+      "used_for": "End-2025 cross-check and valuation-effect caveat"
+    },
+    {
+      "label": "World Gold Council",
+      "url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q2-2026/central-banks",
+      "used_for": "Q2 2026 central-bank net purchases"
+    }
+  ]
+}

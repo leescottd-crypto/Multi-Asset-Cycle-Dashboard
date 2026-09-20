@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Multi-Asset Cycle Dashboard</title>
-    <link rel="stylesheet" href="/src/styles.css?v=multi-asset-20260803-reserve-axes" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/src/styles.css?v=multi-asset-20260904-reserve-shift-v2" />
+    <link rel="stylesheet" href="/src/reserve-holdings.css" />
+    <link rel="stylesheet" href="/src/policy-adoption.css?v=arma-progress-v1" />
     <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
   </head>
   <body>
@@ -12,11 +15,16 @@
       <div>
         <p class="eyebrow">Cross-asset secular trend dashboard</p>
         <h1>Cycle Command Center</h1>
-        <p class="lede">Bitcoin's log channel, rainbow bands, moving-average readouts, regime scoring, and Elliott scenario lab — rebuilt as a repeatable kit for BTC, gold, silver, MAGS, MSTR, S&P 500, and NASDAQ.</p>
+        <p class="lede">Bitcoin's log channel, rainbow bands, moving-average readouts, and Elliott scenario lab — rebuilt as a repeatable kit for BTC, SOL, SUI, HYPE, gold, silver, MAGS, MSTR, S&P 500, and NASDAQ.</p>
       </div>
       <div class="hero-warning">
         <strong>Decision support only.</strong><br />Not financial advice. No autopilot. No clown lever.
       </div>
+      <a class="reserve-shift-shortcut" href="#reserve-shift">
+        <span>New macro exhibit</span>
+        <strong>Gold vs. U.S. Treasuries</strong>
+        <small>Open Reserve Shift exhibit →</small>
+      </a>
     </header>
 
     <main>
@@ -24,7 +32,7 @@
         <div class="panel-title-row">
           <div>
             <h2>Central Dashboard</h2>
-            <p>Pick an asset. The same charting stack renders underneath: log channel, rainbow, Elliott Wave, current read, and regime checks.</p>
+            <p>Pick an asset. The same charting stack renders underneath: log channel, rainbow, Elliott Wave, and current read.</p>
           </div>
           <div id="globalAsOf" class="pill">Loading…</div>
         </div>
@@ -50,6 +58,8 @@
             <button class="macro-tab active" type="button" role="tab" aria-selected="true" data-macro-tab="overview">Overview</button>
             <button class="macro-tab" type="button" role="tab" aria-selected="false" data-macro-tab="liquidity">Liquidity &amp; Rates</button>
             <button class="macro-tab" type="button" role="tab" aria-selected="false" data-macro-tab="fiscal">Fiscal &amp; Holders</button>
+            <button class="macro-tab" type="button" role="tab" aria-selected="false" data-macro-tab="reserves">Reserve Shift</button>
+            <button class="macro-tab" type="button" role="tab" aria-selected="false" data-macro-tab="policy">Policy &amp; Adoption</button>
             <button class="macro-tab" type="button" role="tab" aria-selected="false" data-macro-tab="supply">BTC Market Supply</button>
             <button class="macro-tab" type="button" role="tab" aria-selected="false" data-macro-tab="cycle">Cycle Signals</button>
           </div>
@@ -64,6 +74,8 @@
         <div id="macroOverviewPane" class="macro-pane active" role="tabpanel"></div>
         <div id="macroLiquidityPane" class="macro-pane" role="tabpanel" hidden></div>
         <div id="macroFiscalPane" class="macro-pane" role="tabpanel" hidden></div>
+        <div id="macroReservesPane" class="macro-pane" role="tabpanel" hidden></div>
+        <div id="macroPolicyPane" class="macro-pane" role="tabpanel" hidden></div>
         <div id="macroSupplyPane" class="macro-pane" role="tabpanel" hidden></div>
         <div id="macroCyclePane" class="macro-pane" role="tabpanel" hidden>
           <div class="macro-section-heading">
@@ -103,6 +115,7 @@
             <span><b class="dot deep"></b>-2σ deep value</span>
             <span><b class="dot sell"></b>+2σ take chips</span>
           </div>
+          <div id="logInterpretation"></div>
         </div>
         <div class="chart-pane" id="movingAveragePane" role="tabpanel" hidden>
           <div id="movingAverageChart" class="chart"></div>
@@ -114,10 +127,12 @@
             <span><b class="dot ma-200w"></b>200W</span>
           </div>
           <p id="movingAverageNote" class="chart-note" hidden></p>
+          <div id="movingAverageInterpretation"></div>
         </div>
         <div class="chart-pane" id="rainbowPane" role="tabpanel" hidden>
           <div id="rainbowChart" class="rainbow-chart"></div>
           <div id="rainbowSummary" class="rainbow-summary"></div>
+          <div id="rainbowInterpretation"></div>
         </div>
         <div class="chart-pane" id="elliottPane" role="tabpanel" hidden>
           <div class="elliott-header">
@@ -129,6 +144,7 @@
           </div>
           <div id="elliottSummary" class="elliott-summary"></div>
           <div id="elliottChart" class="elliott-chart"></div>
+          <div id="elliottInterpretation"></div>
           <div class="two-col elliott-scenarios">
             <article class="subpanel"><h3>Primary Count</h3><div id="elliottPrimary"></div></article>
             <article class="subpanel"><h3>Alternate Count</h3><div id="elliottAlternate"></div></article>
@@ -142,15 +158,10 @@
 
       <section class="two-col">
         <article class="panel"><h2>Current Read</h2><div id="currentRead" class="readout"></div></article>
-        <article class="panel"><h2>Regime Score</h2><div id="regime" class="readout"></div></article>
-      </section>
-
-      <section class="two-col">
-        <article class="panel"><h2>Confirmation Checks</h2><div id="components"></div></article>
         <article class="panel"><h2>Data & Notes</h2><div id="manual"></div></article>
       </section>
     </main>
 
-    <script type="module" src="/src/app.js?v=multi-asset-20260803-reserve-axes"></script>
+    <script type="module" src="/src/app.js?v=arma-progress-v1"></script>
   </body>
 </html>

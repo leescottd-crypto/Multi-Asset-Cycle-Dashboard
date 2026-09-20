@@ -1,0 +1,90 @@
+{
+  "by_fiscal_year": {
+    "2006": {
+      "record_date": "2006-09-29",
+      "total_public_debt_outstanding_dollars": 8506973899215
+    },
+    "2007": {
+      "record_date": "2007-09-28",
+      "total_public_debt_outstanding_dollars": 9007653372262
+    },
+    "2008": {
+      "record_date": "2008-09-30",
+      "total_public_debt_outstanding_dollars": 10024724896912
+    },
+    "2009": {
+      "record_date": "2009-09-30",
+      "total_public_debt_outstanding_dollars": 11909829003512
+    },
+    "2010": {
+      "record_date": "2010-09-30",
+      "total_public_debt_outstanding_dollars": 13561623030892
+    },
+    "2011": {
+      "record_date": "2011-09-30",
+      "total_public_debt_outstanding_dollars": 14790340328557
+    },
+    "2012": {
+      "record_date": "2012-09-28",
+      "total_public_debt_outstanding_dollars": 16066241407386
+    },
+    "2013": {
+      "record_date": "2013-09-30",
+      "total_public_debt_outstanding_dollars": 16738183526697
+    },
+    "2014": {
+      "record_date": "2014-09-30",
+      "total_public_debt_outstanding_dollars": 17824071380734
+    },
+    "2015": {
+      "record_date": "2015-09-30",
+      "total_public_debt_outstanding_dollars": 18150617666484
+    },
+    "2016": {
+      "record_date": "2016-09-30",
+      "total_public_debt_outstanding_dollars": 19573444713937
+    },
+    "2017": {
+      "record_date": "2017-09-29",
+      "total_public_debt_outstanding_dollars": 20244900016054
+    },
+    "2018": {
+      "record_date": "2018-09-28",
+      "total_public_debt_outstanding_dollars": 21516058183180
+    },
+    "2019": {
+      "record_date": "2019-09-30",
+      "total_public_debt_outstanding_dollars": 22719401753434
+    },
+    "2020": {
+      "record_date": "2020-09-30",
+      "total_public_debt_outstanding_dollars": 26945391194615
+    },
+    "2021": {
+      "record_date": "2021-09-30",
+      "total_public_debt_outstanding_dollars": 28428918570049
+    },
+    "2022": {
+      "record_date": "2022-09-30",
+      "total_public_debt_outstanding_dollars": 30928911613307
+    },
+    "2023": {
+      "record_date": "2023-09-29",
+      "total_public_debt_outstanding_dollars": 33167334044723
+    },
+    "2024": {
+      "record_date": "2024-09-30",
+      "total_public_debt_outstanding_dollars": 35464673929172
+    },
+    "2025": {
+      "record_date": "2025-09-30",
+      "total_public_debt_outstanding_dollars": 37637553494936
+    }
+  },
+  "current": {
+    "record_date": "2026-09-17",
+    "total_public_debt_outstanding_dollars": 40093343468150
+  },
+  "definition": "Total Public Debt Outstanding: debt held by the public plus intragovernmental holdings.",
+  "source_url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/"
+}

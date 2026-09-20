@@ -58,6 +58,18 @@ def monthly_last(rows: list[dict[str, float | str]]) -> list[dict[str, float | s
     return list(months.values())
 
 
+def year_over_year(rows: list[dict[str, float | str]]) -> list[dict[str, float | str]]:
+    """Convert a level series to year-over-year percentage change."""
+    output: list[dict[str, float | str]] = []
+    for row in rows:
+        prior = value_before(rows, months_before(str(row["date"]), 12))
+        if prior in (None, 0):
+            continue
+        value = (float(row["value"]) / float(prior) - 1) * 100
+        output.append({"date": row["date"], "value": round(value, 4)})
+    return output
+
+
 def value_before(rows: list[dict[str, float | str]], target: str) -> float | None:
     dates = [str(row["date"]) for row in rows]
     index = bisect_right(dates, target) - 1
@@ -138,6 +150,11 @@ def metric(
 def fred(name: str, scale: float = 1.0) -> tuple[list[dict[str, float | str]], dict[str, Any]]:
     payload = read_json(RAW_DIR / f"fred-{name}.json")
     return clean_series(payload["observations"], scale), payload
+
+
+def market(name: str) -> tuple[list[dict[str, float | str]], dict[str, Any]]:
+    payload = read_json(RAW_DIR / f"market-{name}.json")
+    return clean_series(payload["observations"]), payload
 
 
 def build_net_liquidity(
@@ -277,12 +294,17 @@ def main() -> int:
     tga, tga_meta = fred("tga", 1 / 1000)
     rrp, rrp_meta = fred("rrp")
     dollar, dollar_meta = fred("broad_dollar")
+    dxy, dxy_meta = market("dxy")
     real_yield, real_yield_meta = fred("real_yield_10y")
     nfci, nfci_meta = fred("nfci")
     m2, m2_meta = fred("m2")
     fed_treasuries, fed_treasuries_meta = fred("fed_treasuries", 1 / 1000)
     oil, oil_meta = fred("wti")
     credit, credit_meta = fred("credit_spread")
+    vix, vix_meta = fred("vix")
+    cpi, cpi_meta = fred("cpi")
+    m2_yoy = year_over_year(monthly_last(m2))
+    cpi_yoy = year_over_year(monthly_last(cpi))
     net_liquidity = build_net_liquidity(walcl, tga, rrp)
     held_public, gross_debt, debt_meta = build_debt()
     holders = build_holders()
@@ -295,11 +317,15 @@ def main() -> int:
             "Federal Reserve assets minus Treasury cash minus overnight reverse repos; this is a proxy, not an official measure.",
         ),
         "m2": metric("m2", "U.S. M2", m2, "USD billions", "monthly", m2_meta["source"], m2_meta["source_url"], "accelerating growth is generally supportive"),
+        "m2_yoy": metric("m2_yoy", "U.S. M2 Money Supply YoY", m2_yoy, "%", "monthly", m2_meta["source"], m2_meta["source_url"], "rising is generally supportive", "U.S. M2 is used as the transparent liquidity proxy; it is not a global M2 aggregate."),
         "broad_dollar": metric("broad_dollar", "Broad U.S. Dollar", dollar, "index", "daily", dollar_meta["source"], dollar_meta["source_url"], "falling is generally supportive"),
+        "dxy": metric("dxy", "U.S. Dollar Index (DXY)", dxy, "index", "daily", dxy_meta["source"], dxy_meta["source_url"], "falling is generally supportive"),
         "real_yield_10y": metric("real_yield_10y", "10Y Real Yield", real_yield, "%", "daily", real_yield_meta["source"], real_yield_meta["source_url"], "falling is generally supportive"),
         "nfci": metric("nfci", "Financial Conditions", nfci, "index", "weekly", nfci_meta["source"], nfci_meta["source_url"], "falling / negative is easier"),
         "wti": metric("wti", "WTI Oil", oil, "USD/barrel", "daily", oil_meta["source"], oil_meta["source_url"], "contained price shocks are generally supportive"),
         "credit_spread": metric("credit_spread", "Baa - 10Y Credit Spread", credit, "% points", "daily", credit_meta["source"], credit_meta["source_url"], "falling is generally supportive"),
+        "vix": metric("vix", "Market Volatility (VIX)", vix, "index", "daily", vix_meta["source"], vix_meta["source_url"], "falling is generally supportive"),
+        "cpi_yoy": metric("cpi_yoy", "U.S. CPI YoY", cpi_yoy, "%", "monthly", cpi_meta["source"], cpi_meta["source_url"], "falling is generally supportive"),
         "debt_held_public": metric("debt_held_public", "Debt Held by the Public", held_public, "USD trillions", "daily", debt_meta["source"], debt_meta["source_url"], "context only"),
         "gross_debt": metric("gross_debt", "Gross Federal Debt", gross_debt, "USD trillions", "daily", debt_meta["source"], debt_meta["source_url"], "context only"),
         "fed_treasuries": metric("fed_treasuries", "Fed Treasury Holdings", fed_treasuries, "USD billions", "weekly", fed_treasuries_meta["source"], fed_treasuries_meta["source_url"], "rising holdings can absorb market supply"),
