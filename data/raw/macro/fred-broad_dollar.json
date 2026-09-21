@@ -2,7 +2,7 @@
   "series_id": "DTWEXBGS",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS",
-  "fetched_at": "2026-09-21T16:00:33.364973+00:00",
+  "fetched_at": "2026-09-21T21:00:36.773462+00:00",
   "observations": [
     {
       "date": "2006-01-02",
@@ -20755,6 +20755,26 @@
     {
       "date": "2026-09-11",
       "value": 118.2126
+    },
+    {
+      "date": "2026-09-14",
+      "value": 118.6923
+    },
+    {
+      "date": "2026-09-15",
+      "value": 118.8822
+    },
+    {
+      "date": "2026-09-16",
+      "value": 118.9206
+    },
+    {
+      "date": "2026-09-17",
+      "value": 119.3489
+    },
+    {
+      "date": "2026-09-18",
+      "value": 119.5133
     }
   ]
 }

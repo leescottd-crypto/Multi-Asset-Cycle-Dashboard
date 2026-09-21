@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-21T16:00:33.364973+00:00",
+  "fetched_at": "2026-09-21T21:00:36.773462+00:00",
   "errors": [
     "Treasury debt: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>",
     "Glassnode exchange supply: GLASSNODE_API_KEY is not configured"
