@@ -1,7 +1,7 @@
 {
   "source": "U.S. Treasury FiscalData - Debt to the Penny",
   "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:gte:2014-01-01&page[size]=10000&sort=record_date",
-  "fetched_at": "2026-09-20T21:01:08.099787+00:00",
+  "fetched_at": "2026-09-21T13:55:48.296730+00:00",
   "observations": [
     {
       "record_date": "2014-01-02",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T21:01:27.621841+00:00",
+  "generated_at": "2026-09-21T13:59:12.562249+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2491,14 +2491,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 100.220001,
-      "date": "2026-09-18",
+      "value": 100.345001,
+      "date": "2026-09-21",
       "unit": "index",
-      "change_3m": -0.63,
-      "change_12m": 2.87,
-      "change_3m_pct": -0.62,
-      "change_12m_pct": 2.95,
-      "percentile_since_2015": 69.7,
+      "change_3m": -0.5,
+      "change_12m": 2.71,
+      "change_3m_pct": -0.5,
+      "change_12m_pct": 2.77,
+      "percentile_since_2015": 70.3,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3066,8 +3066,8 @@
           "value": 99.43
         },
         {
-          "date": "2026-09-18",
-          "value": 100.220001
+          "date": "2026-09-21",
+          "value": 100.345001
         }
       ]
     },
@@ -5598,14 +5598,14 @@
     "vix": {
       "key": "vix",
       "label": "Market Volatility (VIX)",
-      "value": 15.44,
-      "date": "2026-09-17",
+      "value": 14.81,
+      "date": "2026-09-18",
       "unit": "index",
-      "change_3m": -3.0,
-      "change_12m": -0.28,
-      "change_3m_pct": -16.27,
-      "change_12m_pct": -1.78,
-      "percentile_since_2015": 39.4,
+      "change_3m": -1.59,
+      "change_12m": -0.89,
+      "change_3m_pct": -9.7,
+      "change_12m_pct": -5.67,
+      "percentile_since_2015": 34.1,
       "cadence": "daily",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS",
@@ -6221,8 +6221,8 @@
           "value": 14.92
         },
         {
-          "date": "2026-09-17",
-          "value": 15.44
+          "date": "2026-09-18",
+          "value": 14.81
         }
       ]
     },
@@ -17963,6 +17963,7 @@
   },
   "market_supply_url": "/public/data/btc-market-supply.json",
   "refresh_errors": [
+    "Treasury debt: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>",
     "Glassnode exchange supply: GLASSNODE_API_KEY is not configured"
   ],
   "methodology": {
