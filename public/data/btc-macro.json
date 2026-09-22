@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T10:00:42.456507+00:00",
+  "generated_at": "2026-09-22T16:00:37.507406+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2491,14 +2491,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 100.392998,
+      "value": 100.675003,
       "date": "2026-09-22",
       "unit": "index",
-      "change_3m": -0.63,
-      "change_12m": 3.06,
-      "change_3m_pct": -0.62,
-      "change_12m_pct": 3.15,
-      "percentile_since_2015": 70.5,
+      "change_3m": -0.34,
+      "change_12m": 3.35,
+      "change_3m_pct": -0.34,
+      "change_12m_pct": 3.44,
+      "percentile_since_2015": 71.5,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3067,7 +3067,7 @@
         },
         {
           "date": "2026-09-22",
-          "value": 100.392998
+          "value": 100.675003
         }
       ]
     },
@@ -5598,14 +5598,14 @@
     "vix": {
       "key": "vix",
       "label": "Market Volatility (VIX)",
-      "value": 14.81,
-      "date": "2026-09-18",
+      "value": 14.87,
+      "date": "2026-09-21",
       "unit": "index",
-      "change_3m": -1.59,
-      "change_12m": -0.89,
-      "change_3m_pct": -9.7,
-      "change_12m_pct": -5.67,
-      "percentile_since_2015": 34.1,
+      "change_3m": -1.91,
+      "change_12m": -0.58,
+      "change_3m_pct": -11.38,
+      "change_12m_pct": -3.75,
+      "percentile_since_2015": 34.5,
       "cadence": "daily",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS",
@@ -6221,8 +6221,8 @@
           "value": 14.92
         },
         {
-          "date": "2026-09-18",
-          "value": 14.81
+          "date": "2026-09-21",
+          "value": 14.87
         }
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T10:00:33.285984+00:00",
+  "generated_at": "2026-09-22T16:00:28.188476+00:00",
   "asset": {
     "id": "sol",
     "name": "Solana",
@@ -9,9 +9,9 @@
   },
   "model": {
     "formula": "ln(price) = intercept + slope * ln(days_since_first_price)",
-    "intercept": 2.9226631329328114,
-    "slope": 0.21832538052823036,
-    "residual_std_dev": 0.8193461984921776,
+    "intercept": 2.922663886129966,
+    "slope": 0.2183252455575061,
+    "residual_std_dev": 0.8193461674001374,
     "fit_start_date": "2020-01-01",
     "band_calibration": "Residual standard deviation from asset-specific mature/history window."
   },
@@ -30,20 +30,20 @@
     "rows": 1924,
     "first_date": "2021-06-17",
     "last_date": "2026-09-22",
-    "fetched_at": "2026-09-22T10:00:23.361329+00:00",
+    "fetched_at": "2026-09-22T16:00:19.712736+00:00",
     "request_count": 10,
     "limitation": "History begins when the USD product became available on Coinbase. The current-day close is a provisional spot price until the daily candle finalizes; short-history assets may not yet have a 200-week moving average."
   },
   "latest": {
     "date": "2026-09-22",
-    "close": 117.4,
+    "close": 117.37,
     "trend": 96.9,
     "band_minus_2": 18.82,
     "band_minus_1_5": 28.35,
     "band_minus_1": 42.71,
     "band_plus_1": 219.87,
     "band_plus_2": 498.88,
-    "z_score": 0.2342,
+    "z_score": 0.2339,
     "zone": "Fair",
     "ma_50d": 94.06,
     "ma_100d": 84.54,
@@ -51,14 +51,14 @@
     "ma_200d": 84.08,
     "ma_200w": 110.91,
     "ma_350d_x2": 210.99,
-    "rsi_14d": 67.53,
-    "drawdown_from_ath_pct": -55.19,
+    "rsi_14d": 67.48,
+    "drawdown_from_ath_pct": -55.2,
     "mvrv": null,
     "market_cap_usd": null,
     "realized_cap_usd": null,
     "zone_note": "Solana is near long-term trend fair value.",
-    "distance_to_minus_1_5_pct": 314.11,
-    "distance_to_plus_2_pct": 324.94,
+    "distance_to_minus_1_5_pct": 314.0,
+    "distance_to_plus_2_pct": 325.05,
     "latest_available_mvrv": null,
     "latest_available_mvrv_date": null
   },
@@ -104,8 +104,8 @@
   "rainbow": {
     "model": {
       "formula": "ln(price) = intercept + slope * ln(days_since_first_price)",
-      "intercept": 2.9226631329328114,
-      "slope": 0.21832538052823036,
+      "intercept": 2.922663886129966,
+      "slope": 0.2183252455575061,
       "fit_start_date": "2020-01-01",
       "r_squared": 0.0652,
       "residual_offsets": [
@@ -181,10 +181,10 @@
     ],
     "latest": {
       "date": "2026-09-22",
-      "close": 117.4,
+      "close": 117.37,
       "trend": 96.9,
       "zone": "HODL!",
-      "residual": 0.1919,
+      "residual": 0.1917,
       "lower_band": 92.03,
       "upper_band": 145.61
     },
@@ -628,7 +628,7 @@
         "level_5": 56.9,
         "level_6": 66.51,
         "level_7": 80.55,
-        "level_8": 99.63,
+        "level_8": 99.64,
         "level_9": 137.13
       },
       {
@@ -1406,7 +1406,7 @@
         "level_1": 12.42,
         "level_2": 14.99,
         "level_3": 31.72,
-        "level_4": 44.91,
+        "level_4": 44.92,
         "level_5": 71.07,
         "level_6": 83.07,
         "level_7": 100.61,
@@ -1747,7 +1747,7 @@
         "level_2": 15.81,
         "level_3": 33.46,
         "level_4": 47.38,
-        "level_5": 74.97,
+        "level_5": 74.98,
         "level_6": 87.64,
         "level_7": 106.14,
         "level_8": 131.29,
@@ -2409,7 +2409,7 @@
         "level_1": 14.16,
         "level_2": 17.08,
         "level_3": 36.15,
-        "level_4": 51.18,
+        "level_4": 51.19,
         "level_5": 80.99,
         "level_6": 94.67,
         "level_7": 114.65,
@@ -4483,7 +4483,7 @@
         "level_1": 16.35,
         "level_2": 19.72,
         "level_3": 41.74,
-        "level_4": 59.09,
+        "level_4": 59.1,
         "level_5": 93.5,
         "level_6": 109.3,
         "level_7": 132.37,
@@ -4945,7 +4945,7 @@
         "level_4": 60.42,
         "level_5": 95.6,
         "level_6": 111.75,
-        "level_7": 135.33,
+        "level_7": 135.34,
         "level_8": 167.4,
         "level_9": 230.41
       },
@@ -7015,7 +7015,7 @@
         "level_0": 12.78,
         "level_1": 18.09,
         "level_2": 21.81,
-        "level_3": 46.17,
+        "level_3": 46.18,
         "level_4": 65.38,
         "level_5": 103.45,
         "level_6": 120.93,
@@ -9231,7 +9231,7 @@
         "level_6": 128.56,
         "level_7": 155.69,
         "level_8": 192.59,
-        "level_9": 265.07
+        "level_9": 265.06
       },
       {
         "date": "2022-12-01",
@@ -10586,7 +10586,7 @@
         "level_1": 19.82,
         "level_2": 23.91,
         "level_3": 50.61,
-        "level_4": 71.66,
+        "level_4": 71.67,
         "level_5": 113.39,
         "level_6": 132.55,
         "level_7": 160.53,
@@ -11617,7 +11617,7 @@
         "date": "2023-04-20",
         "close": 22.2,
         "trend": 77.04,
-        "residual": -1.2443,
+        "residual": -1.2442,
         "zone": "BUY!",
         "level_0": 14.3,
         "level_1": 20.24,
@@ -12297,7 +12297,7 @@
         "date": "2023-05-30",
         "close": 21.27,
         "trend": 78.02,
-        "residual": -1.2997,
+        "residual": -1.2996,
         "zone": "BUY!",
         "level_0": 14.48,
         "level_1": 20.5,
@@ -13226,7 +13226,7 @@
         "level_6": 139.25,
         "level_7": 168.64,
         "level_8": 208.6,
-        "level_9": 287.11
+        "level_9": 287.1
       },
       {
         "date": "2023-07-24",
@@ -13345,7 +13345,7 @@
         "level_6": 139.52,
         "level_7": 168.97,
         "level_8": 209.01,
-        "level_9": 287.68
+        "level_9": 287.67
       },
       {
         "date": "2023-07-31",
@@ -14462,7 +14462,7 @@
         "level_1": 21.24,
         "level_2": 25.62,
         "level_3": 54.24,
-        "level_4": 76.79,
+        "level_4": 76.8,
         "level_5": 121.51,
         "level_6": 142.04,
         "level_7": 172.02,
@@ -15674,7 +15674,7 @@
         "level_6": 144.58,
         "level_7": 175.09,
         "level_8": 216.58,
-        "level_9": 298.1
+        "level_9": 298.09
       },
       {
         "date": "2023-12-15",
@@ -17272,7 +17272,7 @@
         "level_6": 147.71,
         "level_7": 178.89,
         "level_8": 221.28,
-        "level_9": 304.56
+        "level_9": 304.55
       },
       {
         "date": "2024-03-18",
@@ -18190,7 +18190,7 @@
         "level_6": 149.41,
         "level_7": 180.94,
         "level_8": 223.82,
-        "level_9": 308.06
+        "level_9": 308.05
       },
       {
         "date": "2024-05-11",
@@ -21930,7 +21930,7 @@
         "level_6": 155.69,
         "level_7": 188.56,
         "level_8": 233.24,
-        "level_9": 321.02
+        "level_9": 321.01
       },
       {
         "date": "2024-12-17",
@@ -22524,7 +22524,7 @@
         "level_5": 133.98,
         "level_6": 156.61,
         "level_7": 189.67,
-        "level_8": 234.62,
+        "level_8": 234.61,
         "level_9": 322.91
       },
       {
@@ -23703,7 +23703,7 @@
       {
         "date": "2025-03-31",
         "close": 124.54,
-        "trend": 90.18,
+        "trend": 90.17,
         "residual": 0.3229,
         "zone": "HODL!",
         "level_0": 16.74,
@@ -25262,7 +25262,7 @@
         "level_6": 160.61,
         "level_7": 194.52,
         "level_8": 240.61,
-        "level_9": 331.17
+        "level_9": 331.16
       },
       {
         "date": "2025-07-01",
@@ -26027,7 +26027,7 @@
         "level_6": 161.67,
         "level_7": 195.8,
         "level_8": 242.19,
-        "level_9": 333.35
+        "level_9": 333.34
       },
       {
         "date": "2025-08-15",
@@ -26152,7 +26152,7 @@
         "date": "2025-08-22",
         "close": 200.62,
         "trend": 92.14,
-        "residual": 0.778,
+        "residual": 0.7781,
         "zone": "Sell. Seriously, SELL!",
         "level_0": 17.1,
         "level_1": 24.21,
@@ -26996,7 +26996,7 @@
         "level_6": 162.98,
         "level_7": 197.38,
         "level_8": 244.15,
-        "level_9": 336.04
+        "level_9": 336.03
       },
       {
         "date": "2025-10-11",
@@ -27404,7 +27404,7 @@
         "level_6": 163.51,
         "level_7": 198.03,
         "level_8": 244.96,
-        "level_9": 337.15
+        "level_9": 337.14
       },
       {
         "date": "2025-11-04",
@@ -27608,7 +27608,7 @@
         "level_6": 163.78,
         "level_7": 198.35,
         "level_8": 245.36,
-        "level_9": 337.7
+        "level_9": 337.69
       },
       {
         "date": "2025-11-16",
@@ -29657,7 +29657,7 @@
         "residual": 0.0155,
         "zone": "HODL!",
         "level_0": 17.58,
-        "level_1": 24.89,
+        "level_1": 24.88,
         "level_2": 30.02,
         "level_3": 63.53,
         "level_4": 89.96,
@@ -29781,7 +29781,7 @@
         "level_3": 63.59,
         "level_4": 90.04,
         "level_5": 142.47,
-        "level_6": 166.54,
+        "level_6": 166.53,
         "level_7": 201.69,
         "level_8": 249.48,
         "level_9": 343.37
@@ -30158,7 +30158,7 @@
         "level_6": 166.99,
         "level_7": 202.24,
         "level_8": 250.16,
-        "level_9": 344.32
+        "level_9": 344.31
       },
       {
         "date": "2026-04-15",
@@ -31992,7 +31992,7 @@
         "level_4": 91.47,
         "level_5": 144.73,
         "level_6": 169.17,
-        "level_7": 204.89,
+        "level_7": 204.88,
         "level_8": 253.43,
         "level_9": 348.81
       },
@@ -32028,7 +32028,7 @@
         "level_6": 169.21,
         "level_7": 204.93,
         "level_8": 253.49,
-        "level_9": 348.9
+        "level_9": 348.89
       },
       {
         "date": "2026-08-03",
@@ -32368,7 +32368,7 @@
         "level_6": 169.61,
         "level_7": 205.41,
         "level_8": 254.08,
-        "level_9": 349.71
+        "level_9": 349.7
       },
       {
         "date": "2026-08-23",
@@ -32882,9 +32882,9 @@
       },
       {
         "date": "2026-09-22",
-        "close": 117.4,
+        "close": 117.37,
         "trend": 96.9,
-        "residual": 0.1919,
+        "residual": 0.1917,
         "zone": "HODL!",
         "level_0": 17.98,
         "level_1": 25.46,
@@ -43555,7 +43555,7 @@
       "band_minus_1_5": 20.72,
       "band_minus_1": 31.22,
       "band_plus_1": 160.72,
-      "band_plus_2": 364.68,
+      "band_plus_2": 364.67,
       "z_score": -0.907,
       "zone": "Cheap",
       "ma_50d": 36.8,
@@ -45717,7 +45717,7 @@
       "band_minus_1_5": 21.59,
       "band_minus_1": 32.52,
       "band_plus_1": 167.41,
-      "band_plus_2": 379.85,
+      "band_plus_2": 379.84,
       "z_score": -2.1904,
       "zone": "Deep Value",
       "ma_50d": 16.49,
@@ -45763,7 +45763,7 @@
       "band_minus_1_5": 21.6,
       "band_minus_1": 32.54,
       "band_plus_1": 167.54,
-      "band_plus_2": 380.15,
+      "band_plus_2": 380.14,
       "z_score": -2.2381,
       "zone": "Deep Value",
       "ma_50d": 15.71,
@@ -47258,7 +47258,7 @@
       "band_minus_1_5": 22.13,
       "band_minus_1": 33.34,
       "band_plus_1": 171.64,
-      "band_plus_2": 389.47,
+      "band_plus_2": 389.46,
       "z_score": -1.4864,
       "zone": "Cheap",
       "ma_50d": 22.38,
@@ -47902,7 +47902,7 @@
       "band_minus_1_5": 22.35,
       "band_minus_1": 33.66,
       "band_plus_1": 173.31,
-      "band_plus_2": 393.25,
+      "band_plus_2": 393.24,
       "z_score": -1.6089,
       "zone": "Accumulation",
       "ma_50d": 21.79,
@@ -48455,7 +48455,7 @@
       "band_minus_1": 33.93,
       "band_plus_1": 174.69,
       "band_plus_2": 396.38,
-      "z_score": -1.3812,
+      "z_score": -1.3811,
       "zone": "Cheap",
       "ma_50d": 21.27,
       "ma_100d": 22.01,
@@ -53697,7 +53697,7 @@
       "band_minus_2": 15.94,
       "band_minus_1_5": 24.01,
       "band_minus_1": 36.17,
-      "band_plus_1": 186.22,
+      "band_plus_1": 186.21,
       "band_plus_2": 422.52,
       "z_score": -0.3092,
       "zone": "Fair",
@@ -57078,7 +57078,7 @@
       "band_minus_2": 16.48,
       "band_minus_1_5": 24.82,
       "band_minus_1": 37.39,
-      "band_plus_1": 192.48,
+      "band_plus_1": 192.47,
       "band_plus_2": 436.73,
       "z_score": 0.6221,
       "zone": "Warm",
@@ -58413,7 +58413,7 @@
       "band_minus_1_5": 25.11,
       "band_minus_1": 37.83,
       "band_plus_1": 194.76,
-      "band_plus_2": 441.91,
+      "band_plus_2": 441.9,
       "z_score": 0.5277,
       "zone": "Warm",
       "ma_50d": 156.53,
@@ -60644,7 +60644,7 @@
       "band_minus_1_5": 25.58,
       "band_minus_1": 38.53,
       "band_plus_1": 198.37,
-      "band_plus_2": 450.11,
+      "band_plus_2": 450.1,
       "z_score": 0.7261,
       "zone": "Warm",
       "ma_50d": 141.8,
@@ -60782,7 +60782,7 @@
       "band_minus_1_5": 25.61,
       "band_minus_1": 38.57,
       "band_plus_1": 198.59,
-      "band_plus_2": 450.6,
+      "band_plus_2": 450.59,
       "z_score": 0.5957,
       "zone": "Warm",
       "ma_50d": 141.81,
@@ -61036,7 +61036,7 @@
       "band_minus_1": 38.65,
       "band_plus_1": 198.98,
       "band_plus_2": 451.49,
-      "z_score": 0.6891,
+      "z_score": 0.6892,
       "zone": "Warm",
       "ma_50d": 141.48,
       "ma_100d": 148.59,
@@ -63518,7 +63518,7 @@
       "band_minus_2": 17.35,
       "band_minus_1_5": 26.14,
       "band_minus_1": 39.37,
-      "band_plus_1": 202.71,
+      "band_plus_1": 202.7,
       "band_plus_2": 459.94,
       "z_score": 1.0601,
       "zone": "Warm",
@@ -64848,7 +64848,7 @@
     {
       "date": "2025-03-31",
       "close": 124.54,
-      "trend": 90.18,
+      "trend": 90.17,
       "band_minus_2": 17.52,
       "band_minus_1_5": 26.38,
       "band_minus_1": 39.74,
@@ -67613,7 +67613,7 @@
       "band_minus_1_5": 26.87,
       "band_minus_1": 40.47,
       "band_plus_1": 208.36,
-      "band_plus_2": 472.77,
+      "band_plus_2": 472.76,
       "z_score": 0.8313,
       "zone": "Warm",
       "ma_50d": 160.31,
@@ -68486,7 +68486,7 @@
       "band_minus_2": 17.93,
       "band_minus_1_5": 27.01,
       "band_minus_1": 40.69,
-      "band_plus_1": 209.5,
+      "band_plus_1": 209.49,
       "band_plus_2": 475.35,
       "z_score": 0.9638,
       "zone": "Warm",
@@ -70121,7 +70121,7 @@
       "band_minus_1": 41.09,
       "band_plus_1": 211.56,
       "band_plus_2": 480.04,
-      "z_score": 0.4921,
+      "z_score": 0.4922,
       "zone": "Fair",
       "ma_50d": 189.71,
       "ma_100d": 198.61,
@@ -71983,7 +71983,7 @@
       "band_minus_1_5": 27.57,
       "band_minus_1": 41.53,
       "band_plus_1": 213.84,
-      "band_plus_2": 485.21,
+      "band_plus_2": 485.2,
       "z_score": -0.0305,
       "zone": "Fair",
       "ma_50d": 126.99,
@@ -72697,7 +72697,7 @@
       "band_minus_1": 41.7,
       "band_plus_1": 214.69,
       "band_plus_2": 487.13,
-      "z_score": -0.1567,
+      "z_score": -0.1566,
       "zone": "Fair",
       "ma_50d": 97.97,
       "ma_100d": 115.14,
@@ -72926,7 +72926,7 @@
       "band_minus_1_5": 27.72,
       "band_minus_1": 41.75,
       "band_plus_1": 214.96,
-      "band_plus_2": 487.75,
+      "band_plus_2": 487.74,
       "z_score": -0.0011,
       "zone": "Fair",
       "ma_50d": 89.77,
@@ -73110,7 +73110,7 @@
       "band_minus_1_5": 27.75,
       "band_minus_1": 41.79,
       "band_plus_1": 215.17,
-      "band_plus_2": 488.24,
+      "band_plus_2": 488.23,
       "z_score": -0.0413,
       "zone": "Fair",
       "ma_50d": 86.18,
@@ -73662,7 +73662,7 @@
       "band_minus_1_5": 27.83,
       "band_minus_1": 41.92,
       "band_plus_1": 215.82,
-      "band_plus_2": 489.7,
+      "band_plus_2": 489.69,
       "z_score": -0.12,
       "zone": "Fair",
       "ma_50d": 85.9,
@@ -74536,7 +74536,7 @@
       "band_minus_1_5": 27.96,
       "band_minus_1": 42.11,
       "band_plus_1": 216.82,
-      "band_plus_2": 491.98,
+      "band_plus_2": 491.97,
       "z_score": -0.1633,
       "zone": "Fair",
       "ma_50d": 86.56,
@@ -75295,7 +75295,7 @@
       "band_minus_1_5": 28.07,
       "band_minus_1": 42.28,
       "band_plus_1": 217.68,
-      "band_plus_2": 493.93,
+      "band_plus_2": 493.92,
       "z_score": -0.3626,
       "zone": "Fair",
       "ma_50d": 77.22,
@@ -75456,7 +75456,7 @@
       "band_minus_1_5": 28.09,
       "band_minus_1": 42.32,
       "band_plus_1": 217.86,
-      "band_plus_2": 494.34,
+      "band_plus_2": 494.33,
       "z_score": -0.1998,
       "zone": "Fair",
       "ma_50d": 75.33,
@@ -76284,7 +76284,7 @@
       "band_minus_1_5": 28.21,
       "band_minus_1": 42.5,
       "band_plus_1": 218.78,
-      "band_plus_2": 496.43,
+      "band_plus_2": 496.42,
       "z_score": -0.2918,
       "zone": "Fair",
       "ma_50d": 75.38,
@@ -76882,7 +76882,7 @@
       "band_minus_1_5": 28.3,
       "band_minus_1": 42.62,
       "band_plus_1": 219.44,
-      "band_plus_2": 497.92,
+      "band_plus_2": 497.91,
       "z_score": 0.079,
       "zone": "Fair",
       "ma_50d": 83.78,
@@ -77267,14 +77267,14 @@
     },
     {
       "date": "2026-09-22",
-      "close": 117.4,
+      "close": 117.37,
       "trend": 96.9,
       "band_minus_2": 18.82,
       "band_minus_1_5": 28.35,
       "band_minus_1": 42.71,
       "band_plus_1": 219.87,
       "band_plus_2": 498.88,
-      "z_score": 0.2342,
+      "z_score": 0.2339,
       "zone": "Fair",
       "ma_50d": 94.06,
       "ma_100d": 84.54,
@@ -77282,8 +77282,8 @@
       "ma_200d": 84.08,
       "ma_200w": 110.91,
       "ma_350d_x2": 210.99,
-      "rsi_14d": 67.53,
-      "drawdown_from_ath_pct": -55.19,
+      "rsi_14d": 67.48,
+      "drawdown_from_ath_pct": -55.2,
       "mvrv": null,
       "market_cap_usd": null,
       "realized_cap_usd": null
