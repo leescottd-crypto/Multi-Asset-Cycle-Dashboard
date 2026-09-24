@@ -1,6 +1,6 @@
 {
   "source": "Yahoo Finance chart endpoint",
-  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=0&period2=1790352026&interval=1d&events=history&includeAdjustedClose=true",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=0&period2=1790370028&interval=1d&events=history&includeAdjustedClose=true",
   "provenance": "live-public-no-key-daily-history",
   "asset_id": "mstr",
   "name": "Strategy (MicroStrategy)",
@@ -10,11 +10,11 @@
   "exchange": "NMS",
   "instrument_type": "EQUITY",
   "category": "Bitcoin Treasury Company",
-  "regular_market_price": 161.7,
-  "regular_market_time": 1790265626,
+  "regular_market_price": 161.61,
+  "regular_market_time": 1790280001,
   "rows": 7116,
   "first_date": "1998-06-11",
   "last_date": "2026-09-24",
-  "fetched_at": "2026-09-24T16:00:27.276069+00:00",
+  "fetched_at": "2026-09-24T21:00:29.266943+00:00",
   "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
 }
