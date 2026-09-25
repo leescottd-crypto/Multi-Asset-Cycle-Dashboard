@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T21:00:32.189731+00:00",
+  "generated_at": "2026-09-25T10:00:28.223489+00:00",
   "asset": {
     "id": "mstr",
     "name": "Strategy (MicroStrategy)",
@@ -17,7 +17,7 @@
   },
   "source": {
     "source": "Yahoo Finance chart endpoint",
-    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=0&period2=1790370028&interval=1d&events=history&includeAdjustedClose=true",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=0&period2=1790416824&interval=1d&events=history&includeAdjustedClose=true",
     "provenance": "live-public-no-key-daily-history",
     "asset_id": "mstr",
     "name": "Strategy (MicroStrategy)",
@@ -32,7 +32,7 @@
     "rows": 7116,
     "first_date": "1998-06-11",
     "last_date": "2026-09-24",
-    "fetched_at": "2026-09-24T21:00:29.266943+00:00",
+    "fetched_at": "2026-09-25T10:00:25.351572+00:00",
     "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
   },
   "latest": {
