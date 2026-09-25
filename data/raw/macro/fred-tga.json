@@ -2,7 +2,7 @@
   "series_id": "WTREGEN",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WTREGEN",
-  "fetched_at": "2026-09-25T10:00:31.326796+00:00",
+  "fetched_at": "2026-09-25T16:00:43.551981+00:00",
   "observations": [
     {
       "date": "2002-12-18",
