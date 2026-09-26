@@ -1226,4 +1226,4 @@ date,open,high,low,close,adj_close,volume,source
 2026-09-23,1.0242,1.0381,0.933,0.96,0.96,39701367.8,coinbase-exchange
 2026-09-24,0.9597,1.0309,0.9356,1.014,1.014,33652470.6,coinbase-exchange
 2026-09-25,1.014,1.2171,1.0052,1.1951,1.1951,73824373.7,coinbase-exchange
-2026-09-26,1.1948,1.2047,1.1505,1.1646,1.1646,12504987.3,coinbase-daily-plus-spot-ticker
+2026-09-26,1.1948,1.2047,1.1505,1.183,1.183,20068737.5,coinbase-daily-plus-spot-ticker
