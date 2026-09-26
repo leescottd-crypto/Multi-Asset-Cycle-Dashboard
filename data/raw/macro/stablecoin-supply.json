@@ -1,7 +1,7 @@
 {
   "source": "DefiLlama Stablecoins",
   "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
-  "fetched_at": "2026-09-25T21:00:35.310497+00:00",
+  "fetched_at": "2026-09-26T10:00:31.901415+00:00",
   "unit": "USD",
   "history_class": "Tactical / shorter history",
   "observations": [
@@ -12895,7 +12895,11 @@
     },
     {
       "date": "2026-09-25",
-      "value": 312316043657.81
+      "value": 312317650053.0
+    },
+    {
+      "date": "2026-09-26",
+      "value": 311601635766.28
     }
   ]
 }
