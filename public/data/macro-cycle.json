@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T21:00:36.795256+00:00",
+  "generated_at": "2026-09-27T10:00:33.686166+00:00",
   "framework": {
     "name": "BTC Macro Domino Sequence",
     "source_video": "https://youtu.be/rzZ1AmdWhaY",
@@ -22,13 +22,13 @@
         "number": 3,
         "name": "BTC volatility expansion",
         "status": "watching",
-        "detail": "90D realized volatility 39.0%; historical percentile 11.9; DVOL 34.9%."
+        "detail": "90D realized volatility 38.9%; historical percentile 11.9; DVOL 34.7%."
       },
       {
         "number": 4,
         "name": "BTC cycle top",
         "status": "not fired",
-        "detail": "Objective proxy: log z-score -0.9283 and RSI 63.99; fires when z \u2265 1.5 and RSI \u2265 70."
+        "detail": "Objective proxy: log z-score -0.9091 and RSI 66.15; fires when z \u2265 1.5 and RSI \u2265 70."
       }
     ],
     "warning": "Research framework and decision support only. Thresholds are transparent dashboard rules, not investment advice."
@@ -2142,15 +2142,11 @@
       ]
     },
     "btc_realized_volatility": {
-      "value": 38.97,
-      "date": "2026-09-26",
-      "historical_percentile": 11.93,
+      "value": 38.93,
+      "date": "2026-09-27",
+      "historical_percentile": 11.86,
       "status": "normal",
       "series": [
-        {
-          "date": "2025-04-25",
-          "value": 56.05
-        },
         {
           "date": "2025-04-26",
           "value": 55.92
@@ -4225,19 +4221,23 @@
         },
         {
           "date": "2026-09-26",
-          "value": 38.97
+          "value": 38.96
+        },
+        {
+          "date": "2026-09-27",
+          "value": 38.93
         }
       ],
       "method": "90-day standard deviation of daily log returns, annualized with \u221a365."
     },
     "btc_implied_volatility": {
-      "value": 34.94,
-      "date": "2026-09-26T21:00:00+00:00",
+      "value": 34.73,
+      "date": "2026-09-27T10:00:00+00:00",
       "status": "low / coiled",
       "source": {
         "source": "Deribit DVOL public API",
-        "source_url": "https://www.deribit.com/api/v2/public/get_volatility_index_data?currency=BTC&start_timestamp=1789246836505&end_timestamp=1790456436505&resolution=3600",
-        "fetched_at": "2026-09-26T21:00:36.753872+00:00"
+        "source_url": "https://www.deribit.com/api/v2/public/get_volatility_index_data?currency=BTC&start_timestamp=1789293633388&end_timestamp=1790503233388&resolution=3600",
+        "fetched_at": "2026-09-27T10:00:33.645572+00:00"
       }
     },
     "oil": {
@@ -6333,26 +6333,26 @@
   "sources": {
     "copper": {
       "source": "Yahoo Finance chart endpoint",
-      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/HG%3DF?period1=0&period2=1790542834&interval=1d&events=history&includeAdjustedClose=true",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/HG%3DF?period1=0&period2=1790589631&interval=1d&events=history&includeAdjustedClose=true",
       "symbol": "HG=F",
-      "fetched_at": "2026-09-26T21:00:35.228860+00:00"
+      "fetched_at": "2026-09-27T10:00:32.097443+00:00"
     },
     "gold": {
       "source": "Yahoo Finance chart endpoint",
-      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=0&period2=1790542835&interval=1d&events=history&includeAdjustedClose=true",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=0&period2=1790589632&interval=1d&events=history&includeAdjustedClose=true",
       "symbol": "GC=F",
-      "fetched_at": "2026-09-26T21:00:35.690389+00:00"
+      "fetched_at": "2026-09-27T10:00:32.550853+00:00"
     },
     "oil": {
       "source": "Yahoo Finance chart endpoint",
-      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=0&period2=1790542835&interval=1d&events=history&includeAdjustedClose=true",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=0&period2=1790589632&interval=1d&events=history&includeAdjustedClose=true",
       "symbol": "CL=F",
-      "fetched_at": "2026-09-26T21:00:36.124863+00:00"
+      "fetched_at": "2026-09-27T10:00:33.002844+00:00"
     },
     "implied_volatility": {
       "source": "Deribit DVOL public API",
-      "source_url": "https://www.deribit.com/api/v2/public/get_volatility_index_data?currency=BTC&start_timestamp=1789246836505&end_timestamp=1790456436505&resolution=3600",
-      "fetched_at": "2026-09-26T21:00:36.753872+00:00"
+      "source_url": "https://www.deribit.com/api/v2/public/get_volatility_index_data?currency=BTC&start_timestamp=1789293633388&end_timestamp=1790503233388&resolution=3600",
+      "fetched_at": "2026-09-27T10:00:33.645572+00:00"
     },
     "pmi": {
       "name": "Video-provided ISM Manufacturing PMI snapshot",
