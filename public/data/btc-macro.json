@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T16:00:34.308649+00:00",
+  "generated_at": "2026-09-28T21:00:41.086100+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -1868,14 +1868,14 @@
     "broad_dollar": {
       "key": "broad_dollar",
       "label": "Broad U.S. Dollar",
-      "value": 119.5133,
-      "date": "2026-09-18",
+      "value": 120.33,
+      "date": "2026-09-25",
       "unit": "index",
-      "change_3m": -0.88,
-      "change_12m": -0.15,
-      "change_3m_pct": -0.73,
-      "change_12m_pct": -0.12,
-      "percentile_since_2015": 67.7,
+      "change_3m": -0.73,
+      "change_12m": -0.21,
+      "change_3m_pct": -0.6,
+      "change_12m_pct": -0.18,
+      "percentile_since_2015": 73.7,
       "cadence": "daily",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS",
@@ -2491,22 +2491,22 @@
           "value": 118.5679
         },
         {
-          "date": "2026-09-18",
-          "value": 119.5133
+          "date": "2026-09-25",
+          "value": 120.33
         }
       ]
     },
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 101.213997,
+      "value": 101.195999,
       "date": "2026-09-28",
       "unit": "index",
-      "change_3m": -0.15,
-      "change_12m": 3.06,
-      "change_3m_pct": -0.14,
-      "change_12m_pct": 3.12,
-      "percentile_since_2015": 74.0,
+      "change_3m": -0.16,
+      "change_12m": 3.05,
+      "change_3m_pct": -0.16,
+      "change_12m_pct": 3.1,
+      "percentile_since_2015": 73.9,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3075,20 +3075,20 @@
         },
         {
           "date": "2026-09-28",
-          "value": 101.213997
+          "value": 101.195999
         }
       ]
     },
     "real_yield_10y": {
       "key": "real_yield_10y",
       "label": "10Y Real Yield",
-      "value": 2.85,
-      "date": "2026-09-24",
+      "value": 2.83,
+      "date": "2026-09-25",
       "unit": "%",
-      "change_3m": 0.62,
-      "change_12m": 1.07,
-      "change_3m_pct": 27.8,
-      "change_12m_pct": 60.11,
+      "change_3m": 0.64,
+      "change_12m": 1.03,
+      "change_3m_pct": 29.22,
+      "change_12m_pct": 57.22,
       "percentile_since_2015": 100.0,
       "cadence": "daily",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
@@ -3705,8 +3705,8 @@
           "value": 2.44
         },
         {
-          "date": "2026-09-24",
-          "value": 2.85
+          "date": "2026-09-25",
+          "value": 2.83
         }
       ]
     },

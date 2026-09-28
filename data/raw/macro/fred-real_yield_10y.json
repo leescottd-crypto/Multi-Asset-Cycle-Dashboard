@@ -2,7 +2,7 @@
   "series_id": "DFII10",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10",
-  "fetched_at": "2026-09-28T16:00:29.184861+00:00",
+  "fetched_at": "2026-09-28T21:00:35.944177+00:00",
   "observations": [
     {
       "date": "2003-01-02",
@@ -23751,6 +23751,10 @@
     {
       "date": "2026-09-24",
       "value": 2.85
+    },
+    {
+      "date": "2026-09-25",
+      "value": 2.83
     }
   ]
 }
