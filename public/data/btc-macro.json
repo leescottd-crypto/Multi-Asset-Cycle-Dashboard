@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T10:00:35.489938+00:00",
+  "generated_at": "2026-09-29T16:00:38.864762+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2499,14 +2499,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 101.464996,
+      "value": 101.483002,
       "date": "2026-09-29",
       "unit": "index",
-      "change_3m": 0.1,
-      "change_12m": 3.31,
-      "change_3m_pct": 0.1,
-      "change_12m_pct": 3.38,
-      "percentile_since_2015": 75.0,
+      "change_3m": 0.12,
+      "change_12m": 3.33,
+      "change_3m_pct": 0.12,
+      "change_12m_pct": 3.4,
+      "percentile_since_2015": 75.1,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3075,7 +3075,7 @@
         },
         {
           "date": "2026-09-29",
-          "value": 101.464996
+          "value": 101.483002
         }
       ]
     },
