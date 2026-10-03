@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-02T21:00:33.436767+00:00",
+  "generated_at": "2026-10-03T10:00:28.737686+00:00",
   "assets": {
     "gold": {
       "label": "Metal value (est.)",
       "value_usd": 29641851376337.832,
-      "as_of": "2026-10-02",
+      "as_of": "2026-10-03",
       "estimated": true,
       "stock_quantity": 222600,
       "stock_unit": "tonnes",
@@ -20,7 +20,7 @@
     "silver": {
       "label": "Metal value (est.)",
       "value_usd": 1168113161400.0,
-      "as_of": "2026-10-02",
+      "as_of": "2026-10-03",
       "estimated": true,
       "stock_quantity": 19300000000,
       "stock_unit": "troy ounces",
@@ -76,8 +76,8 @@
     },
     "btc": {
       "label": "Market cap",
-      "value_usd": 1695846207582,
-      "as_of": "2026-10-02",
+      "value_usd": 1699437169266,
+      "as_of": "2026-10-03",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/bitcoin",
       "method": "Circulating-supply market capitalization in USD, not fully diluted valuation. Provider price timing may differ from the chart price.",
@@ -86,8 +86,8 @@
     },
     "sol": {
       "label": "Market cap",
-      "value_usd": 69277866493,
-      "as_of": "2026-10-02",
+      "value_usd": 70184057282,
+      "as_of": "2026-10-03",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/solana",
       "method": "Circulating-supply market capitalization in USD, not fully diluted valuation. Provider price timing may differ from the chart price.",
@@ -96,8 +96,8 @@
     },
     "sui": {
       "label": "Market cap",
-      "value_usd": 4616654227,
-      "as_of": "2026-10-02",
+      "value_usd": 4883735311,
+      "as_of": "2026-10-03",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/sui",
       "method": "Circulating-supply market capitalization in USD, not fully diluted valuation. Provider price timing may differ from the chart price.",
@@ -106,8 +106,8 @@
     },
     "hype": {
       "label": "Market cap",
-      "value_usd": 19243007198,
-      "as_of": "2026-10-02",
+      "value_usd": 19573397335,
+      "as_of": "2026-10-03",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/hyperliquid",
       "method": "Circulating-supply market capitalization in USD, not fully diluted valuation. Provider price timing may differ from the chart price.",
@@ -116,8 +116,8 @@
     },
     "eth": {
       "label": "Market cap",
-      "value_usd": 324944391017,
-      "as_of": "2026-10-02",
+      "value_usd": 327304381744,
+      "as_of": "2026-10-03",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/ethereum",
       "method": "Circulating-supply market capitalization in USD, not fully diluted valuation. Provider price timing may differ from the chart price.",
