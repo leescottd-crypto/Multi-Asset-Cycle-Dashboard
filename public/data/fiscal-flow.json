@@ -265,7 +265,7 @@
     "definition": "Total Public Debt Outstanding: debt held by the public plus intragovernmental holdings.",
     "source_url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/"
   },
-  "generated_at": "2026-10-03T21:00:45.404304+00:00",
+  "generated_at": "2026-10-04T10:00:40.384554+00:00",
   "manifest_url": "/public/data/fiscal-flow-manifest.json",
   "schema_version": 2,
   "years": [
