@@ -1,6 +1,6 @@
 {
   "source": "Yahoo Finance chart endpoint",
-  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?period1=0&period2=1791302424&interval=1d&events=history&includeAdjustedClose=true",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?period1=0&period2=1791320426&interval=1d&events=history&includeAdjustedClose=true",
   "provenance": "live-public-no-key-daily-history",
   "asset_id": "nasdaq",
   "name": "NASDAQ Composite",
@@ -9,11 +9,11 @@
   "currency": "USD",
   "exchange": "NIM",
   "instrument_type": "INDEX",
-  "regular_market_price": 27394.328,
-  "regular_market_time": 1791216023,
+  "regular_market_price": 27477.31,
+  "regular_market_time": 1791234025,
   "rows": 14033,
   "first_date": "1971-02-05",
   "last_date": "2026-10-05",
-  "fetched_at": "2026-10-05T16:00:24.670868+00:00",
+  "fetched_at": "2026-10-05T21:00:26.823399+00:00",
   "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
 }
