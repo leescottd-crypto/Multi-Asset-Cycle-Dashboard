@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T21:00:28.433425+00:00",
+  "generated_at": "2026-10-06T10:00:31.618413+00:00",
   "asset": {
     "id": "silver",
     "name": "Silver",
@@ -17,7 +17,7 @@
   },
   "source": {
     "source": "Yahoo Finance chart endpoint",
-    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SLV?period1=0&period2=1791320424&interval=1d&events=history&includeAdjustedClose=true",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SLV?period1=0&period2=1791367226&interval=1d&events=history&includeAdjustedClose=true",
     "provenance": "live-public-no-key-daily-history",
     "asset_id": "silver",
     "name": "Silver",
@@ -31,7 +31,7 @@
     "rows": 5141,
     "first_date": "2006-04-28",
     "last_date": "2026-10-05",
-    "fetched_at": "2026-10-05T21:00:24.665406+00:00",
+    "fetched_at": "2026-10-06T10:00:26.668274+00:00",
     "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues.",
     "proxy_note": "ETF proxy for silver spot"
   },

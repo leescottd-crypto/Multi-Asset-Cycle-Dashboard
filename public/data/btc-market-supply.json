@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-05T21:00:36.903297+00:00",
+  "generated_at": "2026-10-06T10:00:38.957767+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2675688.672367,
-      "date": "2026-10-04",
+      "value": 2674314.578151,
+      "date": "2026-10-05",
       "unit": "BTC",
-      "change_3m": 19541.62,
-      "change_12m": -50789.13,
-      "change_3m_pct": 0.74,
-      "change_12m_pct": -1.86,
-      "percentile_since_2015": 42.6,
+      "change_3m": 11307.2,
+      "change_12m": -58211.2,
+      "change_3m_pct": 0.42,
+      "change_12m_pct": -2.13,
+      "percentile_since_2015": 42.5,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -633,8 +633,8 @@
           "value": 2681920.497811
         },
         {
-          "date": "2026-10-04",
-          "value": 2675688.672367
+          "date": "2026-10-05",
+          "value": 2674314.578151
         }
       ],
       "metric_id": "SplyExNtv"
@@ -643,14 +643,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 312.202729,
-    "date": "2026-10-05",
+    "value": 312.65864,
+    "date": "2026-10-06",
     "unit": "USD billions",
-    "change_3m": 3.71,
-    "change_12m": 10.59,
-    "change_3m_pct": 1.2,
-    "change_12m_pct": 3.51,
-    "percentile_since_2015": 96.7,
+    "change_3m": 3.17,
+    "change_12m": 11.51,
+    "change_3m_pct": 1.03,
+    "change_12m_pct": 3.82,
+    "percentile_since_2015": 96.9,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1086,8 +1086,8 @@
         "value": 311.200298
       },
       {
-        "date": "2026-10-05",
-        "value": 312.202729
+        "date": "2026-10-06",
+        "value": 312.65864
       }
     ]
   },
