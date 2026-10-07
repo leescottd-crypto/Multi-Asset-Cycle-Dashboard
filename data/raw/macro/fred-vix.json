@@ -2,7 +2,7 @@
   "series_id": "VIXCLS",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS",
-  "fetched_at": "2026-10-07T10:00:34.135209+00:00",
+  "fetched_at": "2026-10-07T16:00:37.694020+00:00",
   "observations": [
     {
       "date": "1990-01-02",
@@ -37155,6 +37155,10 @@
     {
       "date": "2026-10-05",
       "value": 15.52
+    },
+    {
+      "date": "2026-10-06",
+      "value": 15.01
     }
   ]
 }
