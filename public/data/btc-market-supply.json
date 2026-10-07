@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-06T21:00:35.092797+00:00",
+  "generated_at": "2026-10-07T10:00:39.644402+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2674314.578151,
-      "date": "2026-10-05",
+      "value": 2660207.43037,
+      "date": "2026-10-06",
       "unit": "BTC",
-      "change_3m": 11307.2,
-      "change_12m": -58211.2,
-      "change_3m_pct": 0.42,
-      "change_12m_pct": -2.13,
-      "percentile_since_2015": 42.5,
+      "change_3m": 1509.6,
+      "change_12m": -70882.78,
+      "change_3m_pct": 0.06,
+      "change_12m_pct": -2.6,
+      "percentile_since_2015": 41.5,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -633,8 +633,8 @@
           "value": 2681920.497811
         },
         {
-          "date": "2026-10-05",
-          "value": 2674314.578151
+          "date": "2026-10-06",
+          "value": 2660207.43037
         }
       ],
       "metric_id": "SplyExNtv"
@@ -643,14 +643,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 312.688393,
-    "date": "2026-10-06",
+    "value": 312.854532,
+    "date": "2026-10-07",
     "unit": "USD billions",
-    "change_3m": 3.2,
-    "change_12m": 11.54,
-    "change_3m_pct": 1.03,
-    "change_12m_pct": 3.83,
-    "percentile_since_2015": 97.0,
+    "change_3m": 3.83,
+    "change_12m": 11.03,
+    "change_3m_pct": 1.24,
+    "change_12m_pct": 3.66,
+    "percentile_since_2015": 97.1,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1086,8 +1086,8 @@
         "value": 311.200298
       },
       {
-        "date": "2026-10-06",
-        "value": 312.688393
+        "date": "2026-10-07",
+        "value": 312.854532
       }
     ]
   },
