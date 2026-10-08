@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-07T21:00:44.621213+00:00",
+  "generated_at": "2026-10-08T10:00:37.145150+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2660207.43037,
-      "date": "2026-10-06",
+      "value": 2663366.683323,
+      "date": "2026-10-07",
       "unit": "BTC",
-      "change_3m": 1509.6,
-      "change_12m": -70882.78,
-      "change_3m_pct": 0.06,
-      "change_12m_pct": -2.6,
-      "percentile_since_2015": 41.5,
+      "change_3m": 7925.08,
+      "change_12m": -63086.12,
+      "change_3m_pct": 0.3,
+      "change_12m_pct": -2.31,
+      "percentile_since_2015": 41.6,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -633,8 +633,8 @@
           "value": 2681920.497811
         },
         {
-          "date": "2026-10-06",
-          "value": 2660207.43037
+          "date": "2026-10-07",
+          "value": 2663366.683323
         }
       ],
       "metric_id": "SplyExNtv"
@@ -643,14 +643,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 312.821611,
-    "date": "2026-10-07",
+    "value": 312.28165,
+    "date": "2026-10-08",
     "unit": "USD billions",
-    "change_3m": 3.8,
-    "change_12m": 11.0,
-    "change_3m_pct": 1.23,
-    "change_12m_pct": 3.64,
-    "percentile_since_2015": 97.1,
+    "change_3m": 5.44,
+    "change_12m": 9.67,
+    "change_3m_pct": 1.77,
+    "change_12m_pct": 3.19,
+    "percentile_since_2015": 96.7,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1086,8 +1086,8 @@
         "value": 311.200298
       },
       {
-        "date": "2026-10-07",
-        "value": 312.821611
+        "date": "2026-10-08",
+        "value": 312.28165
       }
     ]
   },
