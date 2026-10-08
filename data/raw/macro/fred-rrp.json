@@ -2,7 +2,7 @@
   "series_id": "RRPONTSYD",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RRPONTSYD",
-  "fetched_at": "2026-10-08T16:00:33.447777+00:00",
+  "fetched_at": "2026-10-08T21:00:36.707178+00:00",
   "observations": [
     {
       "date": "2003-02-07",
@@ -13371,6 +13371,10 @@
     {
       "date": "2026-10-07",
       "value": 2.338
+    },
+    {
+      "date": "2026-10-08",
+      "value": 0.335
     }
   ]
 }

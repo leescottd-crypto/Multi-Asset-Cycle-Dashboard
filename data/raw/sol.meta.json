@@ -13,7 +13,7 @@
   "rows": 1940,
   "first_date": "2021-06-17",
   "last_date": "2026-10-08",
-  "fetched_at": "2026-10-08T16:00:21.022335+00:00",
+  "fetched_at": "2026-10-08T21:00:21.881478+00:00",
   "request_count": 10,
   "limitation": "History begins when the USD product became available on Coinbase. The current-day close is a provisional spot price until the daily candle finalizes; short-history assets may not yet have a 200-week moving average."
 }

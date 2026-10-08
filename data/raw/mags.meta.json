@@ -1,6 +1,6 @@
 {
   "source": "Yahoo Finance chart endpoint",
-  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MAGS?period1=0&period2=1791561625&interval=1d&events=history&includeAdjustedClose=true",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MAGS?period1=0&period2=1791579627&interval=1d&events=history&includeAdjustedClose=true",
   "provenance": "live-public-no-key-daily-history",
   "asset_id": "mags",
   "name": "Roundhill Magnificent Seven ETF",
@@ -9,11 +9,11 @@
   "currency": "USD",
   "exchange": "BTS",
   "instrument_type": "ETF",
-  "regular_market_price": 73.4,
-  "regular_market_time": 1791475200,
+  "regular_market_price": 73.03,
+  "regular_market_time": 1791489600,
   "rows": 878,
   "first_date": "2023-04-11",
   "last_date": "2026-10-08",
-  "fetched_at": "2026-10-08T16:00:26.037197+00:00",
+  "fetched_at": "2026-10-08T21:00:27.773377+00:00",
   "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
 }

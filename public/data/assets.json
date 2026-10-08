@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T16:00:31.189326+00:00",
+  "generated_at": "2026-10-08T21:00:34.279429+00:00",
   "assets": [
     {
       "id": "btc",
@@ -9,40 +9,40 @@
       "url": "/public/data/btc.json",
       "latest": {
         "date": "2026-10-08",
-        "close": 80977.5,
-        "trend": 137626.79,
-        "band_minus_2": 48153.14,
-        "band_minus_1_5": 62610.08,
-        "band_minus_1": 81407.39,
-        "band_plus_1": 232670.95,
-        "band_plus_2": 393351.96,
-        "z_score": -1.0101,
+        "close": 81732.22,
+        "trend": 137627.69,
+        "band_minus_2": 48153.67,
+        "band_minus_1_5": 62610.69,
+        "band_minus_1": 81408.1,
+        "band_plus_1": 232671.97,
+        "band_plus_2": 393352.84,
+        "z_score": -0.9924,
         "zone": "Cheap",
-        "ma_50d": 80510.49,
-        "ma_100d": 72240.99,
-        "ma_111d": 71143.59,
-        "ma_200d": 71789.63,
-        "ma_200w": 66492.9,
-        "ma_350d_x2": 155247.77,
-        "rsi_14d": 44.69,
-        "drawdown_from_ath_pct": -35.13,
+        "ma_50d": 80525.59,
+        "ma_100d": 72248.54,
+        "ma_111d": 71150.39,
+        "ma_200d": 71793.41,
+        "ma_200w": 66496.68,
+        "ma_350d_x2": 155252.08,
+        "rsi_14d": 47.07,
+        "drawdown_from_ath_pct": -34.52,
         "mvrv": null,
         "market_cap_usd": null,
         "realized_cap_usd": null,
         "zone_note": "Bitcoin is below trend but not at the deepest accumulation band.",
-        "distance_to_minus_1_5_pct": 29.34,
-        "distance_to_plus_2_pct": 385.75,
+        "distance_to_minus_1_5_pct": 30.54,
+        "distance_to_plus_2_pct": 381.27,
         "latest_available_mvrv": 1.41,
         "latest_available_mvrv_date": "2026-05-23"
       },
       "regime": {
-        "score": 4,
+        "score": 3,
         "label": "Constructive",
         "components": [
           {
             "name": "Log regression valuation",
             "score": 1,
-            "detail": "z-score -1.01"
+            "detail": "z-score -0.99"
           },
           {
             "name": "200D trend",
@@ -52,12 +52,12 @@
           {
             "name": "RSI momentum",
             "score": 0,
-            "detail": "neutral RSI 44.7"
+            "detail": "neutral RSI 47.1"
           },
           {
             "name": "Drawdown reset",
-            "score": 1,
-            "detail": "-35.1% from ATH"
+            "score": 0,
+            "detail": "-34.5% from ATH"
           },
           {
             "name": "MVRV valuation",
@@ -74,7 +74,7 @@
         "rows": 5927,
         "first_date": "2010-07-18",
         "last_date": "2026-10-08",
-        "fetched_at": "2026-10-08T16:00:11.525575+00:00",
+        "fetched_at": "2026-10-08T21:00:10.330596+00:00",
         "fields": [
           "PriceUSD",
           "CapMVRVCur",
@@ -89,7 +89,7 @@
           "rows": 5790,
           "first_date": "2010-07-18",
           "last_date": "2026-05-24",
-          "fetched_at": "2026-10-08T16:00:05.109207+00:00",
+          "fetched_at": "2026-10-08T21:00:02.383892+00:00",
           "fields": [
             "PriceUSD",
             "CapMVRVCur",
@@ -106,7 +106,7 @@
           "rows": 4099,
           "first_date": "2015-07-20",
           "last_date": "2026-10-08",
-          "fetched_at": "2026-10-08T16:00:11.388724+00:00",
+          "fetched_at": "2026-10-08T21:00:10.194169+00:00",
           "request_count": 15,
           "limitation": "Coinbase spot history starts around 2015; use CoinMetrics/backfill for the final long-term model."
         },
@@ -114,9 +114,9 @@
           "source": "Coinbase Exchange ticker endpoint",
           "product": "BTC-USD",
           "provenance": "live-public-spot-price",
-          "price": 80977.5,
-          "time": "2026-10-08T16:00:10.479837374Z",
-          "fetched_at": "2026-10-08T16:00:11.525441+00:00",
+          "price": 81732.22,
+          "time": "2026-10-08T21:00:08.677566576Z",
+          "fetched_at": "2026-10-08T21:00:10.330469+00:00",
           "limitation": "Hourly dashboard refresh treats the current day's close as provisional spot until the daily candle finalizes."
         },
         "asset_id": "btc",
@@ -134,29 +134,29 @@
       "url": "/public/data/eth.json",
       "latest": {
         "date": "2026-10-08",
-        "close": 2436.44,
-        "trend": 2909.1,
+        "close": 2473.01,
+        "trend": 2909.13,
         "band_minus_2": 554.97,
-        "band_minus_1_5": 839.73,
-        "band_minus_1": 1270.61,
-        "band_plus_1": 6660.47,
-        "band_plus_2": 15249.33,
-        "z_score": -0.214,
+        "band_minus_1_5": 839.74,
+        "band_minus_1": 1270.62,
+        "band_plus_1": 6660.52,
+        "band_plus_2": 15249.43,
+        "z_score": -0.1961,
         "zone": "Fair",
-        "ma_50d": 2550.15,
-        "ma_100d": 2206.51,
-        "ma_111d": 2149.26,
-        "ma_200d": 2128.45,
-        "ma_200w": 2536.16,
-        "ma_350d_x2": 4826.88,
-        "rsi_14d": 35.28,
-        "drawdown_from_ath_pct": -49.57,
+        "ma_50d": 2550.88,
+        "ma_100d": 2206.87,
+        "ma_111d": 2149.59,
+        "ma_200d": 2128.63,
+        "ma_200w": 2536.34,
+        "ma_350d_x2": 4827.09,
+        "rsi_14d": 37.5,
+        "drawdown_from_ath_pct": -48.81,
         "mvrv": null,
         "market_cap_usd": null,
         "realized_cap_usd": null,
         "zone_note": "Ethereum is near long-term trend fair value.",
-        "distance_to_minus_1_5_pct": 190.15,
-        "distance_to_plus_2_pct": 525.89,
+        "distance_to_minus_1_5_pct": 194.5,
+        "distance_to_plus_2_pct": 516.63,
         "latest_available_mvrv": null,
         "latest_available_mvrv_date": null
       },
@@ -167,7 +167,7 @@
           {
             "name": "Log regression valuation",
             "score": 0,
-            "detail": "z-score -0.21"
+            "detail": "z-score -0.20"
           },
           {
             "name": "200D trend",
@@ -177,12 +177,12 @@
           {
             "name": "RSI momentum",
             "score": 0,
-            "detail": "neutral RSI 35.3"
+            "detail": "neutral RSI 37.5"
           },
           {
             "name": "Drawdown reset",
             "score": 1,
-            "detail": "-49.6% from ATH"
+            "detail": "-48.8% from ATH"
           },
           {
             "name": "MVRV valuation",
@@ -207,7 +207,7 @@
         "rows": 3794,
         "first_date": "2016-05-18",
         "last_date": "2026-10-08",
-        "fetched_at": "2026-10-08T16:00:17.236765+00:00",
+        "fetched_at": "2026-10-08T21:00:17.260480+00:00",
         "request_count": 15,
         "limitation": "History begins when the USD product became available on Coinbase. The current-day close is a provisional spot price until the daily candle finalizes; short-history assets may not yet have a 200-week moving average."
       }
@@ -220,29 +220,29 @@
       "url": "/public/data/sol.json",
       "latest": {
         "date": "2026-10-08",
-        "close": 108.59,
+        "close": 109.8,
         "trend": 97.4,
         "band_minus_2": 19.04,
         "band_minus_1_5": 28.63,
         "band_minus_1": 43.06,
         "band_plus_1": 220.3,
         "band_plus_2": 498.28,
-        "z_score": 0.1333,
+        "z_score": 0.1468,
         "zone": "Fair",
-        "ma_50d": 107.77,
-        "ma_100d": 92.09,
-        "ma_111d": 90.04,
-        "ma_200d": 86.52,
-        "ma_200w": 111.95,
-        "ma_350d_x2": 204.08,
-        "rsi_14d": 42.11,
-        "drawdown_from_ath_pct": -58.55,
+        "ma_50d": 107.79,
+        "ma_100d": 92.11,
+        "ma_111d": 90.05,
+        "ma_200d": 86.53,
+        "ma_200w": 111.96,
+        "ma_350d_x2": 204.09,
+        "rsi_14d": 43.64,
+        "drawdown_from_ath_pct": -58.09,
         "mvrv": null,
         "market_cap_usd": null,
         "realized_cap_usd": null,
         "zone_note": "Solana is near long-term trend fair value.",
-        "distance_to_minus_1_5_pct": 279.29,
-        "distance_to_plus_2_pct": 358.86,
+        "distance_to_minus_1_5_pct": 283.51,
+        "distance_to_plus_2_pct": 353.81,
         "latest_available_mvrv": null,
         "latest_available_mvrv_date": null
       },
@@ -253,7 +253,7 @@
           {
             "name": "Log regression valuation",
             "score": 0,
-            "detail": "z-score 0.13"
+            "detail": "z-score 0.15"
           },
           {
             "name": "200D trend",
@@ -263,12 +263,12 @@
           {
             "name": "RSI momentum",
             "score": 0,
-            "detail": "neutral RSI 42.1"
+            "detail": "neutral RSI 43.6"
           },
           {
             "name": "Drawdown reset",
             "score": 1,
-            "detail": "-58.5% from ATH"
+            "detail": "-58.1% from ATH"
           },
           {
             "name": "MVRV valuation",
@@ -293,7 +293,7 @@
         "rows": 1940,
         "first_date": "2021-06-17",
         "last_date": "2026-10-08",
-        "fetched_at": "2026-10-08T16:00:21.022335+00:00",
+        "fetched_at": "2026-10-08T21:00:21.881478+00:00",
         "request_count": 10,
         "limitation": "History begins when the USD product became available on Coinbase. The current-day close is a provisional spot price until the daily candle finalizes; short-history assets may not yet have a 200-week moving average."
       }
@@ -306,14 +306,14 @@
       "url": "/public/data/sui.json",
       "latest": {
         "date": "2026-10-08",
-        "close": 1.03,
+        "close": 1.05,
         "trend": 1.78,
         "band_minus_2": 0.51,
         "band_minus_1_5": 0.7,
         "band_minus_1": 0.95,
         "band_plus_1": 3.32,
         "band_plus_2": 6.18,
-        "z_score": -0.8818,
+        "z_score": -0.8412,
         "zone": "Cheap",
         "ma_50d": 0.9,
         "ma_100d": 0.81,
@@ -321,14 +321,14 @@
         "ma_200d": 0.86,
         "ma_200w": null,
         "ma_350d_x2": 2.23,
-        "rsi_14d": 48.7,
-        "drawdown_from_ath_pct": -80.58,
+        "rsi_14d": 50.82,
+        "drawdown_from_ath_pct": -80.08,
         "mvrv": null,
         "market_cap_usd": null,
         "realized_cap_usd": null,
         "zone_note": "Sui is below trend but not at the deepest accumulation band.",
-        "distance_to_minus_1_5_pct": 47.14,
-        "distance_to_plus_2_pct": 500.0,
+        "distance_to_minus_1_5_pct": 50.0,
+        "distance_to_plus_2_pct": 488.57,
         "latest_available_mvrv": null,
         "latest_available_mvrv_date": null
       },
@@ -339,7 +339,7 @@
           {
             "name": "Log regression valuation",
             "score": 1,
-            "detail": "z-score -0.88"
+            "detail": "z-score -0.84"
           },
           {
             "name": "200D trend",
@@ -349,12 +349,12 @@
           {
             "name": "RSI momentum",
             "score": 0,
-            "detail": "neutral RSI 48.7"
+            "detail": "neutral RSI 50.8"
           },
           {
             "name": "Drawdown reset",
             "score": 2,
-            "detail": "-80.6% from ATH"
+            "detail": "-80.1% from ATH"
           },
           {
             "name": "MVRV valuation",
@@ -379,7 +379,7 @@
         "rows": 1240,
         "first_date": "2023-05-18",
         "last_date": "2026-10-08",
-        "fetched_at": "2026-10-08T16:00:23.441774+00:00",
+        "fetched_at": "2026-10-08T21:00:24.620974+00:00",
         "request_count": 6,
         "limitation": "History begins when the USD product became available on Coinbase. The current-day close is a provisional spot price until the daily candle finalizes; short-history assets may not yet have a 200-week moving average."
       }
@@ -392,29 +392,29 @@
       "url": "/public/data/hype.json",
       "latest": {
         "date": "2026-10-08",
-        "close": 83.41,
-        "trend": 71.82,
+        "close": 84.54,
+        "trend": 71.83,
         "band_minus_2": 49.22,
         "band_minus_1_5": 54.1,
         "band_minus_1": 59.46,
-        "band_plus_1": 86.76,
-        "band_plus_2": 104.81,
-        "z_score": 0.7915,
+        "band_plus_1": 86.78,
+        "band_plus_2": 104.83,
+        "z_score": 0.8619,
         "zone": "Warm",
-        "ma_50d": 85.51,
-        "ma_100d": 72.89,
-        "ma_111d": 72.09,
-        "ma_200d": 61.69,
+        "ma_50d": 85.53,
+        "ma_100d": 72.91,
+        "ma_111d": 72.1,
+        "ma_200d": 61.7,
         "ma_200w": null,
         "ma_350d_x2": null,
-        "rsi_14d": 43.43,
-        "drawdown_from_ath_pct": -14.21,
+        "rsi_14d": 44.84,
+        "drawdown_from_ath_pct": -13.05,
         "mvrv": null,
         "market_cap_usd": null,
         "realized_cap_usd": null,
         "zone_note": "Hyperliquid is above trend. Upside can continue, but risk is rising.",
-        "distance_to_minus_1_5_pct": 54.18,
-        "distance_to_plus_2_pct": 25.66,
+        "distance_to_minus_1_5_pct": 56.27,
+        "distance_to_plus_2_pct": 24.0,
         "latest_available_mvrv": null,
         "latest_available_mvrv_date": null
       },
@@ -425,7 +425,7 @@
           {
             "name": "Log regression valuation",
             "score": 0,
-            "detail": "z-score 0.79"
+            "detail": "z-score 0.86"
           },
           {
             "name": "200D trend",
@@ -435,12 +435,12 @@
           {
             "name": "RSI momentum",
             "score": 0,
-            "detail": "neutral RSI 43.4"
+            "detail": "neutral RSI 44.8"
           },
           {
             "name": "Drawdown reset",
             "score": 0,
-            "detail": "-14.2% from ATH"
+            "detail": "-13.1% from ATH"
           },
           {
             "name": "MVRV valuation",
@@ -465,7 +465,7 @@
         "rows": 246,
         "first_date": "2026-02-05",
         "last_date": "2026-10-08",
-        "fetched_at": "2026-10-08T16:00:24.839546+00:00",
+        "fetched_at": "2026-10-08T21:00:26.160963+00:00",
         "request_count": 4,
         "limitation": "History begins when the USD product became available on Coinbase. The current-day close is a provisional spot price until the daily candle finalizes; short-history assets may not yet have a 200-week moving average."
       }
@@ -478,29 +478,29 @@
       "url": "/public/data/gold.json",
       "latest": {
         "date": "2026-10-08",
-        "close": 376.79,
+        "close": 378.62,
         "trend": 201.06,
         "band_minus_2": 121.61,
         "band_minus_1_5": 137.9,
         "band_minus_1": 156.37,
-        "band_plus_1": 258.52,
-        "band_plus_2": 332.41,
-        "z_score": 2.4985,
+        "band_plus_1": 258.53,
+        "band_plus_2": 332.42,
+        "z_score": 2.5177,
         "zone": "Take Chips",
-        "ma_50d": 396.84,
-        "ma_100d": 391.88,
-        "ma_111d": 395.34,
-        "ma_200d": 415.76,
-        "ma_200w": 274.46,
-        "ma_350d_x2": 766.06,
-        "rsi_14d": 37.93,
-        "drawdown_from_ath_pct": -24.02,
+        "ma_50d": 396.88,
+        "ma_100d": 391.89,
+        "ma_111d": 395.36,
+        "ma_200d": 415.77,
+        "ma_200w": 274.47,
+        "ma_350d_x2": 766.07,
+        "rsi_14d": 39.88,
+        "drawdown_from_ath_pct": -23.65,
         "mvrv": null,
         "market_cap_usd": null,
         "realized_cap_usd": null,
         "zone_note": "Gold is at/above the +2\u03c3 band. Historically hot territory.",
-        "distance_to_minus_1_5_pct": 173.23,
-        "distance_to_plus_2_pct": -11.78,
+        "distance_to_minus_1_5_pct": 174.56,
+        "distance_to_plus_2_pct": -12.2,
         "latest_available_mvrv": null,
         "latest_available_mvrv_date": null
       },
@@ -511,7 +511,7 @@
           {
             "name": "Log regression valuation",
             "score": -3,
-            "detail": "z-score 2.50"
+            "detail": "z-score 2.52"
           },
           {
             "name": "200D trend",
@@ -521,12 +521,12 @@
           {
             "name": "RSI momentum",
             "score": 0,
-            "detail": "neutral RSI 37.9"
+            "detail": "neutral RSI 39.9"
           },
           {
             "name": "Drawdown reset",
             "score": 0,
-            "detail": "-24.0% from ATH"
+            "detail": "-23.6% from ATH"
           },
           {
             "name": "MVRV valuation",
@@ -538,7 +538,7 @@
       },
       "source": {
         "source": "Yahoo Finance chart endpoint",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=0&period2=1791561624&interval=1d&events=history&includeAdjustedClose=true",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=0&period2=1791579626&interval=1d&events=history&includeAdjustedClose=true",
         "provenance": "live-public-no-key-daily-history",
         "asset_id": "gold",
         "name": "Gold",
@@ -547,12 +547,12 @@
         "currency": "USD",
         "exchange": "PCX",
         "instrument_type": "ETF",
-        "regular_market_price": 376.79,
-        "regular_market_time": 1791475209,
+        "regular_market_price": 378.62,
+        "regular_market_time": 1791489600,
         "rows": 5506,
         "first_date": "2004-11-18",
         "last_date": "2026-10-08",
-        "fetched_at": "2026-10-08T16:00:25.287044+00:00",
+        "fetched_at": "2026-10-08T21:00:26.772890+00:00",
         "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues.",
         "proxy_note": "ETF proxy for gold spot"
       }
@@ -565,29 +565,29 @@
       "url": "/public/data/silver.json",
       "latest": {
         "date": "2026-10-08",
-        "close": 53.02,
+        "close": 53.45,
         "trend": 24.53,
         "band_minus_2": 11.96,
         "band_minus_1_5": 14.32,
         "band_minus_1": 17.13,
         "band_plus_1": 35.13,
         "band_plus_2": 50.31,
-        "z_score": 2.1465,
+        "z_score": 2.1687,
         "zone": "Take Chips",
-        "ma_50d": 57.91,
+        "ma_50d": 57.92,
         "ma_100d": 58.27,
         "ma_111d": 59.66,
         "ma_200d": 65.81,
         "ma_200w": 35.45,
         "ma_350d_x2": 109.3,
-        "rsi_14d": 36.2,
-        "drawdown_from_ath_pct": -49.79,
+        "rsi_14d": 37.3,
+        "drawdown_from_ath_pct": -49.38,
         "mvrv": null,
         "market_cap_usd": null,
         "realized_cap_usd": null,
         "zone_note": "Silver is at/above the +2\u03c3 band. Historically hot territory.",
-        "distance_to_minus_1_5_pct": 270.25,
-        "distance_to_plus_2_pct": -5.11,
+        "distance_to_minus_1_5_pct": 273.25,
+        "distance_to_plus_2_pct": -5.87,
         "latest_available_mvrv": null,
         "latest_available_mvrv_date": null
       },
@@ -598,7 +598,7 @@
           {
             "name": "Log regression valuation",
             "score": -3,
-            "detail": "z-score 2.15"
+            "detail": "z-score 2.17"
           },
           {
             "name": "200D trend",
@@ -608,12 +608,12 @@
           {
             "name": "RSI momentum",
             "score": 0,
-            "detail": "neutral RSI 36.2"
+            "detail": "neutral RSI 37.3"
           },
           {
             "name": "Drawdown reset",
             "score": 1,
-            "detail": "-49.8% from ATH"
+            "detail": "-49.4% from ATH"
           },
           {
             "name": "MVRV valuation",
@@ -625,7 +625,7 @@
       },
       "source": {
         "source": "Yahoo Finance chart endpoint",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SLV?period1=0&period2=1791561625&interval=1d&events=history&includeAdjustedClose=true",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SLV?period1=0&period2=1791579626&interval=1d&events=history&includeAdjustedClose=true",
         "provenance": "live-public-no-key-daily-history",
         "asset_id": "silver",
         "name": "Silver",
@@ -634,12 +634,12 @@
         "currency": "USD",
         "exchange": "PCX",
         "instrument_type": "ETF",
-        "regular_market_price": 53.025,
-        "regular_market_time": 1791475212,
+        "regular_market_price": 53.45,
+        "regular_market_time": 1791489600,
         "rows": 5144,
         "first_date": "2006-04-28",
         "last_date": "2026-10-08",
-        "fetched_at": "2026-10-08T16:00:25.738996+00:00",
+        "fetched_at": "2026-10-08T21:00:27.425288+00:00",
         "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues.",
         "proxy_note": "ETF proxy for silver spot"
       }
@@ -652,14 +652,14 @@
       "url": "/public/data/mags.json",
       "latest": {
         "date": "2026-10-08",
-        "close": 73.4,
+        "close": 73.03,
         "trend": 62.11,
         "band_minus_2": 47.55,
         "band_minus_1_5": 50.83,
         "band_minus_1": 54.34,
         "band_plus_1": 70.98,
         "band_plus_2": 81.12,
-        "z_score": 1.251,
+        "z_score": 1.2133,
         "zone": "Warm",
         "ma_50d": 69.61,
         "ma_100d": 67.99,
@@ -667,14 +667,14 @@
         "ma_200d": 65.92,
         "ma_200w": null,
         "ma_350d_x2": 127.45,
-        "rsi_14d": 63.95,
-        "drawdown_from_ath_pct": -0.68,
+        "rsi_14d": 61.11,
+        "drawdown_from_ath_pct": -1.18,
         "mvrv": null,
         "market_cap_usd": null,
         "realized_cap_usd": null,
         "zone_note": "Roundhill Magnificent Seven ETF is above trend. Upside can continue, but risk is rising.",
-        "distance_to_minus_1_5_pct": 44.4,
-        "distance_to_plus_2_pct": 10.52,
+        "distance_to_minus_1_5_pct": 43.67,
+        "distance_to_plus_2_pct": 11.08,
         "latest_available_mvrv": null,
         "latest_available_mvrv_date": null
       },
@@ -685,7 +685,7 @@
           {
             "name": "Log regression valuation",
             "score": 0,
-            "detail": "z-score 1.25"
+            "detail": "z-score 1.21"
           },
           {
             "name": "200D trend",
@@ -695,12 +695,12 @@
           {
             "name": "RSI momentum",
             "score": 0,
-            "detail": "neutral RSI 64.0"
+            "detail": "neutral RSI 61.1"
           },
           {
             "name": "Drawdown reset",
             "score": -1,
-            "detail": "-0.7% from ATH"
+            "detail": "-1.2% from ATH"
           },
           {
             "name": "MVRV valuation",
@@ -712,7 +712,7 @@
       },
       "source": {
         "source": "Yahoo Finance chart endpoint",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MAGS?period1=0&period2=1791561625&interval=1d&events=history&includeAdjustedClose=true",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MAGS?period1=0&period2=1791579627&interval=1d&events=history&includeAdjustedClose=true",
         "provenance": "live-public-no-key-daily-history",
         "asset_id": "mags",
         "name": "Roundhill Magnificent Seven ETF",
@@ -721,12 +721,12 @@
         "currency": "USD",
         "exchange": "BTS",
         "instrument_type": "ETF",
-        "regular_market_price": 73.4,
-        "regular_market_time": 1791475200,
+        "regular_market_price": 73.03,
+        "regular_market_time": 1791489600,
         "rows": 878,
         "first_date": "2023-04-11",
         "last_date": "2026-10-08",
-        "fetched_at": "2026-10-08T16:00:26.037197+00:00",
+        "fetched_at": "2026-10-08T21:00:27.773377+00:00",
         "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
       }
     },
@@ -738,29 +738,29 @@
       "url": "/public/data/mstr.json",
       "latest": {
         "date": "2026-10-08",
-        "close": 149.75,
+        "close": 151.47,
         "trend": 23.39,
         "band_minus_2": 2.62,
         "band_minus_1_5": 4.53,
         "band_minus_1": 7.83,
         "band_plus_1": 69.88,
         "band_plus_2": 208.75,
-        "z_score": 1.6965,
+        "z_score": 1.7069,
         "zone": "Expensive",
-        "ma_50d": 128.65,
-        "ma_100d": 122.07,
-        "ma_111d": 128.21,
-        "ma_200d": 135.9,
-        "ma_200w": 165.32,
-        "ma_350d_x2": 432.29,
-        "rsi_14d": 52.06,
-        "drawdown_from_ath_pct": -68.4,
+        "ma_50d": 128.69,
+        "ma_100d": 122.09,
+        "ma_111d": 128.23,
+        "ma_200d": 135.91,
+        "ma_200w": 165.33,
+        "ma_350d_x2": 432.3,
+        "rsi_14d": 53.37,
+        "drawdown_from_ath_pct": -68.03,
         "mvrv": null,
         "market_cap_usd": null,
         "realized_cap_usd": null,
         "zone_note": "Strategy (MicroStrategy) is stretched above trend. Consider risk controls.",
-        "distance_to_minus_1_5_pct": 3205.74,
-        "distance_to_plus_2_pct": 39.4,
+        "distance_to_minus_1_5_pct": 3243.71,
+        "distance_to_plus_2_pct": 37.82,
         "latest_available_mvrv": null,
         "latest_available_mvrv_date": null
       },
@@ -771,7 +771,7 @@
           {
             "name": "Log regression valuation",
             "score": -2,
-            "detail": "z-score 1.70"
+            "detail": "z-score 1.71"
           },
           {
             "name": "200D trend",
@@ -781,12 +781,12 @@
           {
             "name": "RSI momentum",
             "score": 0,
-            "detail": "neutral RSI 52.1"
+            "detail": "neutral RSI 53.4"
           },
           {
             "name": "Drawdown reset",
             "score": 2,
-            "detail": "-68.4% from ATH"
+            "detail": "-68.0% from ATH"
           },
           {
             "name": "MVRV valuation",
@@ -798,7 +798,7 @@
       },
       "source": {
         "source": "Yahoo Finance chart endpoint",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=0&period2=1791561626&interval=1d&events=history&includeAdjustedClose=true",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=0&period2=1791579627&interval=1d&events=history&includeAdjustedClose=true",
         "provenance": "live-public-no-key-daily-history",
         "asset_id": "mstr",
         "name": "Strategy (MicroStrategy)",
@@ -808,12 +808,12 @@
         "exchange": "NMS",
         "instrument_type": "EQUITY",
         "category": "Bitcoin Treasury Company",
-        "regular_market_price": 149.75,
-        "regular_market_time": 1791475225,
+        "regular_market_price": 151.47,
+        "regular_market_time": 1791489601,
         "rows": 7126,
         "first_date": "1998-06-11",
         "last_date": "2026-10-08",
-        "fetched_at": "2026-10-08T16:00:26.615995+00:00",
+        "fetched_at": "2026-10-08T21:00:28.390327+00:00",
         "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
       }
     },
@@ -825,29 +825,29 @@
       "url": "/public/data/sp500.json",
       "latest": {
         "date": "2026-10-08",
-        "close": 7771.56,
+        "close": 7765.36,
         "trend": 4195.79,
         "band_minus_2": 2430.87,
         "band_minus_1_5": 2786.28,
         "band_minus_1": 3193.65,
-        "band_plus_1": 5512.38,
-        "band_plus_2": 7242.1,
-        "z_score": 2.2585,
+        "band_plus_1": 5512.37,
+        "band_plus_2": 7242.09,
+        "z_score": 2.2556,
         "zone": "Take Chips",
-        "ma_50d": 7689.56,
-        "ma_100d": 7578.83,
-        "ma_111d": 7557.14,
-        "ma_200d": 7245.99,
-        "ma_200w": 5686.48,
-        "ma_350d_x2": 13826.67,
-        "rsi_14d": 56.86,
-        "drawdown_from_ath_pct": -0.61,
+        "ma_50d": 7689.44,
+        "ma_100d": 7578.77,
+        "ma_111d": 7557.08,
+        "ma_200d": 7245.96,
+        "ma_200w": 5686.45,
+        "ma_350d_x2": 13826.63,
+        "rsi_14d": 56.2,
+        "drawdown_from_ath_pct": -0.69,
         "mvrv": null,
         "market_cap_usd": null,
         "realized_cap_usd": null,
         "zone_note": "S&P 500 Index is at/above the +2\u03c3 band. Historically hot territory.",
-        "distance_to_minus_1_5_pct": 178.92,
-        "distance_to_plus_2_pct": -6.81,
+        "distance_to_minus_1_5_pct": 178.7,
+        "distance_to_plus_2_pct": -6.74,
         "latest_available_mvrv": null,
         "latest_available_mvrv_date": null
       },
@@ -868,12 +868,12 @@
           {
             "name": "RSI momentum",
             "score": 0,
-            "detail": "neutral RSI 56.9"
+            "detail": "neutral RSI 56.2"
           },
           {
             "name": "Drawdown reset",
             "score": -1,
-            "detail": "-0.6% from ATH"
+            "detail": "-0.7% from ATH"
           },
           {
             "name": "MVRV valuation",
@@ -885,7 +885,7 @@
       },
       "source": {
         "source": "Yahoo Finance chart endpoint",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=0&period2=1791561626&interval=1d&events=history&includeAdjustedClose=true",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=0&period2=1791579628&interval=1d&events=history&includeAdjustedClose=true",
         "provenance": "live-public-no-key-daily-history",
         "asset_id": "sp500",
         "name": "S&P 500 Index",
@@ -894,12 +894,12 @@
         "currency": "USD",
         "exchange": "SNP",
         "instrument_type": "INDEX",
-        "regular_market_price": 7771.56,
-        "regular_market_time": 1791475225,
+        "regular_market_price": 7765.36,
+        "regular_market_time": 1791492403,
         "rows": 14314,
         "first_date": "1970-01-02",
         "last_date": "2026-10-08",
-        "fetched_at": "2026-10-08T16:00:27.464927+00:00",
+        "fetched_at": "2026-10-08T21:00:29.432314+00:00",
         "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
       }
     },
@@ -911,29 +911,29 @@
       "url": "/public/data/nasdaq.json",
       "latest": {
         "date": "2026-10-08",
-        "close": 27355.37,
-        "trend": 12397.46,
+        "close": 27193.34,
+        "trend": 12397.43,
         "band_minus_2": 5849.5,
         "band_minus_1_5": 7057.85,
         "band_minus_1": 8515.8,
-        "band_plus_1": 18048.43,
-        "band_plus_2": 26275.23,
-        "z_score": 2.1073,
+        "band_plus_1": 18048.37,
+        "band_plus_2": 26275.1,
+        "z_score": 2.0915,
         "zone": "Take Chips",
-        "ma_50d": 26521.34,
-        "ma_100d": 26249.54,
-        "ma_111d": 26216.03,
-        "ma_200d": 24818.85,
-        "ma_200w": 18437.46,
-        "ma_350d_x2": 46957.1,
-        "rsi_14d": 61.22,
-        "drawdown_from_ath_pct": -0.89,
+        "ma_50d": 26518.1,
+        "ma_100d": 26247.92,
+        "ma_111d": 26214.57,
+        "ma_200d": 24818.04,
+        "ma_200w": 18436.65,
+        "ma_350d_x2": 46956.18,
+        "rsi_14d": 57.42,
+        "drawdown_from_ath_pct": -1.47,
         "mvrv": null,
         "market_cap_usd": null,
         "realized_cap_usd": null,
         "zone_note": "NASDAQ Composite is at/above the +2\u03c3 band. Historically hot territory.",
-        "distance_to_minus_1_5_pct": 287.59,
-        "distance_to_plus_2_pct": -3.95,
+        "distance_to_minus_1_5_pct": 285.29,
+        "distance_to_plus_2_pct": -3.38,
         "latest_available_mvrv": null,
         "latest_available_mvrv_date": null
       },
@@ -944,7 +944,7 @@
           {
             "name": "Log regression valuation",
             "score": -3,
-            "detail": "z-score 2.11"
+            "detail": "z-score 2.09"
           },
           {
             "name": "200D trend",
@@ -954,12 +954,12 @@
           {
             "name": "RSI momentum",
             "score": 0,
-            "detail": "neutral RSI 61.2"
+            "detail": "neutral RSI 57.4"
           },
           {
             "name": "Drawdown reset",
             "score": -1,
-            "detail": "-0.9% from ATH"
+            "detail": "-1.5% from ATH"
           },
           {
             "name": "MVRV valuation",
@@ -971,7 +971,7 @@
       },
       "source": {
         "source": "Yahoo Finance chart endpoint",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?period1=0&period2=1791561627&interval=1d&events=history&includeAdjustedClose=true",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?period1=0&period2=1791579629&interval=1d&events=history&includeAdjustedClose=true",
         "provenance": "live-public-no-key-daily-history",
         "asset_id": "nasdaq",
         "name": "NASDAQ Composite",
@@ -980,12 +980,12 @@
         "currency": "USD",
         "exchange": "NIM",
         "instrument_type": "INDEX",
-        "regular_market_price": 27355.367,
-        "regular_market_time": 1791475223,
+        "regular_market_price": 27193.34,
+        "regular_market_time": 1791493225,
         "rows": 14036,
         "first_date": "1971-02-05",
         "last_date": "2026-10-08",
-        "fetched_at": "2026-10-08T16:00:28.258930+00:00",
+        "fetched_at": "2026-10-08T21:00:30.332851+00:00",
         "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
       }
     }
