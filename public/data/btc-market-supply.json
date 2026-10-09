@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-08T21:00:41.962177+00:00",
+  "generated_at": "2026-10-09T10:01:04.212308+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2663366.683323,
-      "date": "2026-10-07",
+      "value": 2665392.036226,
+      "date": "2026-10-08",
       "unit": "BTC",
-      "change_3m": 7925.08,
-      "change_12m": -63086.12,
-      "change_3m_pct": 0.3,
-      "change_12m_pct": -2.31,
-      "percentile_since_2015": 41.6,
+      "change_3m": 10580.17,
+      "change_12m": -59246.12,
+      "change_3m_pct": 0.4,
+      "change_12m_pct": -2.17,
+      "percentile_since_2015": 41.7,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -633,8 +633,8 @@
           "value": 2681920.497811
         },
         {
-          "date": "2026-10-07",
-          "value": 2663366.683323
+          "date": "2026-10-08",
+          "value": 2665392.036226
         }
       ],
       "metric_id": "SplyExNtv"
@@ -643,14 +643,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 312.33227,
-    "date": "2026-10-08",
+    "value": 311.576282,
+    "date": "2026-10-09",
     "unit": "USD billions",
-    "change_3m": 5.49,
-    "change_12m": 9.72,
-    "change_3m_pct": 1.79,
-    "change_12m_pct": 3.21,
-    "percentile_since_2015": 96.7,
+    "change_3m": 4.73,
+    "change_12m": 8.95,
+    "change_3m_pct": 1.54,
+    "change_12m_pct": 2.96,
+    "percentile_since_2015": 96.4,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1086,8 +1086,8 @@
         "value": 311.200298
       },
       {
-        "date": "2026-10-08",
-        "value": 312.33227
+        "date": "2026-10-09",
+        "value": 311.576282
       }
     ]
   },
