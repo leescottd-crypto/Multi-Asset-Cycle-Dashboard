@@ -2,7 +2,7 @@
   "series_id": "TREAST",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=TREAST",
-  "fetched_at": "2026-10-10T10:00:30.838771+00:00",
+  "fetched_at": "2026-10-10T16:00:36.048094+00:00",
   "observations": [
     {
       "date": "2002-12-18",

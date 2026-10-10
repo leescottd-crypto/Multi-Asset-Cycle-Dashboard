@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T10:00:28.036239+00:00",
+  "generated_at": "2026-10-10T16:00:33.197286+00:00",
   "asset": {
     "id": "sp500",
     "name": "S&P 500 Index",
@@ -17,7 +17,7 @@
   },
   "source": {
     "source": "Yahoo Finance chart endpoint",
-    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=0&period2=1791712824&interval=1d&events=history&includeAdjustedClose=true",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=0&period2=1791734429&interval=1d&events=history&includeAdjustedClose=true",
     "provenance": "live-public-no-key-daily-history",
     "asset_id": "sp500",
     "name": "S&P 500 Index",
@@ -31,7 +31,7 @@
     "rows": 14315,
     "first_date": "1970-01-02",
     "last_date": "2026-10-09",
-    "fetched_at": "2026-10-10T10:00:25.478738+00:00",
+    "fetched_at": "2026-10-10T16:00:30.333415+00:00",
     "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
   },
   "latest": {
