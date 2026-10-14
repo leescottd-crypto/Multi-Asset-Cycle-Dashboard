@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T21:01:11.427777+00:00",
+  "generated_at": "2026-10-14T10:00:34.746992+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2507,14 +2507,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 102.203003,
-      "date": "2026-10-13",
+      "value": 102.228996,
+      "date": "2026-10-14",
       "unit": "index",
-      "change_3m": 0.92,
-      "change_12m": 2.93,
-      "change_3m_pct": 0.91,
-      "change_12m_pct": 2.95,
-      "percentile_since_2015": 78.0,
+      "change_3m": 1.29,
+      "change_12m": 3.18,
+      "change_3m_pct": 1.28,
+      "change_12m_pct": 3.21,
+      "percentile_since_2015": 78.1,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3086,8 +3086,8 @@
           "value": 101.449997
         },
         {
-          "date": "2026-10-13",
-          "value": 102.203003
+          "date": "2026-10-14",
+          "value": 102.228996
         }
       ]
     },
@@ -4999,14 +4999,14 @@
     "credit_spread": {
       "key": "credit_spread",
       "label": "Baa - 10Y Credit Spread",
-      "value": 1.48,
-      "date": "2026-10-08",
+      "value": 1.45,
+      "date": "2026-10-09",
       "unit": "% points",
-      "change_3m": -0.08,
-      "change_12m": -0.2,
-      "change_3m_pct": -5.13,
-      "change_12m_pct": -11.9,
-      "percentile_since_2015": 4.7,
+      "change_3m": -0.11,
+      "change_12m": -0.24,
+      "change_3m_pct": -7.05,
+      "change_12m_pct": -14.2,
+      "percentile_since_2015": 2.7,
       "cadence": "daily",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAA10Y",
@@ -5626,8 +5626,8 @@
           "value": 1.47
         },
         {
-          "date": "2026-10-08",
-          "value": 1.48
+          "date": "2026-10-09",
+          "value": 1.45
         }
       ]
     },
