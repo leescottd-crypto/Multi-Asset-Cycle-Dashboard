@@ -2,7 +2,7 @@
   "series_id": "CPIAUCSL",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL",
-  "fetched_at": "2026-10-14T10:00:29.635537+00:00",
+  "fetched_at": "2026-10-14T16:00:41.667743+00:00",
   "observations": [
     {
       "date": "1947-01-01",
@@ -3823,6 +3823,10 @@
     {
       "date": "2026-08-01",
       "value": 334.131
+    },
+    {
+      "date": "2026-09-01",
+      "value": 336.298
     }
   ]
 }
