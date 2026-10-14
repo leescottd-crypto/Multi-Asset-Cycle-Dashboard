@@ -82,8 +82,8 @@
     }
   },
   "current": {
-    "record_date": "2026-10-09",
-    "total_public_debt_outstanding_dollars": 40301480531900
+    "record_date": "2026-10-13",
+    "total_public_debt_outstanding_dollars": 40343879238036
   },
   "definition": "Total Public Debt Outstanding: debt held by the public plus intragovernmental holdings.",
   "source_url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/"
