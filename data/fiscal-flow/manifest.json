@@ -172,7 +172,7 @@
   },
   "debt": {
     "file": "data/fiscal-flow/debt.json",
-    "sha256": "fa7dbf6e521779a08bae5e3df96e9da1fabf85b5673ab67e95de5189f8ec9602",
+    "sha256": "0d89a505ba25cc7dc9dfbc3823cb70dc4ec557a42b8a3428f728259a32d13ed8",
     "source_url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/"
   },
   "schema_version": 2
