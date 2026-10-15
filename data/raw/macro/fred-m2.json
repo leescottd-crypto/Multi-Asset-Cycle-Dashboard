@@ -2,7 +2,7 @@
   "series_id": "M2SL",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=M2SL",
-  "fetched_at": "2026-10-15T10:00:31.699860+00:00",
+  "fetched_at": "2026-10-15T16:00:42.003831+00:00",
   "observations": [
     {
       "date": "1959-01-01",
