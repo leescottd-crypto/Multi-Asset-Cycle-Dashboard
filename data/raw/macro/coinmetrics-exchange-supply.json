@@ -3,7 +3,7 @@
   "source_url": "https://docs.coinmetrics.io/api/v4/",
   "api_url": "https://community-api.coinmetrics.io/v4/timeseries/asset-metrics?assets=btc&metrics=SplyExNtv&frequency=1d&start_time=2014-01-01&page_size=10000",
   "metric": "SplyExNtv",
-  "fetched_at": "2026-10-15T21:00:47.977315+00:00",
+  "fetched_at": "2026-10-16T10:00:33.328203+00:00",
   "unit": "BTC",
   "methodology_warning": "Coin Metrics includes balances held by exchanges and addresses it has identified. Label coverage can change, and the balance is exchange custody inventory rather than BTC necessarily posted in live sell orders.",
   "observations": [
@@ -18686,6 +18686,10 @@
     {
       "date": "2026-10-14",
       "value": 2675716.72251022
+    },
+    {
+      "date": "2026-10-15",
+      "value": 2676909.60861932
     }
   ]
 }

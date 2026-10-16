@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-15T21:01:01.107331+00:00",
+  "generated_at": "2026-10-16T10:00:37.831017+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2675716.72251,
-      "date": "2026-10-14",
+      "value": 2676909.608619,
+      "date": "2026-10-15",
       "unit": "BTC",
-      "change_3m": 14522.15,
-      "change_12m": -41103.86,
-      "change_3m_pct": 0.55,
-      "change_12m_pct": -1.51,
-      "percentile_since_2015": 42.7,
+      "change_3m": 13133.03,
+      "change_12m": -21374.27,
+      "change_3m_pct": 0.49,
+      "change_12m_pct": -0.79,
+      "percentile_since_2015": 42.8,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -633,8 +633,8 @@
           "value": 2681920.497811
         },
         {
-          "date": "2026-10-14",
-          "value": 2675716.72251
+          "date": "2026-10-15",
+          "value": 2676909.608619
         }
       ],
       "metric_id": "SplyExNtv"
@@ -643,14 +643,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 305.527398,
-    "date": "2026-10-15",
+    "value": 305.24141,
+    "date": "2026-10-16",
     "unit": "USD billions",
-    "change_3m": 4.07,
-    "change_12m": 2.06,
-    "change_3m_pct": 1.35,
-    "change_12m_pct": 0.68,
-    "percentile_since_2015": 95.1,
+    "change_3m": 4.49,
+    "change_12m": 0.95,
+    "change_3m_pct": 1.49,
+    "change_12m_pct": 0.31,
+    "percentile_since_2015": 94.8,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1086,8 +1086,8 @@
         "value": 306.315332
       },
       {
-        "date": "2026-10-15",
-        "value": 305.527398
+        "date": "2026-10-16",
+        "value": 305.24141
       }
     ]
   },
