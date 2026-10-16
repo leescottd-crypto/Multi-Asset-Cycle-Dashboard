@@ -166,13 +166,13 @@
     "file": "data/fiscal-flow/current.json",
     "fiscal_year": 2026,
     "precision": "cents rounded to nearest dollar",
-    "sha256": "b90b30cf6c975e5f09204a8171a270b87d826801a6681c405975f84887359d7e",
+    "sha256": "ba43d8f2258eb469317d5859aab645cd43f5ef46b50c40efd212a34bab67b686",
     "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
     "status": "current-ytd"
   },
   "debt": {
     "file": "data/fiscal-flow/debt.json",
-    "sha256": "0d89a505ba25cc7dc9dfbc3823cb70dc4ec557a42b8a3428f728259a32d13ed8",
+    "sha256": "9d07ed5031fdcede59767a5eab84798a38dd5cb7f87fde4f8cad76e7e23fbf06",
     "source_url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/"
   },
   "schema_version": 2
