@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T21:00:37.192716+00:00",
+  "generated_at": "2026-10-17T10:00:36.629035+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2507,14 +2507,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 101.783997,
+      "value": 101.839996,
       "date": "2026-10-16",
       "unit": "index",
-      "change_3m": 1.05,
-      "change_12m": 3.39,
-      "change_3m_pct": 1.05,
-      "change_12m_pct": 3.45,
-      "percentile_since_2015": 76.1,
+      "change_3m": 1.11,
+      "change_12m": 3.45,
+      "change_3m_pct": 1.1,
+      "change_12m_pct": 3.51,
+      "percentile_since_2015": 76.4,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3087,7 +3087,7 @@
         },
         {
           "date": "2026-10-16",
-          "value": 101.783997
+          "value": 101.839996
         }
       ]
     },
@@ -5000,13 +5000,13 @@
       "key": "credit_spread",
       "label": "Baa - 10Y Credit Spread",
       "value": 1.44,
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "unit": "% points",
       "change_3m": -0.16,
-      "change_12m": -0.27,
+      "change_12m": -0.24,
       "change_3m_pct": -10.0,
-      "change_12m_pct": -15.79,
-      "percentile_since_2015": 2.1,
+      "change_12m_pct": -14.29,
+      "percentile_since_2015": 2.2,
       "cadence": "daily",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAA10Y",
@@ -5626,7 +5626,7 @@
           "value": 1.47
         },
         {
-          "date": "2026-10-14",
+          "date": "2026-10-15",
           "value": 1.44
         }
       ]
