@@ -2,7 +2,7 @@
   "series_id": "WALCL",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WALCL",
-  "fetched_at": "2026-10-17T16:00:32.247278+00:00",
+  "fetched_at": "2026-10-17T21:00:28.636118+00:00",
   "observations": [
     {
       "date": "2002-12-18",
