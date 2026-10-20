@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-19T21:00:42.228546+00:00",
+  "generated_at": "2026-10-20T10:00:40.631427+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2679759.336373,
-      "date": "2026-10-18",
+      "value": 2680974.729856,
+      "date": "2026-10-19",
       "unit": "BTC",
-      "change_3m": 27222.99,
-      "change_12m": -23054.82,
-      "change_3m_pct": 1.03,
-      "change_12m_pct": -0.85,
-      "percentile_since_2015": 43.0,
+      "change_3m": 26794.23,
+      "change_12m": -21074.35,
+      "change_3m_pct": 1.01,
+      "change_12m_pct": -0.78,
+      "percentile_since_2015": 43.2,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -633,8 +633,8 @@
           "value": 2681920.497811
         },
         {
-          "date": "2026-10-18",
-          "value": 2679759.336373
+          "date": "2026-10-19",
+          "value": 2680974.729856
         }
       ],
       "metric_id": "SplyExNtv"
@@ -643,14 +643,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 304.630419,
-    "date": "2026-10-19",
+    "value": 303.736848,
+    "date": "2026-10-20",
     "unit": "USD billions",
-    "change_3m": 3.3,
-    "change_12m": 0.01,
-    "change_3m_pct": 1.1,
-    "change_12m_pct": 0.0,
-    "percentile_since_2015": 93.9,
+    "change_3m": 2.59,
+    "change_12m": -1.15,
+    "change_3m_pct": 0.86,
+    "change_12m_pct": -0.38,
+    "percentile_since_2015": 92.7,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1086,8 +1086,8 @@
         "value": 306.315332
       },
       {
-        "date": "2026-10-19",
-        "value": 304.630419
+        "date": "2026-10-20",
+        "value": 303.736848
       }
     ]
   },
