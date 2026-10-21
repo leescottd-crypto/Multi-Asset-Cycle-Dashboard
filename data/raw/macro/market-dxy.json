@@ -2,7 +2,7 @@
   "symbol": "DX-Y.NYB",
   "source": "ICE U.S. Dollar Index via Yahoo Finance",
   "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
-  "fetched_at": "2026-10-21T16:00:32.326301+00:00",
+  "fetched_at": "2026-10-21T21:00:38.469505+00:00",
   "observations": [
     {
       "date": "2015-01-02",
@@ -11878,7 +11878,7 @@
     },
     {
       "date": "2026-10-21",
-      "value": 101.81900024414062
+      "value": 101.68499755859375
     }
   ]
 }
