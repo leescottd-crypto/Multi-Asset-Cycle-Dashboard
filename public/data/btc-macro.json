@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T10:00:36.447648+00:00",
+  "generated_at": "2026-10-21T16:00:37.399319+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2507,14 +2507,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 101.759003,
+      "value": 101.819,
       "date": "2026-10-21",
       "unit": "index",
-      "change_3m": 0.58,
-      "change_12m": 2.83,
-      "change_3m_pct": 0.57,
-      "change_12m_pct": 2.86,
-      "percentile_since_2015": 75.9,
+      "change_3m": 0.64,
+      "change_12m": 2.89,
+      "change_3m_pct": 0.63,
+      "change_12m_pct": 2.92,
+      "percentile_since_2015": 76.1,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3087,7 +3087,7 @@
         },
         {
           "date": "2026-10-21",
-          "value": 101.759003
+          "value": 101.819
         }
       ]
     },
@@ -18071,6 +18071,18 @@
   },
   "market_supply_url": "/public/data/btc-market-supply.json",
   "refresh_errors": [
+    "FRED WALCL: no observations",
+    "FRED WTREGEN: no observations",
+    "FRED RRPONTSYD: no observations",
+    "FRED DTWEXBGS: no observations",
+    "FRED DFII10: no observations",
+    "FRED NFCI: no observations",
+    "FRED M2SL: no observations",
+    "FRED TREAST: no observations",
+    "FRED DCOILWTICO: no observations",
+    "FRED BAA10Y: no observations",
+    "FRED VIXCLS: no observations",
+    "FRED CPIAUCSL: no observations",
     "Treasury debt: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>",
     "Glassnode exchange supply: GLASSNODE_API_KEY is not configured"
   ],
