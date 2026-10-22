@@ -2,7 +2,7 @@
   "series_id": "DCOILWTICO",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO",
-  "fetched_at": "2026-10-21T10:00:31.583935+00:00",
+  "fetched_at": "2026-10-22T10:00:37.420778+00:00",
   "observations": [
     {
       "date": "1986-01-02",
@@ -38086,15 +38086,31 @@
     },
     {
       "date": "2026-10-12",
-      "value": 98.73
+      "value": 94.99
     },
     {
       "date": "2026-10-13",
-      "value": 100.86
+      "value": 95.39
     },
     {
       "date": "2026-10-14",
-      "value": 101.91
+      "value": 96.34
+    },
+    {
+      "date": "2026-10-15",
+      "value": 104.71
+    },
+    {
+      "date": "2026-10-16",
+      "value": 108.21
+    },
+    {
+      "date": "2026-10-19",
+      "value": 110.01
+    },
+    {
+      "date": "2026-10-20",
+      "value": 107.89
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T21:00:38.430031+00:00",
+  "generated_at": "2026-10-22T10:00:37.379960+00:00",
   "framework": {
     "name": "BTC Macro Domino Sequence",
     "source_video": "https://youtu.be/rzZ1AmdWhaY",
@@ -21,14 +21,14 @@
       {
         "number": 3,
         "name": "BTC volatility expansion",
-        "status": "coiled",
-        "detail": "90D realized volatility 37.7%; historical percentile 9.6; DVOL 37.1%."
+        "status": "watching",
+        "detail": "90D realized volatility 37.9%; historical percentile 10.1; DVOL 37.9%."
       },
       {
         "number": 4,
         "name": "BTC cycle top",
         "status": "not fired",
-        "detail": "Objective proxy: log z-score -0.9383 and RSI 58.65; fires when z \u2265 1.5 and RSI \u2265 70."
+        "detail": "Objective proxy: log z-score -1.0026 and RSI 47.81; fires when z \u2265 1.5 and RSI \u2265 70."
       }
     ],
     "warning": "Research framework and decision support only. Thresholds are transparent dashboard rules, not investment advice."
@@ -50,19 +50,15 @@
       "status": "expansion"
     },
     "copper_gold": {
-      "value": 0.001581,
-      "date": "2026-10-21",
-      "trendline": 0.001183,
-      "ma_200d": 0.001374,
-      "distance_above_3y_trend_pct": 33.66,
+      "value": 0.001567,
+      "date": "2026-10-22",
+      "trendline": 0.001184,
+      "ma_200d": 0.001375,
+      "distance_above_3y_trend_pct": 32.37,
       "status": "fired",
       "detail": "Above the three-year regression trendline and 200D average.",
       "method": "Breakout = ratio > 2% above a three-year linear trendline and above its 200D moving average.",
       "series": [
-        {
-          "date": "2024-09-27",
-          "value": 0.00170196
-        },
         {
           "date": "2024-09-30",
           "value": 0.00169061
@@ -2137,20 +2133,20 @@
         },
         {
           "date": "2026-10-21",
-          "value": 0.00158138
+          "value": 0.00157663
+        },
+        {
+          "date": "2026-10-22",
+          "value": 0.00156701
         }
       ]
     },
     "btc_realized_volatility": {
-      "value": 37.74,
-      "date": "2026-10-21",
-      "historical_percentile": 9.61,
-      "status": "coiled",
+      "value": 37.92,
+      "date": "2026-10-22",
+      "historical_percentile": 10.1,
+      "status": "normal",
       "series": [
-        {
-          "date": "2025-05-20",
-          "value": 55.52
-        },
         {
           "date": "2025-05-21",
           "value": 55.64
@@ -4225,31 +4221,31 @@
         },
         {
           "date": "2026-10-21",
-          "value": 37.74
+          "value": 37.64
+        },
+        {
+          "date": "2026-10-22",
+          "value": 37.92
         }
       ],
       "method": "90-day standard deviation of daily log returns, annualized with \u221a365."
     },
     "btc_implied_volatility": {
-      "value": 37.07,
-      "date": "2026-10-21T21:00:00+00:00",
+      "value": 37.89,
+      "date": "2026-10-22T10:00:00+00:00",
       "status": "low / coiled",
       "source": {
         "source": "Deribit DVOL public API",
-        "source_url": "https://www.deribit.com/api/v2/public/get_volatility_index_data?currency=BTC&start_timestamp=1791406838119&end_timestamp=1792616438119&resolution=3600",
-        "fetched_at": "2026-10-21T21:00:38.390206+00:00"
+        "source_url": "https://www.deribit.com/api/v2/public/get_volatility_index_data?currency=BTC&start_timestamp=1791453637091&end_timestamp=1792663237091&resolution=3600",
+        "fetched_at": "2026-10-22T10:00:37.339788+00:00"
       }
     },
     "oil": {
-      "value": 97.58,
-      "date": "2026-10-21",
-      "change_20d_pct": 5.88,
+      "value": 99.78,
+      "date": "2026-10-22",
+      "change_20d_pct": 5.46,
       "status": "elevated watch",
       "series": [
-        {
-          "date": "2024-09-27",
-          "value": 68.18000030517578
-        },
         {
           "date": "2024-09-30",
           "value": 68.16999816894531
@@ -6324,7 +6320,11 @@
         },
         {
           "date": "2026-10-21",
-          "value": 97.58
+          "value": 97.1500015258789
+        },
+        {
+          "date": "2026-10-22",
+          "value": 99.78
         }
       ],
       "rule": "Elevated watch above $80 with >5% 20-session rise; high risk at/above $100."
@@ -6333,26 +6333,26 @@
   "sources": {
     "copper": {
       "source": "Yahoo Finance chart endpoint",
-      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/HG%3DF?period1=0&period2=1792702836&interval=1d&events=history&includeAdjustedClose=true",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/HG%3DF?period1=0&period2=1792749635&interval=1d&events=history&includeAdjustedClose=true",
       "symbol": "HG=F",
-      "fetched_at": "2026-10-21T21:00:36.873631+00:00"
+      "fetched_at": "2026-10-22T10:00:35.811477+00:00"
     },
     "gold": {
       "source": "Yahoo Finance chart endpoint",
-      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=0&period2=1792702836&interval=1d&events=history&includeAdjustedClose=true",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=0&period2=1792749635&interval=1d&events=history&includeAdjustedClose=true",
       "symbol": "GC=F",
-      "fetched_at": "2026-10-21T21:00:37.334239+00:00"
+      "fetched_at": "2026-10-22T10:00:36.262590+00:00"
     },
     "oil": {
       "source": "Yahoo Finance chart endpoint",
-      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=0&period2=1792702837&interval=1d&events=history&includeAdjustedClose=true",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=0&period2=1792749636&interval=1d&events=history&includeAdjustedClose=true",
       "symbol": "CL=F",
-      "fetched_at": "2026-10-21T21:00:37.763805+00:00"
+      "fetched_at": "2026-10-22T10:00:36.738473+00:00"
     },
     "implied_volatility": {
       "source": "Deribit DVOL public API",
-      "source_url": "https://www.deribit.com/api/v2/public/get_volatility_index_data?currency=BTC&start_timestamp=1791406838119&end_timestamp=1792616438119&resolution=3600",
-      "fetched_at": "2026-10-21T21:00:38.390206+00:00"
+      "source_url": "https://www.deribit.com/api/v2/public/get_volatility_index_data?currency=BTC&start_timestamp=1791453637091&end_timestamp=1792663237091&resolution=3600",
+      "fetched_at": "2026-10-22T10:00:37.339788+00:00"
     },
     "pmi": {
       "name": "Video-provided ISM Manufacturing PMI snapshot",

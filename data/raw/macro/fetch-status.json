@@ -1,18 +1,6 @@
 {
-  "fetched_at": "2026-10-21T21:00:38.469505+00:00",
+  "fetched_at": "2026-10-22T10:00:37.420778+00:00",
   "errors": [
-    "FRED WALCL: no observations",
-    "FRED WTREGEN: no observations",
-    "FRED RRPONTSYD: no observations",
-    "FRED DTWEXBGS: no observations",
-    "FRED DFII10: no observations",
-    "FRED NFCI: no observations",
-    "FRED M2SL: no observations",
-    "FRED TREAST: no observations",
-    "FRED DCOILWTICO: no observations",
-    "FRED BAA10Y: no observations",
-    "FRED VIXCLS: no observations",
-    "FRED CPIAUCSL: no observations",
     "Treasury debt: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>",
     "Glassnode exchange supply: GLASSNODE_API_KEY is not configured"
   ]
