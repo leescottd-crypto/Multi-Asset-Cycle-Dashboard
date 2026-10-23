@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T21:00:29.118288+00:00",
+  "generated_at": "2026-10-23T10:00:29.697550+00:00",
   "asset": {
     "id": "nasdaq",
     "name": "NASDAQ Composite",
@@ -17,7 +17,7 @@
   },
   "source": {
     "source": "Yahoo Finance chart endpoint",
-    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?period1=0&period2=1792789224&interval=1d&events=history&includeAdjustedClose=true",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?period1=0&period2=1792836026&interval=1d&events=history&includeAdjustedClose=true",
     "provenance": "live-public-no-key-daily-history",
     "asset_id": "nasdaq",
     "name": "NASDAQ Composite",
@@ -27,11 +27,11 @@
     "exchange": "NIM",
     "instrument_type": "INDEX",
     "regular_market_price": 26008.86,
-    "regular_market_time": 1792702822,
+    "regular_market_time": 1792703759,
     "rows": 14046,
     "first_date": "1971-02-05",
     "last_date": "2026-10-22",
-    "fetched_at": "2026-10-22T21:00:25.510332+00:00",
+    "fetched_at": "2026-10-23T10:00:27.069301+00:00",
     "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
   },
   "latest": {

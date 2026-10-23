@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T21:00:38.514797+00:00",
+  "generated_at": "2026-10-23T10:00:38.271605+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
@@ -643,14 +643,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 303.691918,
-    "date": "2026-10-22",
+    "value": 303.21047,
+    "date": "2026-10-23",
     "unit": "USD billions",
-    "change_3m": 2.61,
-    "change_12m": -2.12,
-    "change_3m_pct": 0.87,
-    "change_12m_pct": -0.69,
-    "percentile_since_2015": 92.5,
+    "change_3m": 2.49,
+    "change_12m": -2.0,
+    "change_3m_pct": 0.83,
+    "change_12m_pct": -0.66,
+    "percentile_since_2015": 92.0,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1039,19 +1039,19 @@
       },
       {
         "date": "2025-10-31",
-        "value": 304.34541
+        "value": 304.345409
       },
       {
         "date": "2025-11-30",
-        "value": 303.336678
+        "value": 303.336687
       },
       {
         "date": "2025-12-31",
-        "value": 304.427066
+        "value": 304.427075
       },
       {
         "date": "2026-01-31",
-        "value": 301.225942
+        "value": 301.225948
       },
       {
         "date": "2026-02-28",
@@ -1083,11 +1083,11 @@
       },
       {
         "date": "2026-09-30",
-        "value": 306.315332
+        "value": 306.315335
       },
       {
-        "date": "2026-10-22",
-        "value": 303.691918
+        "date": "2026-10-23",
+        "value": 303.21047
       }
     ]
   },
