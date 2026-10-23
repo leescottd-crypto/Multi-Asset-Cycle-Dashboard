@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T16:00:54.810186+00:00",
+  "generated_at": "2026-10-23T21:00:39.003179+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2507,14 +2507,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 101.763,
+      "value": 101.806,
       "date": "2026-10-23",
       "unit": "index",
-      "change_3m": 0.33,
-      "change_12m": 2.82,
-      "change_3m_pct": 0.33,
-      "change_12m_pct": 2.85,
-      "percentile_since_2015": 75.9,
+      "change_3m": 0.38,
+      "change_12m": 2.87,
+      "change_3m_pct": 0.37,
+      "change_12m_pct": 2.9,
+      "percentile_since_2015": 76.1,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3087,21 +3087,21 @@
         },
         {
           "date": "2026-10-23",
-          "value": 101.763
+          "value": 101.806
         }
       ]
     },
     "real_yield_10y": {
       "key": "real_yield_10y",
       "label": "10Y Real Yield",
-      "value": 2.76,
-      "date": "2026-10-21",
+      "value": 2.64,
+      "date": "2026-10-22",
       "unit": "%",
-      "change_3m": 0.39,
-      "change_12m": 1.06,
-      "change_3m_pct": 16.46,
-      "change_12m_pct": 62.35,
-      "percentile_since_2015": 99.4,
+      "change_3m": 0.25,
+      "change_12m": 0.96,
+      "change_3m_pct": 10.46,
+      "change_12m_pct": 57.14,
+      "percentile_since_2015": 99.3,
       "cadence": "daily",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10",
@@ -3721,8 +3721,8 @@
           "value": 2.93
         },
         {
-          "date": "2026-10-21",
-          "value": 2.76
+          "date": "2026-10-22",
+          "value": 2.64
         }
       ]
     },
