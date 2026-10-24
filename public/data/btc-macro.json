@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T21:00:39.003179+00:00",
+  "generated_at": "2026-10-24T10:00:40.835382+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2507,7 +2507,7 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 101.806,
+      "value": 101.809998,
       "date": "2026-10-23",
       "unit": "index",
       "change_3m": 0.38,
@@ -3087,7 +3087,7 @@
         },
         {
           "date": "2026-10-23",
-          "value": 101.806
+          "value": 101.809998
         }
       ]
     },
@@ -4999,14 +4999,14 @@
     "credit_spread": {
       "key": "credit_spread",
       "label": "Baa - 10Y Credit Spread",
-      "value": 1.44,
-      "date": "2026-10-21",
+      "value": 1.46,
+      "date": "2026-10-22",
       "unit": "% points",
-      "change_3m": -0.16,
+      "change_3m": -0.12,
       "change_12m": -0.23,
-      "change_3m_pct": -10.0,
-      "change_12m_pct": -13.77,
-      "percentile_since_2015": 2.2,
+      "change_3m_pct": -7.59,
+      "change_12m_pct": -13.61,
+      "percentile_since_2015": 4.0,
       "cadence": "daily",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAA10Y",
@@ -5626,8 +5626,8 @@
           "value": 1.47
         },
         {
-          "date": "2026-10-21",
-          "value": 1.44
+          "date": "2026-10-22",
+          "value": 1.46
         }
       ]
     },
