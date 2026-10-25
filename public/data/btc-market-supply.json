@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-24T21:00:46.955273+00:00",
+  "generated_at": "2026-10-25T10:00:41.600669+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2685905.075638,
-      "date": "2026-10-23",
+      "value": 2686248.063113,
+      "date": "2026-10-24",
       "unit": "BTC",
-      "change_3m": 37448.56,
-      "change_12m": -14920.36,
-      "change_3m_pct": 1.41,
+      "change_3m": 32560.81,
+      "change_12m": -14907.2,
+      "change_3m_pct": 1.23,
       "change_12m_pct": -0.55,
-      "percentile_since_2015": 43.6,
+      "percentile_since_2015": 43.7,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -633,8 +633,8 @@
           "value": 2681920.497811
         },
         {
-          "date": "2026-10-23",
-          "value": 2685905.075638
+          "date": "2026-10-24",
+          "value": 2686248.063113
         }
       ],
       "metric_id": "SplyExNtv"
@@ -643,14 +643,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 302.817746,
-    "date": "2026-10-24",
+    "value": 302.598582,
+    "date": "2026-10-25",
     "unit": "USD billions",
-    "change_3m": 1.25,
-    "change_12m": -2.59,
-    "change_3m_pct": 0.42,
-    "change_12m_pct": -0.85,
-    "percentile_since_2015": 91.5,
+    "change_3m": 1.06,
+    "change_12m": -3.41,
+    "change_3m_pct": 0.35,
+    "change_12m_pct": -1.12,
+    "percentile_since_2015": 91.3,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1086,8 +1086,8 @@
         "value": 306.315335
       },
       {
-        "date": "2026-10-24",
-        "value": 302.817746
+        "date": "2026-10-25",
+        "value": 302.598582
       }
     ]
   },
