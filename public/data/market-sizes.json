@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T10:00:31.991416+00:00",
+  "generated_at": "2026-10-25T16:00:42.090670+00:00",
   "assets": {
     "gold": {
       "label": "Metal value (est.)",
@@ -76,7 +76,7 @@
     },
     "btc": {
       "label": "Market cap",
-      "value_usd": 1613153952224,
+      "value_usd": 1619530414584,
       "as_of": "2026-10-25",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/bitcoin",
@@ -86,7 +86,7 @@
     },
     "sol": {
       "label": "Market cap",
-      "value_usd": 59463451792,
+      "value_usd": 59862859412,
       "as_of": "2026-10-25",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/solana",
@@ -96,7 +96,7 @@
     },
     "sui": {
       "label": "Market cap",
-      "value_usd": 3755248882,
+      "value_usd": 3775379451,
       "as_of": "2026-10-25",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/sui",
@@ -106,7 +106,7 @@
     },
     "hype": {
       "label": "Market cap",
-      "value_usd": 16844338918,
+      "value_usd": 17106844330,
       "as_of": "2026-10-25",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/hyperliquid",
@@ -116,7 +116,7 @@
     },
     "eth": {
       "label": "Market cap",
-      "value_usd": 284064950630,
+      "value_usd": 286097783525,
       "as_of": "2026-10-25",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/ethereum",

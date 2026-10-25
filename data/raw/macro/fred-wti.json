@@ -2,7 +2,7 @@
   "series_id": "DCOILWTICO",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO",
-  "fetched_at": "2026-10-25T10:00:36.333358+00:00",
+  "fetched_at": "2026-10-25T16:00:46.557700+00:00",
   "observations": [
     {
       "date": "1986-01-02",
