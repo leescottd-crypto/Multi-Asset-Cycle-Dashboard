@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T16:00:43.063649+00:00",
+  "generated_at": "2026-10-25T21:00:26.724956+00:00",
   "asset": {
     "id": "mags",
     "name": "Roundhill Magnificent Seven ETF",
@@ -17,7 +17,7 @@
   },
   "source": {
     "source": "Yahoo Finance chart endpoint",
-    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MAGS?period1=0&period2=1793030430&interval=1d&events=history&includeAdjustedClose=true",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MAGS?period1=0&period2=1793048421&interval=1d&events=history&includeAdjustedClose=true",
     "provenance": "live-public-no-key-daily-history",
     "asset_id": "mags",
     "name": "Roundhill Magnificent Seven ETF",
@@ -31,7 +31,7 @@
     "rows": 889,
     "first_date": "2023-04-11",
     "last_date": "2026-10-23",
-    "fetched_at": "2026-10-25T16:00:30.350366+00:00",
+    "fetched_at": "2026-10-25T21:00:22.128963+00:00",
     "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues."
   },
   "latest": {
