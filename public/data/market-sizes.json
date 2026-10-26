@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-26T10:00:28.468980+00:00",
+  "generated_at": "2026-10-26T16:00:53.662710+00:00",
   "assets": {
     "gold": {
       "label": "Metal value (est.)",
-      "value_usd": 28760141111130.47,
+      "value_usd": 28747258599314.297,
       "as_of": "2026-10-26",
       "estimated": true,
       "stock_quantity": 222600,
@@ -12,14 +12,14 @@
       "source": "World Gold Council",
       "source_url": "https://www.gold.org/goldhub/data/how-much-gold",
       "method": "Estimated entire above-ground gold stock, including jewellery, central banks, investment holdings and other uses. Not GLD fund assets and not freely tradable supply.",
-      "price_usd_per_oz": 4018.600098,
+      "price_usd_per_oz": 4016.800049,
       "price_source_url": "https://api.gold-api.com/price/XAU",
       "refresh_mode": "spot on asset refresh; stock is a dated estimate",
       "status": "ok"
     },
     "silver": {
       "label": "Metal value (est.)",
-      "value_usd": 1045635419300.0,
+      "value_usd": 1046581119300.0,
       "as_of": "2026-10-26",
       "estimated": true,
       "stock_quantity": 19300000000,
@@ -29,7 +29,7 @@
       "source_url": "https://silverinstitute.org/wp-content/uploads/2025/02/Final_Price_Sensitivity_of_Above-Ground-Silver-Stocks.pdf",
       "corroborating_url": "https://www.strategicmetals.org/silver-supply-deficit/",
       "method": "Estimated entire above-ground silver stock in all forms: 19.3 billion troy ounces at end-2023, repriced at the quoted silver spot price. Stock estimate is older than price; no extrapolation of stock growth. Includes largely immobile fabricated metal, not just investment bullion. Not SLV fund assets or liquid supply.",
-      "price_usd_per_oz": 54.178001,
+      "price_usd_per_oz": 54.227001,
       "price_source_url": "https://api.gold-api.com/price/XAG",
       "refresh_mode": "spot on asset refresh; stock is a dated estimate",
       "status": "ok"
@@ -76,7 +76,7 @@
     },
     "btc": {
       "label": "Market cap",
-      "value_usd": 1617818617743,
+      "value_usd": 1615117872294,
       "as_of": "2026-10-26",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/bitcoin",
@@ -86,7 +86,7 @@
     },
     "sol": {
       "label": "Market cap",
-      "value_usd": 59936150667,
+      "value_usd": 60054994057,
       "as_of": "2026-10-26",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/solana",
@@ -96,7 +96,7 @@
     },
     "sui": {
       "label": "Market cap",
-      "value_usd": 3785078814,
+      "value_usd": 3790639607,
       "as_of": "2026-10-26",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/sui",
@@ -106,7 +106,7 @@
     },
     "hype": {
       "label": "Market cap",
-      "value_usd": 17158756971,
+      "value_usd": 17431715935,
       "as_of": "2026-10-26",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/hyperliquid",
@@ -116,7 +116,7 @@
     },
     "eth": {
       "label": "Market cap",
-      "value_usd": 285232433632,
+      "value_usd": 284218272903,
       "as_of": "2026-10-26",
       "source": "CoinGecko",
       "source_url": "https://www.coingecko.com/en/coins/ethereum",
