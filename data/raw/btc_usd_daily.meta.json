@@ -2,10 +2,10 @@
   "source": "CoinMetrics community BTC CSV + Coinbase Exchange recent candles + Coinbase spot ticker",
   "source_url": "https://raw.githubusercontent.com/coinmetrics/data/master/csv/btc.csv",
   "provenance": "live-public-full-history-with-recent-coinbase-overlay-and-spot",
-  "rows": 5946,
+  "rows": 5947,
   "first_date": "2010-07-18",
-  "last_date": "2026-10-27",
-  "fetched_at": "2026-10-27T21:00:14.946134+00:00",
+  "last_date": "2026-10-28",
+  "fetched_at": "2026-10-28T10:00:09.520662+00:00",
   "fields": [
     "PriceUSD",
     "CapMVRVCur",
@@ -20,7 +20,7 @@
     "rows": 5790,
     "first_date": "2010-07-18",
     "last_date": "2026-05-24",
-    "fetched_at": "2026-10-27T21:00:03.221266+00:00",
+    "fetched_at": "2026-10-28T10:00:02.853932+00:00",
     "fields": [
       "PriceUSD",
       "CapMVRVCur",
@@ -34,10 +34,10 @@
     "product": "BTC-USD",
     "granularity_seconds": 86400,
     "provenance": "live-public-partial-history",
-    "rows": 4118,
+    "rows": 4119,
     "first_date": "2015-07-20",
-    "last_date": "2026-10-27",
-    "fetched_at": "2026-10-27T21:00:14.808850+00:00",
+    "last_date": "2026-10-28",
+    "fetched_at": "2026-10-28T10:00:09.417216+00:00",
     "request_count": 15,
     "limitation": "Coinbase spot history starts around 2015; use CoinMetrics/backfill for the final long-term model."
   },
@@ -45,9 +45,9 @@
     "source": "Coinbase Exchange ticker endpoint",
     "product": "BTC-USD",
     "provenance": "live-public-spot-price",
-    "price": 80678.28,
-    "time": "2026-10-27T21:00:13.505137599Z",
-    "fetched_at": "2026-10-27T21:00:14.946044+00:00",
+    "price": 81443.73,
+    "time": "2026-10-28T10:00:08.496429987Z",
+    "fetched_at": "2026-10-28T10:00:09.520579+00:00",
     "limitation": "Hourly dashboard refresh treats the current day's close as provisional spot until the daily candle finalizes."
   }
 }
