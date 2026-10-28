@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T10:00:38.117565+00:00",
+  "generated_at": "2026-10-28T16:00:48.381845+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2515,13 +2515,13 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 102.378998,
+      "value": 102.360001,
       "date": "2026-10-28",
       "unit": "index",
-      "change_3m": 1.0,
-      "change_12m": 3.69,
-      "change_3m_pct": 0.99,
-      "change_12m_pct": 3.74,
+      "change_3m": 0.98,
+      "change_12m": 3.67,
+      "change_3m_pct": 0.97,
+      "change_12m_pct": 3.72,
       "percentile_since_2015": 78.5,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
@@ -3095,7 +3095,7 @@
         },
         {
           "date": "2026-10-28",
-          "value": 102.378998
+          "value": 102.360001
         }
       ]
     },
@@ -3737,14 +3737,14 @@
     "nfci": {
       "key": "nfci",
       "label": "Financial Conditions",
-      "value": -0.496,
-      "date": "2026-10-16",
+      "value": -0.487,
+      "date": "2026-10-23",
       "unit": "index",
-      "change_3m": 0.03,
+      "change_3m": 0.04,
       "change_12m": 0.03,
-      "change_3m_pct": -5.7,
-      "change_12m_pct": -5.16,
-      "percentile_since_2015": 50.6,
+      "change_3m_pct": -8.29,
+      "change_12m_pct": -6.35,
+      "percentile_since_2015": 54.3,
       "cadence": "weekly",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI",
@@ -3761,7 +3761,7 @@
         },
         {
           "date": "2014-03-28",
-          "value": -0.791
+          "value": -0.792
         },
         {
           "date": "2014-04-25",
@@ -3769,7 +3769,7 @@
         },
         {
           "date": "2014-05-30",
-          "value": -0.802
+          "value": -0.803
         },
         {
           "date": "2014-06-27",
@@ -3873,7 +3873,7 @@
         },
         {
           "date": "2016-07-29",
-          "value": -0.367
+          "value": -0.366
         },
         {
           "date": "2016-08-26",
@@ -3885,7 +3885,7 @@
         },
         {
           "date": "2016-10-28",
-          "value": -0.387
+          "value": -0.386
         },
         {
           "date": "2016-11-25",
@@ -4049,11 +4049,11 @@
         },
         {
           "date": "2020-03-27",
-          "value": 0.274
+          "value": 0.275
         },
         {
           "date": "2020-04-24",
-          "value": 0.162
+          "value": 0.163
         },
         {
           "date": "2020-05-29",
@@ -4061,7 +4061,7 @@
         },
         {
           "date": "2020-06-26",
-          "value": -0.387
+          "value": -0.386
         },
         {
           "date": "2020-07-31",
@@ -4153,7 +4153,7 @@
         },
         {
           "date": "2022-05-27",
-          "value": -0.253
+          "value": -0.252
         },
         {
           "date": "2022-06-24",
@@ -4173,7 +4173,7 @@
         },
         {
           "date": "2022-10-28",
-          "value": -0.117
+          "value": -0.116
         },
         {
           "date": "2022-11-25",
@@ -4189,7 +4189,7 @@
         },
         {
           "date": "2023-02-24",
-          "value": -0.267
+          "value": -0.266
         },
         {
           "date": "2023-03-31",
@@ -4197,7 +4197,7 @@
         },
         {
           "date": "2023-04-28",
-          "value": -0.186
+          "value": -0.185
         },
         {
           "date": "2023-05-26",
@@ -4233,7 +4233,7 @@
         },
         {
           "date": "2024-01-26",
-          "value": -0.396
+          "value": -0.395
         },
         {
           "date": "2024-02-23",
@@ -4353,7 +4353,7 @@
         },
         {
           "date": "2026-07-31",
-          "value": -0.543
+          "value": -0.542
         },
         {
           "date": "2026-08-28",
@@ -4364,8 +4364,8 @@
           "value": -0.518
         },
         {
-          "date": "2026-10-16",
-          "value": -0.496
+          "date": "2026-10-23",
+          "value": -0.487
         }
       ]
     },
@@ -5642,14 +5642,14 @@
     "vix": {
       "key": "vix",
       "label": "Market Volatility (VIX)",
-      "value": 18.39,
-      "date": "2026-10-26",
+      "value": 17.52,
+      "date": "2026-10-27",
       "unit": "index",
-      "change_3m": -0.19,
-      "change_12m": 2.02,
-      "change_3m_pct": -1.02,
-      "change_12m_pct": 12.34,
-      "percentile_since_2015": 62.1,
+      "change_3m": -1.15,
+      "change_12m": 1.73,
+      "change_3m_pct": -6.16,
+      "change_12m_pct": 10.96,
+      "percentile_since_2015": 57.0,
       "cadence": "daily",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS",
@@ -6269,8 +6269,8 @@
           "value": 16.34
         },
         {
-          "date": "2026-10-26",
-          "value": 18.39
+          "date": "2026-10-27",
+          "value": 17.52
         }
       ]
     },
