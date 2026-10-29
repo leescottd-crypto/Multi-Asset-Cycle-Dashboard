@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-28T21:00:41.776924+00:00",
+  "generated_at": "2026-10-29T10:00:39.309465+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2678007.255737,
-      "date": "2026-10-27",
+      "value": 2683288.407534,
+      "date": "2026-10-28",
       "unit": "BTC",
-      "change_3m": 24922.48,
-      "change_12m": -18129.84,
-      "change_3m_pct": 0.94,
-      "change_12m_pct": -0.67,
-      "percentile_since_2015": 42.9,
+      "change_3m": 36734.75,
+      "change_12m": -7992.64,
+      "change_3m_pct": 1.39,
+      "change_12m_pct": -0.3,
+      "percentile_since_2015": 43.3,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -633,8 +633,8 @@
           "value": 2681920.497811
         },
         {
-          "date": "2026-10-27",
-          "value": 2678007.255737
+          "date": "2026-10-28",
+          "value": 2683288.407534
         }
       ],
       "metric_id": "SplyExNtv"
@@ -643,14 +643,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 301.607854,
-    "date": "2026-10-28",
+    "value": 300.324223,
+    "date": "2026-10-29",
     "unit": "USD billions",
-    "change_3m": 1.72,
-    "change_12m": -3.67,
-    "change_3m_pct": 0.57,
-    "change_12m_pct": -1.2,
-    "percentile_since_2015": 90.3,
+    "change_3m": 0.44,
+    "change_12m": -4.95,
+    "change_3m_pct": 0.15,
+    "change_12m_pct": -1.62,
+    "percentile_since_2015": 89.0,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1043,15 +1043,15 @@
       },
       {
         "date": "2025-11-30",
-        "value": 303.336687
+        "value": 303.336688
       },
       {
         "date": "2025-12-31",
-        "value": 304.427075
+        "value": 304.427077
       },
       {
         "date": "2026-01-31",
-        "value": 301.225948
+        "value": 301.225949
       },
       {
         "date": "2026-02-28",
@@ -1059,15 +1059,15 @@
       },
       {
         "date": "2026-03-31",
-        "value": 308.543312
+        "value": 308.543313
       },
       {
         "date": "2026-04-30",
-        "value": 312.059316
+        "value": 312.059317
       },
       {
         "date": "2026-05-31",
-        "value": 312.256748
+        "value": 312.256749
       },
       {
         "date": "2026-06-30",
@@ -1075,7 +1075,7 @@
       },
       {
         "date": "2026-07-31",
-        "value": 298.540093
+        "value": 298.540094
       },
       {
         "date": "2026-08-31",
@@ -1086,8 +1086,8 @@
         "value": 306.315335
       },
       {
-        "date": "2026-10-28",
-        "value": 301.607854
+        "date": "2026-10-29",
+        "value": 300.324223
       }
     ]
   },
