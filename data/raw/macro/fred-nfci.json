@@ -2,7 +2,7 @@
   "series_id": "NFCI",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI",
-  "fetched_at": "2026-10-30T10:00:40.285089+00:00",
+  "fetched_at": "2026-10-30T16:00:38.269900+00:00",
   "observations": [
     {
       "date": "1971-01-08",
