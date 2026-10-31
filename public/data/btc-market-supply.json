@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-30T21:00:43.492975+00:00",
+  "generated_at": "2026-10-31T10:01:11.935431+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2660347.546653,
-      "date": "2026-10-29",
+      "value": 2666040.082018,
+      "date": "2026-10-30",
       "unit": "BTC",
-      "change_3m": 13793.89,
-      "change_12m": -30933.5,
-      "change_3m_pct": 0.52,
-      "change_12m_pct": -1.15,
-      "percentile_since_2015": 41.3,
+      "change_3m": 19486.42,
+      "change_12m": -25240.96,
+      "change_3m_pct": 0.74,
+      "change_12m_pct": -0.94,
+      "percentile_since_2015": 41.6,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -633,8 +633,8 @@
           "value": 2681920.497811
         },
         {
-          "date": "2026-10-29",
-          "value": 2660347.546653
+          "date": "2026-10-30",
+          "value": 2666040.082018
         }
       ],
       "metric_id": "SplyExNtv"
@@ -643,14 +643,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 299.651725,
-    "date": "2026-10-30",
+    "value": 298.86754,
+    "date": "2026-10-31",
     "unit": "USD billions",
-    "change_3m": -0.23,
-    "change_12m": -5.63,
-    "change_3m_pct": -0.08,
-    "change_12m_pct": -1.84,
-    "percentile_since_2015": 88.8,
+    "change_3m": -1.02,
+    "change_12m": -6.41,
+    "change_3m_pct": -0.34,
+    "change_12m_pct": -2.1,
+    "percentile_since_2015": 88.2,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1086,8 +1086,8 @@
         "value": 306.315335
       },
       {
-        "date": "2026-10-30",
-        "value": 299.651725
+        "date": "2026-10-31",
+        "value": 298.86754
       }
     ]
   },
