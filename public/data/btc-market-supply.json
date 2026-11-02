@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-11-01T22:00:42.767638+00:00",
+  "generated_at": "2026-11-02T11:00:44.797483+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2665091.86877,
-      "date": "2026-10-31",
+      "value": 2651888.227871,
+      "date": "2026-11-01",
       "unit": "BTC",
-      "change_3m": 18538.21,
-      "change_12m": -26189.18,
-      "change_3m_pct": 0.7,
-      "change_12m_pct": -0.97,
-      "percentile_since_2015": 41.5,
+      "change_3m": -14442.17,
+      "change_12m": -43616.82,
+      "change_3m_pct": -0.54,
+      "change_12m_pct": -1.62,
+      "percentile_since_2015": 40.7,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -635,6 +635,10 @@
         {
           "date": "2026-10-31",
           "value": 2665091.86877
+        },
+        {
+          "date": "2026-11-01",
+          "value": 2651888.227871
         }
       ],
       "metric_id": "SplyExNtv"
@@ -643,14 +647,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 298.363841,
-    "date": "2026-11-01",
+    "value": 297.744901,
+    "date": "2026-11-02",
     "unit": "USD billions",
-    "change_3m": -0.2,
-    "change_12m": -5.93,
-    "change_3m_pct": -0.07,
-    "change_12m_pct": -1.95,
-    "percentile_since_2015": 88.0,
+    "change_3m": -0.73,
+    "change_12m": -6.7,
+    "change_3m_pct": -0.24,
+    "change_12m_pct": -2.2,
+    "percentile_since_2015": 87.9,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1087,11 +1091,11 @@
       },
       {
         "date": "2026-10-31",
-        "value": 298.964318
+        "value": 298.962628
       },
       {
-        "date": "2026-11-01",
-        "value": 298.363841
+        "date": "2026-11-02",
+        "value": 297.744901
       }
     ]
   },
