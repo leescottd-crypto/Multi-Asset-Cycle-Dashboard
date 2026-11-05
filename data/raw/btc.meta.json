@@ -5,7 +5,7 @@
   "rows": 5955,
   "first_date": "2010-07-18",
   "last_date": "2026-11-05",
-  "fetched_at": "2026-11-05T11:00:13.352893+00:00",
+  "fetched_at": "2026-11-05T17:00:13.516259+00:00",
   "fields": [
     "PriceUSD",
     "CapMVRVCur",
@@ -20,7 +20,7 @@
     "rows": 5790,
     "first_date": "2010-07-18",
     "last_date": "2026-05-24",
-    "fetched_at": "2026-11-05T11:00:06.201418+00:00",
+    "fetched_at": "2026-11-05T17:00:06.057625+00:00",
     "fields": [
       "PriceUSD",
       "CapMVRVCur",
@@ -37,7 +37,7 @@
     "rows": 4127,
     "first_date": "2015-07-20",
     "last_date": "2026-11-05",
-    "fetched_at": "2026-11-05T11:00:13.243524+00:00",
+    "fetched_at": "2026-11-05T17:00:13.351081+00:00",
     "request_count": 15,
     "limitation": "Coinbase spot history starts around 2015; use CoinMetrics/backfill for the final long-term model."
   },
@@ -45,9 +45,9 @@
     "source": "Coinbase Exchange ticker endpoint",
     "product": "BTC-USD",
     "provenance": "live-public-spot-price",
-    "price": 80185.59,
-    "time": "2026-11-05T11:00:12.389944096Z",
-    "fetched_at": "2026-11-05T11:00:13.352794+00:00",
+    "price": 76231.52,
+    "time": "2026-11-05T17:00:12.553488361Z",
+    "fetched_at": "2026-11-05T17:00:13.516173+00:00",
     "limitation": "Hourly dashboard refresh treats the current day's close as provisional spot until the daily candle finalizes."
   },
   "asset_id": "btc",
