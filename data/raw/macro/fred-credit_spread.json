@@ -2,7 +2,7 @@
   "series_id": "BAA10Y",
   "source": "Federal Reserve Bank of St. Louis (FRED)",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAA10Y",
-  "fetched_at": "2026-11-04T22:00:37.857373+00:00",
+  "fetched_at": "2026-11-05T11:00:38.464254+00:00",
   "observations": [
     {
       "date": "1986-01-02",
@@ -40839,6 +40839,10 @@
     {
       "date": "2026-11-02",
       "value": 1.53
+    },
+    {
+      "date": "2026-11-03",
+      "value": 1.54
     }
   ]
 }
