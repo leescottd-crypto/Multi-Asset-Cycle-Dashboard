@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T17:00:43.993204+00:00",
+  "generated_at": "2026-11-06T22:12:40.853307+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2519,14 +2519,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 102.160004,
+      "value": 102.278999,
       "date": "2026-11-06",
       "unit": "index",
-      "change_3m": 2.19,
-      "change_12m": 2.43,
-      "change_3m_pct": 2.19,
-      "change_12m_pct": 2.44,
-      "percentile_since_2015": 77.8,
+      "change_3m": 2.31,
+      "change_12m": 2.55,
+      "change_3m_pct": 2.31,
+      "change_12m_pct": 2.56,
+      "percentile_since_2015": 78.2,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3103,7 +3103,7 @@
         },
         {
           "date": "2026-11-06",
-          "value": 102.160004
+          "value": 102.278999
         }
       ]
     },
@@ -18107,6 +18107,18 @@
   },
   "market_supply_url": "/public/data/btc-market-supply.json",
   "refresh_errors": [
+    "FRED WALCL: The read operation timed out",
+    "FRED WTREGEN: The read operation timed out",
+    "FRED RRPONTSYD: The read operation timed out",
+    "FRED DTWEXBGS: The read operation timed out",
+    "FRED DFII10: The read operation timed out",
+    "FRED NFCI: The read operation timed out",
+    "FRED M2SL: The read operation timed out",
+    "FRED TREAST: The read operation timed out",
+    "FRED DCOILWTICO: The read operation timed out",
+    "FRED BAA10Y: The read operation timed out",
+    "FRED VIXCLS: The read operation timed out",
+    "FRED CPIAUCSL: The read operation timed out",
     "Treasury debt: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>",
     "Glassnode exchange supply: GLASSNODE_API_KEY is not configured"
   ],
