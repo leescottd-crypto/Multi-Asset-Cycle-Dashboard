@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T22:12:11.940165+00:00",
+  "generated_at": "2026-11-06T11:00:41.524514+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -31,14 +31,14 @@
     "net_liquidity": {
       "key": "net_liquidity",
       "label": "Net Liquidity Proxy",
-      "value": 5745.732,
-      "date": "2026-10-28",
+      "value": 5790.745,
+      "date": "2026-11-04",
       "unit": "USD billions",
-      "change_3m": -171.65,
-      "change_12m": 68.2,
-      "change_3m_pct": -2.9,
-      "change_12m_pct": 1.2,
-      "percentile_since_2015": 53.8,
+      "change_3m": -34.09,
+      "change_12m": 181.2,
+      "change_3m_pct": -0.59,
+      "change_12m_pct": 3.23,
+      "percentile_since_2015": 56.3,
       "cadence": "weekly",
       "source": "Federal Reserve / U.S. Treasury via FRED",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WALCL",
@@ -660,6 +660,10 @@
         {
           "date": "2026-10-28",
           "value": 5745.732
+        },
+        {
+          "date": "2026-11-04",
+          "value": 5790.745
         }
       ]
     },
@@ -2515,14 +2519,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 101.585999,
-      "date": "2026-11-05",
+      "value": 102.001999,
+      "date": "2026-11-06",
       "unit": "index",
-      "change_3m": 1.9,
-      "change_12m": 1.39,
-      "change_3m_pct": 1.9,
-      "change_12m_pct": 1.38,
-      "percentile_since_2015": 74.9,
+      "change_3m": 2.03,
+      "change_12m": 2.27,
+      "change_3m_pct": 2.03,
+      "change_12m_pct": 2.28,
+      "percentile_since_2015": 77.0,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3098,22 +3102,22 @@
           "value": 101.879997
         },
         {
-          "date": "2026-11-05",
-          "value": 101.585999
+          "date": "2026-11-06",
+          "value": 102.001999
         }
       ]
     },
     "real_yield_10y": {
       "key": "real_yield_10y",
       "label": "10Y Real Yield",
-      "value": 2.65,
-      "date": "2026-11-03",
+      "value": 2.64,
+      "date": "2026-11-04",
       "unit": "%",
-      "change_3m": 0.22,
+      "change_3m": 0.24,
       "change_12m": 0.83,
-      "change_3m_pct": 9.05,
-      "change_12m_pct": 45.6,
-      "percentile_since_2015": 99.2,
+      "change_3m_pct": 10.0,
+      "change_12m_pct": 45.86,
+      "percentile_since_2015": 99.1,
       "cadence": "daily",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10",
@@ -3737,8 +3741,8 @@
           "value": 2.6
         },
         {
-          "date": "2026-11-03",
-          "value": 2.65
+          "date": "2026-11-04",
+          "value": 2.64
         }
       ]
     },
@@ -5019,14 +5023,14 @@
     "credit_spread": {
       "key": "credit_spread",
       "label": "Baa - 10Y Credit Spread",
-      "value": 1.54,
-      "date": "2026-11-03",
+      "value": 1.52,
+      "date": "2026-11-04",
       "unit": "% points",
-      "change_3m": -0.07,
-      "change_12m": -0.17,
-      "change_3m_pct": -4.35,
-      "change_12m_pct": -9.94,
-      "percentile_since_2015": 7.8,
+      "change_3m": -0.12,
+      "change_12m": -0.2,
+      "change_3m_pct": -7.32,
+      "change_12m_pct": -11.63,
+      "percentile_since_2015": 6.4,
       "cadence": "daily",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAA10Y",
@@ -5650,8 +5654,8 @@
           "value": 1.53
         },
         {
-          "date": "2026-11-03",
-          "value": 1.54
+          "date": "2026-11-04",
+          "value": 1.52
         }
       ]
     },
@@ -8138,13 +8142,13 @@
     "fed_treasuries": {
       "key": "fed_treasuries",
       "label": "Fed Treasury Holdings",
-      "value": 4576.582,
-      "date": "2026-10-28",
+      "value": 4578.777,
+      "date": "2026-11-04",
       "unit": "USD billions",
-      "change_3m": 60.92,
-      "change_12m": 380.12,
-      "change_3m_pct": 1.35,
-      "change_12m_pct": 9.06,
+      "change_3m": 59.12,
+      "change_12m": 382.04,
+      "change_3m_pct": 1.31,
+      "change_12m_pct": 9.1,
       "percentile_since_2015": 71.5,
       "cadence": "weekly",
       "source": "Federal Reserve Bank of St. Louis (FRED)",
@@ -8767,6 +8771,10 @@
         {
           "date": "2026-10-28",
           "value": 4576.582
+        },
+        {
+          "date": "2026-11-04",
+          "value": 4578.777
         }
       ]
     }
@@ -18099,18 +18107,6 @@
   },
   "market_supply_url": "/public/data/btc-market-supply.json",
   "refresh_errors": [
-    "FRED WALCL: The read operation timed out",
-    "FRED WTREGEN: The read operation timed out",
-    "FRED RRPONTSYD: The read operation timed out",
-    "FRED DTWEXBGS: The read operation timed out",
-    "FRED DFII10: The read operation timed out",
-    "FRED NFCI: The read operation timed out",
-    "FRED M2SL: The read operation timed out",
-    "FRED TREAST: The read operation timed out",
-    "FRED DCOILWTICO: The read operation timed out",
-    "FRED BAA10Y: The read operation timed out",
-    "FRED VIXCLS: Remote end closed connection without response",
-    "FRED CPIAUCSL: The read operation timed out",
     "Treasury debt: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>",
     "Glassnode exchange supply: GLASSNODE_API_KEY is not configured"
   ],
