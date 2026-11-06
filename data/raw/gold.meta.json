@@ -1,6 +1,6 @@
 {
   "source": "Yahoo Finance chart endpoint",
-  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=0&period2=1794049228&interval=1d&events=history&includeAdjustedClose=true",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=0&period2=1794070828&interval=1d&events=history&includeAdjustedClose=true",
   "provenance": "live-public-no-key-daily-history",
   "asset_id": "gold",
   "name": "Gold",
@@ -9,12 +9,12 @@
   "currency": "USD",
   "exchange": "PCX",
   "instrument_type": "ETF",
-  "regular_market_price": 375.49,
-  "regular_market_time": 1793912400,
-  "rows": 5526,
+  "regular_market_price": 372.65,
+  "regular_market_time": 1793984418,
+  "rows": 5527,
   "first_date": "2004-11-18",
-  "last_date": "2026-11-05",
-  "fetched_at": "2026-11-06T11:00:29.294127+00:00",
+  "last_date": "2026-11-06",
+  "fetched_at": "2026-11-06T17:00:28.926826+00:00",
   "limitation": "No-key Yahoo chart endpoint; current-day close may be a provisional regular-market price until the daily bar finalizes. Expect occasional availability/rate-limit issues.",
   "proxy_note": "ETF proxy for gold spot"
 }
