@@ -274,4 +274,4 @@ date,open,high,low,close,adj_close,volume,source
 2026-11-04,85.11,88.85,80.96,83.73,83.73,783861.945,coinbase-exchange
 2026-11-05,83.73,84.82,76.13,76.55,76.55,698991.476,coinbase-exchange
 2026-11-06,76.58,79.3,76.46,78.46,78.46,285509.926,coinbase-exchange
-2026-11-07,78.48,79.56,77.14,77.21,77.21,95509.53,coinbase-daily-plus-spot-ticker
+2026-11-07,78.48,79.56,76.76,77.01,77.01,130256.608,coinbase-daily-plus-spot-ticker
