@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-11-06T22:12:40.849041+00:00",
+  "generated_at": "2026-11-07T11:11:11.294038+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2709957.441708,
-      "date": "2026-11-05",
+      "value": 2705336.34171,
+      "date": "2026-11-06",
       "unit": "BTC",
-      "change_3m": 42899.72,
-      "change_12m": 9993.94,
-      "change_3m_pct": 1.61,
-      "change_12m_pct": 0.37,
-      "percentile_since_2015": 46.8,
+      "change_3m": 37795.45,
+      "change_12m": 7334.35,
+      "change_3m_pct": 1.42,
+      "change_12m_pct": 0.27,
+      "percentile_since_2015": 46.3,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -637,8 +637,8 @@
           "value": 2665091.86877
         },
         {
-          "date": "2026-11-05",
-          "value": 2709957.441708
+          "date": "2026-11-06",
+          "value": 2705336.34171
         }
       ],
       "metric_id": "SplyExNtv"
@@ -647,14 +647,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 293.706338,
-    "date": "2026-11-06",
+    "value": 292.274518,
+    "date": "2026-11-07",
     "unit": "USD billions",
-    "change_3m": -5.29,
-    "change_12m": -9.08,
-    "change_3m_pct": -1.77,
-    "change_12m_pct": -3.0,
-    "percentile_since_2015": 87.7,
+    "change_3m": -6.86,
+    "change_12m": -9.89,
+    "change_3m_pct": -2.29,
+    "change_12m_pct": -3.27,
+    "percentile_since_2015": 87.5,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1031,27 +1031,27 @@
       },
       {
         "date": "2025-07-31",
-        "value": 263.486719
+        "value": 263.486969
       },
       {
         "date": "2025-08-31",
-        "value": 280.257609
+        "value": 280.257859
       },
       {
         "date": "2025-09-30",
-        "value": 294.566451
+        "value": 294.566505
       },
       {
         "date": "2025-10-31",
-        "value": 304.345409
+        "value": 304.345685
       },
       {
         "date": "2025-11-30",
-        "value": 303.336688
+        "value": 303.336979
       },
       {
         "date": "2025-12-31",
-        "value": 304.427077
+        "value": 304.428932
       },
       {
         "date": "2026-01-31",
@@ -1075,7 +1075,7 @@
       },
       {
         "date": "2026-06-30",
-        "value": 304.117491
+        "value": 304.126749
       },
       {
         "date": "2026-07-31",
@@ -1083,7 +1083,7 @@
       },
       {
         "date": "2026-08-31",
-        "value": 302.164755
+        "value": 302.164905
       },
       {
         "date": "2026-09-30",
@@ -1091,11 +1091,11 @@
       },
       {
         "date": "2026-10-31",
-        "value": 298.962059
+        "value": 298.96196
       },
       {
-        "date": "2026-11-06",
-        "value": 293.706338
+        "date": "2026-11-07",
+        "value": 292.274518
       }
     ]
   },
