@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T11:11:13.329454+00:00",
+  "generated_at": "2026-11-08T17:11:32.707963+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -18108,17 +18108,17 @@
   "market_supply_url": "/public/data/btc-market-supply.json",
   "refresh_errors": [
     "FRED WALCL: The read operation timed out",
-    "FRED WTREGEN: Remote end closed connection without response",
+    "FRED WTREGEN: The read operation timed out",
     "FRED RRPONTSYD: The read operation timed out",
-    "FRED DTWEXBGS: The read operation timed out",
-    "FRED DFII10: The read operation timed out",
+    "FRED DTWEXBGS: Remote end closed connection without response",
+    "FRED DFII10: Remote end closed connection without response",
     "FRED NFCI: The read operation timed out",
     "FRED M2SL: The read operation timed out",
     "FRED TREAST: The read operation timed out",
     "FRED DCOILWTICO: The read operation timed out",
-    "FRED BAA10Y: Remote end closed connection without response",
+    "FRED BAA10Y: The read operation timed out",
     "FRED VIXCLS: The read operation timed out",
-    "FRED CPIAUCSL: Remote end closed connection without response",
+    "FRED CPIAUCSL: The read operation timed out",
     "Treasury debt: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>",
     "Glassnode exchange supply: GLASSNODE_API_KEY is not configured"
   ],
