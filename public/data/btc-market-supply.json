@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-11-07T22:12:06.168084+00:00",
+  "generated_at": "2026-11-08T11:11:13.325329+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2705336.34171,
-      "date": "2026-11-06",
+      "value": 2700890.519597,
+      "date": "2026-11-07",
       "unit": "BTC",
-      "change_3m": 37795.45,
-      "change_12m": 7334.35,
-      "change_3m_pct": 1.42,
-      "change_12m_pct": 0.27,
-      "percentile_since_2015": 46.3,
+      "change_3m": 36812.34,
+      "change_12m": 4962.37,
+      "change_3m_pct": 1.38,
+      "change_12m_pct": 0.18,
+      "percentile_since_2015": 45.7,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -637,8 +637,8 @@
           "value": 2665091.86877
         },
         {
-          "date": "2026-11-06",
-          "value": 2705336.34171
+          "date": "2026-11-07",
+          "value": 2700890.519597
         }
       ],
       "metric_id": "SplyExNtv"
@@ -647,13 +647,13 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 292.264939,
-    "date": "2026-11-07",
+    "value": 292.363871,
+    "date": "2026-11-08",
     "unit": "USD billions",
-    "change_3m": -6.87,
-    "change_12m": -9.9,
-    "change_3m_pct": -2.3,
-    "change_12m_pct": -3.28,
+    "change_3m": -6.81,
+    "change_12m": -10.12,
+    "change_3m_pct": -2.28,
+    "change_12m_pct": -3.35,
     "percentile_since_2015": 87.5,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
@@ -1094,8 +1094,8 @@
         "value": 298.96196
       },
       {
-        "date": "2026-11-07",
-        "value": 292.264939
+        "date": "2026-11-08",
+        "value": 292.363871
       }
     ]
   },

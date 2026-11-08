@@ -10,10 +10,10 @@
   "exchange": "Coinbase Exchange",
   "instrument_type": "CRYPTOCURRENCY",
   "category": "Decentralized exchange network",
-  "rows": 276,
+  "rows": 277,
   "first_date": "2026-02-05",
-  "last_date": "2026-11-07",
-  "fetched_at": "2026-11-07T22:00:24.324078+00:00",
+  "last_date": "2026-11-08",
+  "fetched_at": "2026-11-08T11:00:27.126906+00:00",
   "request_count": 4,
   "limitation": "History begins when the USD product became available on Coinbase. The current-day close is a provisional spot price until the daily candle finalizes; short-history assets may not yet have a 200-week moving average."
 }
