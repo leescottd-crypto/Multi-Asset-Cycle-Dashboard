@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T22:12:39.620542+00:00",
+  "generated_at": "2026-11-09T11:11:35.742877+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2519,14 +2519,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 102.300003,
-      "date": "2026-11-06",
+      "value": 101.834,
+      "date": "2026-11-09",
       "unit": "index",
-      "change_3m": 2.33,
-      "change_12m": 2.57,
-      "change_3m_pct": 2.33,
-      "change_12m_pct": 2.58,
-      "percentile_since_2015": 78.4,
+      "change_3m": 2.23,
+      "change_12m": 2.23,
+      "change_3m_pct": 2.24,
+      "change_12m_pct": 2.24,
+      "percentile_since_2015": 76.2,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3102,8 +3102,8 @@
           "value": 101.879997
         },
         {
-          "date": "2026-11-06",
-          "value": 102.300003
+          "date": "2026-11-09",
+          "value": 101.834
         }
       ]
     },
@@ -18113,9 +18113,9 @@
     "FRED DTWEXBGS: The read operation timed out",
     "FRED DFII10: The read operation timed out",
     "FRED NFCI: The read operation timed out",
-    "FRED M2SL: The read operation timed out",
+    "FRED M2SL: Remote end closed connection without response",
     "FRED TREAST: The read operation timed out",
-    "FRED DCOILWTICO: The read operation timed out",
+    "FRED DCOILWTICO: Remote end closed connection without response",
     "FRED BAA10Y: The read operation timed out",
     "FRED VIXCLS: The read operation timed out",
     "FRED CPIAUCSL: The read operation timed out",

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-08T22:00:34.638271+00:00",
+  "fetched_at": "2026-11-09T11:00:36.708446+00:00",
   "errors": [
     "FRED WALCL: The read operation timed out",
     "FRED WTREGEN: The read operation timed out",
@@ -7,9 +7,9 @@
     "FRED DTWEXBGS: The read operation timed out",
     "FRED DFII10: The read operation timed out",
     "FRED NFCI: The read operation timed out",
-    "FRED M2SL: The read operation timed out",
+    "FRED M2SL: Remote end closed connection without response",
     "FRED TREAST: The read operation timed out",
-    "FRED DCOILWTICO: The read operation timed out",
+    "FRED DCOILWTICO: Remote end closed connection without response",
     "FRED BAA10Y: The read operation timed out",
     "FRED VIXCLS: The read operation timed out",
     "FRED CPIAUCSL: The read operation timed out",
