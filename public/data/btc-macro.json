@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T11:11:35.742877+00:00",
+  "generated_at": "2026-11-09T17:12:53.101609+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2519,14 +2519,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 101.834,
+      "value": 101.818001,
       "date": "2026-11-09",
       "unit": "index",
-      "change_3m": 2.23,
-      "change_12m": 2.23,
-      "change_3m_pct": 2.24,
-      "change_12m_pct": 2.24,
-      "percentile_since_2015": 76.2,
+      "change_3m": 2.22,
+      "change_12m": 2.22,
+      "change_3m_pct": 2.23,
+      "change_12m_pct": 2.23,
+      "percentile_since_2015": 76.0,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3103,7 +3103,7 @@
         },
         {
           "date": "2026-11-09",
-          "value": 101.834
+          "value": 101.818001
         }
       ]
     },
@@ -18113,11 +18113,11 @@
     "FRED DTWEXBGS: The read operation timed out",
     "FRED DFII10: The read operation timed out",
     "FRED NFCI: The read operation timed out",
-    "FRED M2SL: Remote end closed connection without response",
+    "FRED M2SL: The read operation timed out",
     "FRED TREAST: The read operation timed out",
-    "FRED DCOILWTICO: Remote end closed connection without response",
+    "FRED DCOILWTICO: The read operation timed out",
     "FRED BAA10Y: The read operation timed out",
-    "FRED VIXCLS: The read operation timed out",
+    "FRED VIXCLS: Remote end closed connection without response",
     "FRED CPIAUCSL: The read operation timed out",
     "Treasury debt: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>",
     "Glassnode exchange supply: GLASSNODE_API_KEY is not configured"
