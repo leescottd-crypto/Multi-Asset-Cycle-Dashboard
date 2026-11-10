@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-11-09T22:12:57.856668+00:00",
+  "generated_at": "2026-11-10T11:12:42.740786+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
     {
       "key": "exchange_reserve",
       "label": "BTC on Tracked Exchanges",
-      "value": 2705762.041562,
-      "date": "2026-11-08",
+      "value": 2701576.812995,
+      "date": "2026-11-09",
       "unit": "BTC",
-      "change_3m": 39999.39,
-      "change_12m": 9780.18,
-      "change_3m_pct": 1.5,
-      "change_12m_pct": 0.36,
-      "percentile_since_2015": 46.3,
+      "change_3m": 33749.43,
+      "change_12m": 7442.13,
+      "change_3m_pct": 1.27,
+      "change_12m_pct": 0.28,
+      "percentile_since_2015": 45.9,
       "cadence": "daily",
       "source": "Coin Metrics Community API",
       "source_url": "https://docs.coinmetrics.io/api/v4/",
@@ -637,8 +637,8 @@
           "value": 2665091.86877
         },
         {
-          "date": "2026-11-08",
-          "value": 2705762.041562
+          "date": "2026-11-09",
+          "value": 2701576.812995
         }
       ],
       "metric_id": "SplyExNtv"
@@ -647,14 +647,14 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 292.989129,
-    "date": "2026-11-09",
+    "value": 291.983528,
+    "date": "2026-11-10",
     "unit": "USD billions",
-    "change_3m": -6.19,
-    "change_12m": -8.97,
-    "change_3m_pct": -2.07,
-    "change_12m_pct": -2.97,
-    "percentile_since_2015": 87.5,
+    "change_3m": -7.26,
+    "change_12m": -9.91,
+    "change_3m_pct": -2.43,
+    "change_12m_pct": -3.28,
+    "percentile_since_2015": 87.4,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
     "source_url": "https://stablecoins.llama.fi/stablecoincharts/all",
@@ -1094,8 +1094,8 @@
         "value": 298.981769
       },
       {
-        "date": "2026-11-09",
-        "value": 292.989129
+        "date": "2026-11-10",
+        "value": 291.983528
       }
     ]
   },
