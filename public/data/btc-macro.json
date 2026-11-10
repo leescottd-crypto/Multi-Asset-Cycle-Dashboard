@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T11:12:42.744927+00:00",
+  "generated_at": "2026-11-10T17:13:00.546971+00:00",
   "history_start": "2014-01-01",
   "pillars": [
     {
@@ -2519,14 +2519,14 @@
     "dxy": {
       "key": "dxy",
       "label": "U.S. Dollar Index (DXY)",
-      "value": 101.699997,
+      "value": 102.358002,
       "date": "2026-11-10",
       "unit": "index",
-      "change_3m": 1.89,
-      "change_12m": 2.08,
-      "change_3m_pct": 1.89,
-      "change_12m_pct": 2.09,
-      "percentile_since_2015": 75.5,
+      "change_3m": 2.55,
+      "change_12m": 2.74,
+      "change_3m_pct": 2.55,
+      "change_12m_pct": 2.75,
+      "percentile_since_2015": 78.5,
       "cadence": "daily",
       "source": "ICE U.S. Dollar Index via Yahoo Finance",
       "source_url": "https://finance.yahoo.com/quote/DX-Y.NYB/",
@@ -3103,7 +3103,7 @@
         },
         {
           "date": "2026-11-10",
-          "value": 101.699997
+          "value": 102.358002
         }
       ]
     },
@@ -18117,7 +18117,7 @@
     "FRED TREAST: The read operation timed out",
     "FRED DCOILWTICO: The read operation timed out",
     "FRED BAA10Y: The read operation timed out",
-    "FRED VIXCLS: Remote end closed connection without response",
+    "FRED VIXCLS: The read operation timed out",
     "FRED CPIAUCSL: The read operation timed out",
     "Treasury debt: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>",
     "Glassnode exchange supply: GLASSNODE_API_KEY is not configured"

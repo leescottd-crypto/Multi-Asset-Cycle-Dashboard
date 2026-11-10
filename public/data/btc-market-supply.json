@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T11:12:42.740786+00:00",
+  "generated_at": "2026-11-10T17:13:00.542593+00:00",
   "status": "live",
   "status_message": "Ten-year daily exchange-supply history is available.",
   "exchange_metrics": [
@@ -647,13 +647,13 @@
   "stablecoin": {
     "key": "stablecoin_supply",
     "label": "USD Stablecoin Supply",
-    "value": 291.983528,
+    "value": 292.025633,
     "date": "2026-11-10",
     "unit": "USD billions",
-    "change_3m": -7.26,
-    "change_12m": -9.91,
-    "change_3m_pct": -2.43,
-    "change_12m_pct": -3.28,
+    "change_3m": -7.22,
+    "change_12m": -9.87,
+    "change_3m_pct": -2.41,
+    "change_12m_pct": -3.27,
     "percentile_since_2015": 87.4,
     "cadence": "daily",
     "source": "DefiLlama Stablecoins",
@@ -1095,7 +1095,7 @@
       },
       {
         "date": "2026-11-10",
-        "value": 291.983528
+        "value": 292.025633
       }
     ]
   },
